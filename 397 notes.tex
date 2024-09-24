@@ -1,0 +1,933 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[total={6.5in,9in}]{geometry} % set text height and width: 1-in margins all around
+\title{Algebraic Numbers \\ MAT397 , Fall 2024} % assignment title
+\date{September, 2024} % due date
+\author{SHIVANK GOEL} %% your name here (or you can just delete this line)
+\usepackage{tabularx}
+\usepackage{mdframed}
+\newenvironment{proofbox}
+  {\begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=white]\noindent\ignorespaces}
+  {\end{mdframed}}
+\usepackage{amsthm,amsmath,amssymb,amsfonts}
+\usepackage{enumerate} 
+\newcommand\tab[1][0.5cm]{\hspace*{#1}}
+\usepackage{hyperref} % package for in-text hyperlinks
+\hypersetup{colorlinks=true,
+linkcolor=blue,
+urlcolor=blue}
+\usepackage{listings}
+\lstdefinestyle{Python}{
+  language=Python,
+  basicstyle=\small\ttfamily,
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{gray!10},
+  frame=single,
+  breaklines=true,
+  showstringspaces=false,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!60!black},
+  stringstyle=\color{red},
+  identifierstyle=\color{black}
+}
+
+\usepackage{thmtools}
+\usepackage{graphicx}
+\graphicspath{{C:/Users/shiva/OneDrive/Desktop/3rd year/Winter/mat402/assignments}}
+\usepackage{setspace}
+
+\usepackage{float}
+
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{environ}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+
+% ------------------------------------------------------------------------------
+
+\newtcolorbox{myBox}[3][]{
+arc=5mm,
+lower separated=false,
+fonttitle=\bfseries,
+colbacktitle=green!10,
+coltitle=green!50!black,
+enhanced,
+attach boxed title to top left={xshift=0.5cm,
+        yshift=-2mm},
+colframe=green!50!black,
+colback=green!10,
+overlay={
+\node[draw=green!50!black,thick,
+%inner sep=2mm,
+fill= green!10,rounded corners=1mm, 
+yshift=0pt, 
+xshift=-0.5cm, 
+left, 
+text=green!50!black,
+anchor=east,
+font=\bfseries] 
+at (frame.north east) {#3};},
+title=#2,#1}
+
+
+\usepackage{tikz} % For plots, drawings
+
+%% command to produce (mod n) notation
+%  better spacing than \pmod
+\newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)} 
+
+\usepackage{fancyhdr} % package for headers and footers
+\pagestyle{fancy}
+\lhead{SHIVANK - 1007938038} % replace this with your information
+\rhead{Assignment 4}
+% Definition
+\newtcbtheorem{mydefinition}{Definition}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=green!20!white,
+    colback=green!10!white,
+}{defn}
+
+\NewDocumentCommand{\defn}{m+m}{
+    \begin{mydefinition}{#1}{}
+        #2
+    \end{mydefinition}
+}
+
+\NewDocumentCommand{\defnr}{mm+m}{
+    \begin{mydefinition}{#1}{#2}
+        #3
+    \end{mydefinition}
+}
+
+% Theorem
+\newtcbtheorem{mytheorem}{Theorem}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=cyan!20!white,
+    colback=cyan!10!white,
+}{thm}
+
+\NewDocumentCommand{\thm}{m+m}{
+    \begin{mytheorem}{#1}{}
+        #2
+    \end{mytheorem}
+}
+
+\NewDocumentCommand{\thmr}{mm+m}{
+    \begin{mytheorem}{#1}{#2}
+        #3
+    \end{mytheorem}
+}
+
+% Lemma
+\newtcbtheorem[use counter from=mydefinition]{mylemma}{Lemma}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=violet!20!white,
+    colback=violet!10!white,
+}{lem}
+
+\NewDocumentCommand{\lem}{m+m}{
+    \begin{mylemma}{#1}{}
+        #2
+    \end{mylemma}
+}
+
+\newenvironment{lempf}{
+	{\noindent{\it \textbf{Proof for Lemma}}}
+	\tcolorbox[blanker,breakable,left=5mm,parbox=false,
+    before upper={\parindent15pt},
+    after skip=10pt,
+	borderline west={1mm}{0pt}{violet!20!white}]
+}{
+    \textcolor{violet!20!white}{\hbox{}\nobreak\hfill$\blacksquare$} 
+    \endtcolorbox
+}
+
+\NewDocumentCommand{\lemp}{m+m+m}{
+    \begin{mylemma}{#1}{}
+        #2
+    \end{mylemma}
+
+    \begin{lempf}
+        #3
+    \end{lempf}
+}
+
+% Corollary
+\newtcbtheorem[use counter from=mydefinition]{mycorollary}{Corollary}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=orange!20!white,
+    colback=orange!10!white,
+}{cor}
+
+\NewDocumentCommand{\cor}{+m}{
+    \begin{mycorollary}{}{}
+        #1
+    \end{mycorollary}
+}
+
+\newenvironment{corpf}{
+	{\noindent{\it \textbf{Proof for Corollary.}}}
+	\tcolorbox[blanker,breakable,left=5mm,parbox=false,
+    before upper={\parindent15pt},
+    after skip=10pt,
+	borderline west={1mm}{0pt}{orange!20!white}]
+}{
+    \textcolor{orange!20!white}{\hbox{}\nobreak\hfill$\blacksquare$} 
+    \endtcolorbox
+}
+
+\NewDocumentCommand{\corp}{m+m+m}{
+    \begin{mycorollary}{}{}
+        #1
+    \end{mycorollary}
+
+    \begin{corpf}
+        #2
+    \end{corpf}
+}
+
+% Proposition
+\newtcbtheorem[use counter from=mydefinition]{myproposition}{Proposition}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=yellow!30!white,
+    colback=yellow!20!white,
+}{prop}
+
+\NewDocumentCommand{\prop}{+m}{
+    \begin{myproposition}{}{}
+        #1
+    \end{myproposition}
+}
+
+\newenvironment{proppf}{
+	{\noindent{\it \textbf{Proof for Proposition.}}}
+	\tcolorbox[blanker,breakable,left=5mm,parbox=false,
+    before upper={\parindent15pt},
+    after skip=10pt,
+	borderline west={1mm}{0pt}{yellow!30!white}]
+}{
+    \textcolor{yellow!30!white}{\hbox{}\nobreak\hfill$\blacksquare$} 
+    \endtcolorbox
+}
+
+\NewDocumentCommand{\propp}{+m+m}{
+    \begin{myproposition}{}{}
+        #1
+    \end{myproposition}
+
+    \begin{proppf}
+        #2
+    \end{proppf}
+}
+
+% Claim
+\newtcbtheorem[use counter from=mydefinition]{myclaim}{Claim}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=pink!30!white,
+    colback=pink!20!white,
+}{clm}
+
+
+\NewDocumentCommand{\clm}{m+m}{
+    \begin{myclaim*}{#1}{}
+        #2
+    \end{myclaim*}
+}
+
+\newenvironment{clmpf}{
+	{\noindent{\it \textbf{Proof for Claim.}}}
+	\tcolorbox[blanker,breakable,left=5mm,parbox=false,
+    before upper={\parindent15pt},
+    after skip=10pt,
+	borderline west={1mm}{0pt}{pink!30!white}]
+}{
+    \textcolor{pink!30!white}{\hbox{}\nobreak\hfill$\blacksquare$} 
+    \endtcolorbox
+}
+
+\NewDocumentCommand{\clmp}{m+m+m}{
+    \begin{myclaim*}{#1}{}
+        #2
+    \end{myclaim*}
+
+    \begin{clmpf}
+        #3
+    \end{clmpf}
+}
+
+% Fact
+\newtcbtheorem[use counter from=mydefinition]{myfact}{Fact}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=purple!20!white,
+    colback=purple!10!white,
+}{fact}
+
+\NewDocumentCommand{\fact}{+m}{
+    \begin{myfact}{}{}
+        #1
+    \end{myfact}
+}
+
+
+% Proof
+\NewDocumentCommand{\pf}{+m}{
+    \begin{proof}
+        [\noindent\textbf{Proof.}]
+        #1
+    \end{proof}
+}
+
+% Example
+\newenvironment{example}{%
+    \par
+    \vspace{5pt}
+	\begin{minipage}{\textwidth}
+		\noindent\textbf{Example.}
+		\tcolorbox[blanker,breakable,left=5mm,parbox=false,
+	    before upper={\parindent15pt},
+	    after skip=10pt,
+		borderline west={1mm}{0pt}{cyan!10!white}]
+}{%
+		\endtcolorbox
+	\end{minipage}
+    \vspace{5pt}
+}
+
+\NewDocumentCommand{\ex}{+m}{
+    \begin{example}
+        #1
+    \end{example}
+}
+
+
+% Remark
+\NewDocumentCommand{\rmk}{+m}{
+    {\it \color{blue!50!white}#1}
+}
+
+\newenvironment{remark}{
+    \par
+    \vspace{5pt}
+    \begin{minipage}{\textwidth}
+        {\par\noindent{\textbf{Remark.}}}
+        \tcolorbox[blanker,breakable,left=5mm,
+        before skip=10pt,after skip=10pt,
+        borderline west={1mm}{0pt}{cyan!10!white}]
+}{
+        \endtcolorbox
+    \end{minipage}
+    \vspace{5pt}
+}
+
+\NewDocumentCommand{\rmkb}{+m}{
+    \begin{remark}
+        #1
+    \end{remark}
+}
+
+\newcommand{\lcm}{\operatorname{lcm}}
+
+
+
+
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sP}{\mathscr{P}}
+
+\newcommand{\cov}{\mathrm{Cov}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\pr}{\mathrm{Pr}}
+\newcommand{\var}{\mathrm{Var}}
+
+\newcommand{\ax}[1]{\operatorname{\mathsf{#1}}}
+
+
+\begin{document}
+\maketitle
+
+
+\section*{Primitive Polynomial}
+A \textbf{primitive polynomial} is a polynomial with integer coefficients in $\mathbb{Z}[x]$ such that the greatest common divisor (GCD) of its coefficients is 1. In other words, a polynomial is primitive if its coefficients have no common prime divisor.
+
+\textbf{Example of a Primitive Polynomial:}
+\[
+f(x) = 2x^2 + 3x + 1
+\]
+Here, the GCD of the coefficients $\{2, 3, 1\}$ is 1, so this polynomial is primitive.
+
+\textbf{Non-Example (Not Primitive):}
+\[
+g(x) = 2x^2 + 4x + 6
+\]
+In this case, the GCD of the coefficients $\{2, 4, 6\}$ is 2, so this polynomial is not primitive.
+
+\textbf{Key Concept:} A primitive polynomial is related to the content of the polynomial, which is the GCD of its coefficients. If the content is 1, the polynomial is primitive.
+
+\section*{Irreducible Polynomial}
+A \textbf{polynomial is irreducible} if it cannot be factored into the product of two non-constant polynomials with coefficients in the same ring (e.g., $\mathbb{Z}[x]$ or $\mathbb{Q}[x]$).
+
+\textbf{Example of an Irreducible Polynomial (over $\mathbb{Q}$):}
+\[
+f(x) = x^2 + 1
+\]
+This polynomial cannot be factored over $\mathbb{Q}[x]$ into lower-degree polynomials, so it is irreducible over $\mathbb{Q}$.
+
+\textbf{Non-Example (Not Irreducible):}
+\[
+g(x) = x^2 - 1 = (x - 1)(x + 1)
+\]
+Here, $g(x)$ can be factored into two polynomials of degree 1, so it is not irreducible.
+
+\textbf{Key Concept:} Irreducibility refers to the inability to factor a polynomial into lower-degree polynomials with coefficients in the same field or ring.
+
+\section*{Summary of Differences}
+\begin{itemize}
+    \item \textbf{Primitive Polynomial}: Focuses on the \textbf{coefficients} of the polynomial. A polynomial is primitive if the GCD of its coefficients is 1.
+    \item \textbf{Irreducible Polynomial}: Focuses on the \textbf{factorization} of the polynomial. A polynomial is irreducible if it cannot be factored into the product of two non-constant polynomials with coefficients in the same field or ring.
+\end{itemize}
+
+\section*{Combining the Concepts}
+A polynomial can be both primitive and irreducible, but these properties are independent of each other:
+\begin{itemize}
+    \item A polynomial can be \textbf{primitive but reducible}, e.g., 
+    \[
+    f(x) = x^2 - 1 = (x - 1)(x + 1)
+    \]
+    Here, $f(x)$ is reducible but primitive, as the GCD of its coefficients is 1.
+    
+    \item A polynomial can be \textbf{irreducible but not primitive}, e.g.,
+    \[
+    g(x) = 2x^2 + 4x + 6
+    \]
+    This polynomial is irreducible over $\mathbb{Z}$, but not primitive, as the GCD of its coefficients is 2.
+\end{itemize}
+
+
+\thm{1}{
+    Product of two primitive polynomials is primitive.
+}
+
+\begin{proofbox}
+    Let $f(x), g(x) \in \mathbb{Z}[x]$ be primitive polynomials, i.e., $c(f(x)) = c(g(x)) = 1$, where $c(f(x))$ denotes the content of $f(x)$, which is the greatest common divisor of the coefficients of $f(x)$.
+    
+    Assume, for contradiction, that $h(x) = f(x)g(x)$ is not primitive. This would mean that $c(h(x)) \neq 1$, so there exists a prime $p$ such that $p$ divides all the coefficients of $h(x)$.
+
+    Write $f(x) = a_0 + a_1x + \cdots + a_nx^n$ and $g(x) = b_0 + b_1x + \cdots + b_mx^m$, where $a_i, b_j \in \mathbb{Z}$. Since $f(x)$ and $g(x)$ are primitive, $p$ does not divide all the coefficients of either $f(x)$ or $g(x)$.
+
+    Now consider the product:
+    \[
+    h(x) = f(x)g(x) = a_0b_0 + (a_0b_1 + a_1b_0)x + \cdots + a_nb_mx^{n+m}.
+    \]
+    By assumption, $p$ divides all the coefficients of $h(x)$. In particular, $p$ divides the constant term $a_0b_0$. Thus, $p$ must divide either $a_0$ or $b_0$, but not both (since $f(x)$ and $g(x)$ are primitive).
+
+    Without loss of generality, assume $p \mid a_0$ but $p \nmid b_0$. Consider the next term in $h(x)$, which is $a_0b_1 + a_1b_0$. Since $p \mid a_0$ and $p \mid a_0b_1 + a_1b_0$, we must have $p \mid a_1b_0$. Since $p \nmid b_0$, it follows that $p \mid a_1$.
+
+    Continuing in this way, we conclude that $p$ divides all the coefficients of $f(x)$. This contradicts the assumption that $f(x)$ is primitive.
+
+    Similarly, if we had assumed $p \mid b_0$ and $p \nmid a_0$, we would have reached the conclusion that $p$ divides all the coefficients of $g(x)$, contradicting the fact that $g(x)$ is primitive.
+
+    Therefore, our assumption that $h(x)$ is not primitive must be false, and so $h(x) = f(x)g(x)$ is primitive.
+\end{proofbox}
+
+\lem{Gauss Lemma}{If a monic polynomial $f(x)$ with integral 
+coefficient factors into two monic 
+polynomials with rational coefficient say 
+$f(x) = g(x)h(x)$, then $g(x)$ and $h(x)$
+have integral coefficients.} 
+In other words, Reducibility over $Q$ implies reducibility over $Z$.
+\begin{proofbox}
+    Let $f(x) \in \mathbb{Z}[x]$.\\\\
+    Given that $f(x)$ is reducible over $\mathbb{Q}$, we have $f(x) = g(x)h(x)$, where $g(x)$ and $h(x)$ are monic polynomials with rational coefficients, i.e. $g(x), h(x) \in \mathbb{Q}[x]$, with $\deg(g(x)) < \deg(f(x))$ and $\deg(h(x)) < \deg(f(x))$.\\\\
+    Assume $f(x)$ is primitive.\\\\
+    Since $g(x)$ and $h(x)$ have rational coefficients, let $a$ be the least common multiple of the denominators of the coefficients of $g(x)$, and $b$ the least common multiple of the denominators of the coefficients of $h(x)$.\\\\
+    Now multiply both sides of the equation $f(x) = g(x)h(x)$ by $ab$ to clear the denominators. This gives:
+    \[
+    abf(x) = ag(x)bh(x)
+    \]
+    Let $g_1(x) = ag(x)$ and $h_1(x) = bh(x)$, where $g_1(x), h_1(x) \in \mathbb{Z}[x]$.\\\\
+    Now let $c_1 = c(g_1(x))$ and $c_2 = c(h_1(x))$ be the contents of $g_1(x)$ and $h_1(x)$, respectively.\\\\
+    We can then write:
+    \[
+    abf(x) = c_1g_2(x)c_2h_2(x)
+    \]
+    where $g_2(x)$ and $h_2(x)$ are primitive polynomials.\\\\
+    Since the product of two primitive polynomials is primitive, $g_2(x)h_2(x)$ is primitive. Therefore, we have:
+    \[
+    ab = c_1c_2
+    \]
+    which implies that $f(x)$ is primitive.\\\\
+    If $f(x)$ is not primitive, we can write $f(x) = cf_1(x)$, where $c = c(f(x))$ and $f_1(x)$ is primitive. Since $f_1(x)$ is reducible over $\mathbb{Z}$ (from the argument above), it follows that $f(x)$ is reducible over $\mathbb{Z}$ as well.\\\\
+    This completes the proof.
+    \end{proofbox}
+
+    \section*{Algebraic Number}
+    \defn{Algebraic Number}{$x$ is algbraic if $x$ is root of 
+    polynomial with integer coefficient, i.e.
+    there are integers $a_n$, $a_{n-1}$, $\ldots$, $a_0$ such that
+    \[
+    a_nx^n + a_{n-1}x^{n-1} + \ldots + a_0 = 0
+    \]}
+    \ex{}{
+        $x = \sqrt[3]{\frac{\sqrt{2} - 3}{5}}$ is algebraic? \\\\
+        $x^3 = \frac{\sqrt{2} - 3}{5}$ \\\\
+        $5x^3 + 3 = \sqrt{2}$ \\\\
+        $25x^6 + 30x^3 + 9 = 2$ \\\\
+        $25x^6 + 30x^3 + 7 = 0$ \\\\
+        Therefore, $x$ is algebraic.
+    }
+
+    \defn{Transcendental Number}{A number that is not algebraic.}
+    \ex{}{
+        $\pi$, $e$ are transcendental numbers.
+    }
+
+    \defn{Algebraic Integers}{Algebraic Integers: These are a special subset of algebraic numbers that satisfy a monic polynomial (leading coefficient 1) with integer coefficients. for example, $\sqrt{2}$
+      is also an algebraic integer because it satisfies $x^2 - 2 = 0$ monic polynomial with integer coefficients.}
+
+    \defn{Unique Minimal Polynomial}{For any algebraic number \( g \), there is a unique minimal polynomial over \( \mathbb{Q} \). This is the irreducible monic polynomial that has \( g \) as a root. It is the polynomial of the smallest degree with rational coefficients that has \( g \) as a solution.}
+    
+    \ex{}{For example, for \( \sqrt{2} \), the minimal polynomial is \( x^2 - 2 \), since this is the simplest polynomial with rational coefficients that has \( \sqrt{2} \) as a root.
+    As $x^2 - 2$ is irreducible over $\mathbb{Q}$, it is the unique minimal polynomial for $\sqrt{2}$. (if we factor it, we get $x^2 - 2 = (x - \sqrt{2})(x + \sqrt{2})$ i.e. it is reducible over $\mathbb{R}$ but not over $\mathbb{Q}$.)}
+
+    \thm{9.8}{For any algebraic number \( g \), there is a unique irreducible monic polynomial over \( \mathbb{Q} \) such that:
+    \begin{enumerate}
+        \item \( g \) satisfies the polynomial equation \( g(x) = 0 \),
+        \item Any other polynomial over \( \mathbb{Q} \) that has \( g \) as a root is divisible by \( g(x) \).
+    \end{enumerate}}
+    \begin{proofbox}
+     
+\textbf{Step 1: Finding the Polynomial of Lowest Degree}
+Since \( g \) is an algebraic number, it satisfies some polynomial equation with rational coefficients. Out of all such polynomials, let’s choose one of the lowest degree, say \( G(x) \), such that \( G(g) = 0 \). If \( G(x) \) is not monic, we divide it by its leading coefficient to create a monic polynomial \( g(x) \). Now, \( g(x) \) is a monic polynomial of the lowest degree that has \( g \) as a root.
+
+\textbf{Step 2: Proving that \( g(x) \) is Irreducible}
+We now show that \( g(x) \) is irreducible over \( \mathbb{Q} \). Suppose, for contradiction, that \( g(x) \) can be factored as:
+
+\[
+g(x) = h_1(x) h_2(x)
+\]
+
+where \( h_1(x) \) and \( h_2(x) \) are lower-degree polynomials with rational coefficients. Since \( g \) is a root of \( g(x) \), one of \( h_1(g) = 0 \) or \( h_2(g) = 0 \) must be true. This would contradict the fact that \( g(x) \) was chosen to have the lowest degree, since \( h_1(x) \) or \( h_2(x) \) would have a smaller degree than \( g(x) \). Hence, \( g(x) \) must be irreducible.
+
+\textbf{Step 3: Any Polynomial with \( g \) as a Root is Divisible by \( g(x) \)}
+Now, let \( f(x) \) be any polynomial over \( \mathbb{Q} \) that has \( g \) as a root (i.e., \( f(g) = 0 \)). Using the division algorithm for polynomials, we can write:
+
+\[
+f(x) = g(x) q(x) + r(x)
+\]
+
+where \( r(x) \) is a remainder with degree smaller than that of \( g(x) \). Since \( f(g) = g(g) = 0 \), it follows that:
+
+\[
+0 = f(g) = g(g) q(g) + r(g) = 0 + r(g)
+\]
+
+which implies that \( r(g) = 0 \). Since the degree of \( r(x) \) is less than that of \( g(x) \), the only way this is possible is if \( r(x) = 0 \). Therefore, \( f(x) \) must be divisible by \( g(x) \).
+
+\textbf{Step 4: Proving Uniqueness of \( g(x) \)}
+Finally, let's assume there is another irreducible monic polynomial, say \( g_1(x) \), such that \( g_1(g) = 0 \). Since \( g_1(x) \) has \( g \) as a root, and \( g(x) \) is the minimal polynomial, we know \( g_1(x) \) must divide \( g(x) \) and vice versa. Since both polynomials are irreducible and monic, this implies that \( g_1(x) = g(x) \). Thus, \( g(x) \) is unique.
+
+\textbf{Conclusion}
+For any algebraic number \( g \), there exists a unique irreducible monic polynomial over \( \mathbb{Q} \), and any other polynomial over \( \mathbb{Q} \) with \( g \) as a root is divisible by this minimal polynomial.
+    \end{proofbox}
+    \defn{Degree of an Algebraic Number}{The degree of an algebraic number is the degree of its minimal polynomial over $\mathbb{Q}$.}
+    \ex{}{The degree of $\sqrt{2}$ is 2, as its minimal polynomial is $x^2 - 2$.}
+
+
+\thm{9.9}{Among the rational numbers, the only ones that are algebraic
+integers are the integers 0, $\pm 1$, $\pm 2$, $\pm 3$, $\ldots$}
+\begin{proofbox}
+   Step 1: Integers Are Algebraic Integers
+    Any regular integer \( m \) is an algebraic integer because it satisfies the monic polynomial \( x - m = 0 \). This is a monic polynomial (the leading coefficient is 1) with integer coefficients, so by definition, every integer is an algebraic integer.
+    
+   Step 2: Rational Numbers that Are Algebraic Integers Must Be Integers
+    Now, let’s suppose we have a rational number \( \frac{m}{q} \) (where \( m \) and \( q \) are integers and \( \gcd(m, q) = 1 \), meaning they have no common factors other than 1). We want to see if this rational number can be an algebraic integer.
+    
+    - Since \( \frac{m}{q} \) is an algebraic integer, it must satisfy a monic polynomial with integer coefficients:
+    
+    \[
+    \left( \frac{m}{q} \right)^n + b_{n-1} \left( \frac{m}{q} \right)^{n-1} + \dots + b_0 = 0
+    \]
+    
+    where \( b_{n-1}, \dots, b_0 \) are integers. 
+    
+    - Multiplying through by \( q^n \) to clear the denominators:
+    
+    \[
+    m^n + b_{n-1} m^{n-1} q + \dots + b_0 q^n = 0
+    \]
+    
+    Now, observe that this equation implies \( q \) must divide \( m^n \) (the first term on the left-hand side). Since \( m \) and \( q \) have no common factors (we assumed \( \gcd(m, q) = 1 \)), the only way \( q \) can divide \( m^n \) is if \( q = \pm 1 \).
+    
+    - Therefore, \( \frac{m}{q} \) must be an integer because \( q = \pm 1 \).
+    
+    Conclusion:
+    This shows that the only rational numbers that are algebraic integers are the integers themselves, \( 0, \pm 1, \pm 2, \dots \).
+    
+    Additional Explanation:
+    - The term rational integer is used in algebraic number theory to distinguish regular integers from other types of algebraic integers that are not rational numbers. For example, \( \sqrt{2} \) is an algebraic integer because it satisfies the equation \( x^2 - 2 = 0 \), but it’s not a **rational integer** because it’s not a rational number.
+    
+     Example:
+    - Rational integer: 2, because it satisfies \( x - 2 = 0 \), and it’s also a rational number.
+    - Algebraic integer but not a rational integer: \( \sqrt{2} \), because it satisfies \( x^2 - 2 = 0 \), but it’s not a rational number.
+    
+    Thus, the integers are the only rational numbers that can be algebraic integers.
+\end{proofbox}
+
+\thm{9.10}{The minimal equation of an algebraic integer is monic with
+integral coefficients.}
+\begin{proofbox}
+
+    \textbf{Step 1: The Equation is Monic by Definition}
+    By definition, the minimal polynomial of an algebraic integer is \textbf{monic}, meaning its leading coefficient is 1. Therefore, there is no need to prove that the polynomial is monic, as it is assumed from the start.
+    
+    \textbf{Step 2: Showing that the Coefficients are Integers}
+    Let \( g \) be an algebraic integer. Since \( g \) is an algebraic integer, it satisfies some polynomial equation with \textbf{integer coefficients}. Let this polynomial be \( f(x) \), such that:
+    
+    \[
+    f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 = 0
+    \]
+    
+    where \( a_n, a_{n-1}, \dots, a_0 \) are integers.
+    
+    Let \( g(x) = 0 \) be the minimal polynomial of \( g \), which is \textbf{monic} and \textbf{irreducible} over \( \mathbb{Q} \). By \textbf{Theorem 9.8}, the minimal polynomial \( g(x) \) divides any polynomial with \( g \) as a root. Therefore, \( g(x) \) divides \( f(x) \), which gives:
+    
+    \[
+    f(x) = g(x) h(x)
+    \]
+    
+    where \( h(x) \) is another polynomial, and both \( g(x) \) and \( h(x) \) have rational coefficients. Since \( f(x) \) is monic and has integer coefficients, \( g(x) \) and \( h(x) \) must be monic as well.
+    
+     By \textbf{Gauss Lemma}, if a monic polynomial with rational coefficients divides a polynomial with integer coefficients, then the dividing polynomial must have integer coefficients. Hence, the minimal polynomial \( g(x) \) of the algebraic integer \( g \) must have integer coefficients.
+\end{proofbox}
+
+\thm{9.11}{Let \( n \) be a positive rational integer, and \( g \) a complex number. Suppose we have a system of \( n \) equations involving complex numbers \( \theta_1, \theta_2, \dots, \theta_n \), not all zero, given by:
+\[
+g \theta_j = a_{j,1} \theta_1 + a_{j,2} \theta_2 + \dots + a_{j,n} \theta_n, \quad j = 1, 2, \dots, n
+\]
+where \( a_{j,i} \) are rational numbers. Then:
+\begin{enumerate}
+    \item \( g \) is an algebraic number.
+    \item If \( a_{j,i} \) are rational integers, \( g \) is an algebraic integer.
+\end{enumerate}
+}
+
+\thm{9.12}{If $\alpha$ and $\beta$ are 
+algebraic numbers, then so are $\alpha + \beta$ and $\alpha \beta$. If 
+$\alpha$ and $\beta$ are algebraic integers, then so are $\alpha + \beta$ and $\alpha \beta$.}
+
+\section{Ring Theory}
+\subsection*{Example 1: The Ring of Integers \(\mathbb{Z}\)}
+The set of integers \(\mathbb{Z}\) has two operations: addition and multiplication.
+\begin{itemize}
+    \item \((\mathbb{Z}, +)\) is an abelian group.
+    \item \((\mathbb{Z}, \times)\) is not a group since there is no multiplicative inverse for every element. However, a multiplicative inverse is not required for a set to be a ring.
+\end{itemize}
+
+\subsection*{Example 2: The Field of Rational Numbers \(\mathbb{Q}\)}
+The set \(\mathbb{Q}\) of rational numbers has two operations: addition and multiplication.
+\begin{itemize}
+    \item \((\mathbb{Q}, +)\) is an abelian group.
+    \item \((\mathbb{Q}, \times)\) is not a group, but \((\mathbb{Q} \setminus \{0\}, \times)\) forms an abelian group.
+\end{itemize}
+
+Similarly, the sets \(\mathbb{R}\) (real numbers) and \(\mathbb{C}\) (complex numbers) also form rings under addition and multiplication.
+
+\subsection*{Example 3: The Gaussian Integers \(\mathbb{Z}[i]\)}
+Consider \(\mathbb{Z}[i] = \{a + bi \mid a, b \in \mathbb{Z}\}\), where \(i\) is the imaginary unit, i.e., \(i^2 = -1\).
+\begin{itemize}
+    \item \(1 \in \mathbb{Z}[i]\), and for any integer \(n \in \mathbb{Z}\), \(n \in \mathbb{Z}[i]\).
+    \item \(\mathbb{Z}[i] \subseteq \mathbb{C}\), and it is closed under addition:
+    \[
+    (a + bi) + (c + di) = (a + c) + (b + d)i,
+    \]
+    where \(a + bi \in \mathbb{Z}[i]\) and \(c + di \in \mathbb{Z}[i]\).
+    \item It is easy to verify that \(\mathbb{Z}[i]\) is an abelian group under addition and is a subgroup of \((\mathbb{C}, +)\).
+    \item \(\mathbb{Z}[i]\) is closed under multiplication as well:
+    \[
+    (a + bi)(c + di) = (ac - bd) + (ad + bc)i,
+    \]
+    and both terms are in \(\mathbb{Z}[i]\).
+\end{itemize}
+Thus, \(\mathbb{Z}[i]\) is a ring under addition and multiplication.
+
+\subsection*{Example 4: A Non-Ring Set}
+Consider the set \(A = \left\{ a + \frac{b}{2} \mid a, b \in \mathbb{Z} \right\}\) (where \(1/2\) replaces \(i\)). Note:
+\begin{itemize}
+    \item \(\frac{1}{2} \in A\), but \(\frac{1}{2} \times \frac{1}{2} = \frac{1}{4} \notin A\).
+\end{itemize}
+Therefore, \(A\) is not closed under multiplication, and hence it is not a ring.
+
+\defn{Ring}{A ring \(R\) is a set with two operations, denoted by \(+\) (addition) and \(\times\) (multiplication), satisfying the following properties:
+\begin{enumerate}
+    \item \((R, +)\) is an abelian group.
+    \item Multiplication is commutative, associative, and contains an identity element.
+    \item Addition and multiplication are distributive over each other, i.e., \(\forall a, b, c \in R\):
+    \[
+    (a + b)c = ac + bc \quad \text{and} \quad a(b + c) = ab + ac.
+    \]
+\end{enumerate}}
+
+Examples: The sets \(\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}, \mathbb{Z}[i]\) are all rings. Additionally, the distributive property holds for \(\mathbb{C}\), and thus it also holds for the sets \(\mathbb{Z} \subseteq \mathbb{Z}[i] \subseteq \mathbb{C}\), and similarly for \(\mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}\).
+
+Distribtuive property holds for $\mathbb{C}$ so it also holds 
+for other sets above:
+$\mathbb{Z} \subseteq Z[i] \subseteq \mathbb{C}$.\\\\
+$\mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$.\\\\
+
+
+
+\defn{Subring}{Let \(R\) be a ring. A subset \(S\) of \(R\) is called a \textbf{subring} of \(R\) if it satisfies the following conditions:
+\begin{itemize}
+    \item It is closed under addition and multiplication.
+    \item It is a subgroup of \((R, +)\).
+    \item It contains the multiplicative identity \(1\).
+\end{itemize}}
+
+$\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$,$Z[i]$ are subrings of $\mathbb{C}$.\\\\
+
+
+\rmk{It is possible to define rings wothout asking for multiplication to be 
+commutative. They are called non-commutative rings. For example, the set of
+matrix rings:  ex: $3 \times 3$ square matrices with real entries.}
+
+\rmk{Rings can also be defined by not asking for multiplicative identity. ex: $R = 2Z =$ \{ even integers \} does not have $1$.}\\\\
+
+\textbf{More Examples of Rings}
+\begin{enumerate}
+    \item \textbf{Zero Ring:} Let $R = \{0\}$. In this ring, the only element is $0$, and here $0 = 1$. This is a trivial example of a ring.
+
+    \item \(\mathbb{Z}\) and \(\mathbb{Z}/3\mathbb{Z}\): Consider the integers \(\mathbb{Z}\). The set \(3\mathbb{Z}\) (multiples of 3) is a subgroup of \((\mathbb{Z}, +)\). Now consider the quotient group:
+    \[
+    \mathbb{Z}/3\mathbb{Z} = \{0, 1, 2\}.
+    \]
+    More generally, for any \(n \geq 1\), \(\mathbb{Z}/n\mathbb{Z}\) is a ring. If \(n > 0\), the number of elements in \(\mathbb{Z}/n\mathbb{Z}\) is \(n\).
+    
+    \begin{rmk}
+        For \(n \geq 2\), \(\mathbb{Z}/n\mathbb{Z}\) is not a subring of \(\mathbb{C}\).
+    \end{rmk}
+
+    \item \textbf{Continuous Functions:} Let \(R = \{f: \mathbb{R} \to \mathbb{R} \mid f \text{ is continuous}\}\). This set forms a ring under pointwise addition and multiplication of functions. There is a well-defined ring structure on this set.
+\end{enumerate}
+
+
+\section{Field}
+
+\defn{Field}{A \textbf{field} \( F \) is a set equipped with two operations: addition (\(+\)) and multiplication (\(\times\)), such that the following properties are satisfied:
+
+\begin{enumerate}
+    \item \textbf{Additive Group:} 
+    \[
+    (F, +) \text{ is an abelian group}.
+    \]
+    This means:
+    \begin{itemize}
+        \item For all \( a, b \in F \), \( a + b \in F \) (closure under addition).
+        \item There exists an element \( 0 \in F \) such that \( a + 0 = a \) for all \( a \in F \) (additive identity).
+        \item For every \( a \in F \), there exists \( -a \in F \) such that \( a + (-a) = 0 \) (additive inverse).
+        \item Addition is associative: \( (a + b) + c = a + (b + c) \) for all \( a, b, c \in F \).
+        \item Addition is commutative: \( a + b = b + a \) for all \( a, b \in F \).
+    \end{itemize}
+
+    \item \textbf{Multiplicative Group:} 
+    The set \( F \setminus \{0\} \) (i.e., all non-zero elements of \( F \)) is an abelian group under multiplication:
+    \begin{itemize}
+        \item For all \( a, b \in F \setminus \{0\} \), \( a \times b \in F \setminus \{0\} \) (closure under multiplication).
+        \item There exists an element \( 1 \in F \) such that \( a \times 1 = a \) for all \( a \in F \) (multiplicative identity).
+        \item For every \( a \in F \setminus \{0\} \), there exists \( a^{-1} \in F \) such that \( a \times a^{-1} = 1 \) (multiplicative inverse).
+        \item Multiplication is associative: \( (a \times b) \times c = a \times (b \times c) \) for all \( a, b, c \in F \).
+        \item Multiplication is commutative: \( a \times b = b \times a \) for all \( a, b \in F \setminus \{0\} \).
+    \end{itemize}
+
+    \item \textbf{Distributive Property:} 
+    Addition and multiplication are distributive over each other. For all \( a, b, c \in F \):
+    \[
+    a \times (b + c) = a \times b + a \times c \quad \text{and} \quad (a + b) \times c = a \times c + b \times c.
+    \]
+\end{enumerate}}
+
+\textbf{Key Differences Between Fields and Rings}
+\begin{itemize}
+    \item In a \textbf{field}, every non-zero element has a \textbf{multiplicative inverse}. In a \textbf{ring}, this is not required. For example, in the ring of integers \( \mathbb{Z} \), only \( 1 \) and \( -1 \) have multiplicative inverses, while in a field like \( \mathbb{Q} \) (the rational numbers), every non-zero element has a multiplicative inverse.
+    \item Multiplication in a \textbf{field} is always \textbf{commutative}, whereas rings can be either commutative or non-commutative.
+\end{itemize}
+
+\textbf{Examples of Fields}
+
+\begin{enumerate}
+    \item \textbf{The Rational Numbers \(\mathbb{Q}\):} Every non-zero rational number has a multiplicative inverse, and all field properties are satisfied.
+   
+    \item \textbf{The Real Numbers \(\mathbb{R}\):} The set of real numbers is a field under the usual addition and multiplication.
+   
+    \item \textbf{The Complex Numbers \(\mathbb{C}\):} The complex numbers form a field under addition and multiplication, where every non-zero complex number has a multiplicative inverse.
+   
+    \item \textbf{Finite Fields \(\mathbb{Z}/p\mathbb{Z}\):} For a prime \( p \), the set \(\mathbb{Z}/p\mathbb{Z}\) (integers modulo \(p\)) forms a field. In this case, every non-zero element has a multiplicative inverse modulo \( p \). For example, \(\mathbb{Z}/5\mathbb{Z} = \{0, 1, 2, 3, 4\}\) is a field.
+\end{enumerate}
+
+\textbf{Non-Examples of Fields}
+\begin{itemize}
+    \item \textbf{The Integers \(\mathbb{Z}\):} While \(\mathbb{Z}\) is a ring, it is not a field because most elements (other than \(1\) and \(-1\)) do not have a multiplicative inverse in \(\mathbb{Z}\).
+\end{itemize}
+
+\thm{9.13}{The set of all algebraic numbers forms a field. The set of all
+algebraic integers forms a ring.}
+
+\begin{proofbox}
+    We begin by recalling the definitions of a \emph{field} and a \emph{ring}.
+
+    \subsection*{Field Properties}
+    A field satisfies the following conditions:
+    \begin{enumerate}
+        \item Closure under addition and multiplication: If \( a \) and \( b \) are elements of the field, then \( a + b \) and \( a \cdot b \) are also in the field.
+        \item Associativity of addition and multiplication: For any \( a, b, c \) in the field, \( (a + b) + c = a + (b + c) \) and \( (a \cdot b) \cdot c = a \cdot (b \cdot c) \).
+        \item Commutativity of addition and multiplication: For any \( a, b \) in the field, \( a + b = b + a \) and \( a \cdot b = b \cdot a \).
+        \item Additive identity: There exists an element \( 0 \) such that for any \( a \), \( a + 0 = a \).
+        \item Multiplicative identity: There exists an element \( 1 \) such that for any \( a \), \( a \cdot 1 = a \).
+        \item Additive inverses: For every element \( a \), there exists an element \( -a \) such that \( a + (-a) = 0 \).
+        \item Multiplicative inverses: For every non-zero element \( a \), there exists an element \( a^{-1} \) such that \( a \cdot a^{-1} = 1 \).
+        \item Distributive property: For all \( a, b, c \) in the field, \( a \cdot (b + c) = a \cdot b + a \cdot c \).
+    \end{enumerate}
+    
+    \subsection*{Algebraic Numbers Form a Field}
+    Let us now show that the set of all algebraic numbers forms a field. Algebraic numbers are complex numbers that satisfy polynomial equations with rational coefficients. We verify that algebraic numbers satisfy the conditions for a field:
+    
+    \begin{itemize}
+        \item \textbf{Closure under addition and multiplication}: The sum and product of two algebraic numbers is also an algebraic number. For example, \( \sqrt{2} + \sqrt{3} \) is an algebraic number, and \( \sqrt{2} \cdot \sqrt{3} = \sqrt{6} \) is also an algebraic number.
+        
+        \item \textbf{Associativity}: Algebraic numbers inherit the associative properties of addition and multiplication from complex numbers.
+        
+        \item \textbf{Commutativity}: Addition and multiplication of algebraic numbers are commutative because complex numbers are commutative.
+        
+        \item \textbf{Additive identity}: The number \( 0 \) is an algebraic number because it satisfies the polynomial equation \( x = 0 \), which has rational coefficients.
+        
+        \item \textbf{Multiplicative identity}: The number \( 1 \) is an algebraic number because it satisfies the polynomial equation \( x - 1 = 0 \), which has rational coefficients.
+        
+        \item \textbf{Additive inverse}: If \( \alpha \) is an algebraic number, its additive inverse \( -\alpha \) is also algebraic. For example, if \( \alpha \) satisfies a polynomial, then \( -\alpha \) satisfies the same equation with appropriate sign changes.
+        
+        \item \textbf{Multiplicative inverse}: If \( \alpha \neq 0 \) is an algebraic number, its multiplicative inverse \( \alpha^{-1} \) is also algebraic. For example, if \( \alpha \) satisfies a polynomial equation, then \( \alpha^{-1} \) satisfies a polynomial equation constructed from it. For instance, \( 2 \) has an inverse \( 1/2 \), which satisfies \( 2x - 1 = 0 \).
+        
+        \item \textbf{Distributive property}: Algebraic numbers satisfy the distributive property since complex numbers satisfy the distributive property.
+    \end{itemize}
+    
+    Since all the conditions for a field are satisfied, the set of algebraic numbers forms a \textbf{field}.
+    
+    \subsection*{Ring Properties}
+    A ring satisfies the following conditions:
+    \begin{enumerate}
+        \item Closure under addition and multiplication.
+        \item Associativity of addition and multiplication.
+        \item Additive identity.
+        \item Additive inverse.
+        \item Distributive property.
+    \end{enumerate}
+    Note that a ring does not require the existence of a multiplicative inverse.
+    
+    \subsection*{Algebraic Integers Form a Ring}
+    Now, consider the set of all algebraic integers, which are algebraic numbers that satisfy monic polynomial equations with integer coefficients. We check the conditions for a ring:
+    
+    \begin{itemize}
+        \item \textbf{Closure under addition and multiplication}: The sum and product of two algebraic integers are also algebraic integers. For example, \( \sqrt{2} \cdot \sqrt{2} = 2 \) is an algebraic integer because it satisfies \( x - 2 = 0 \).
+        
+        \item \textbf{Associativity}: Algebraic integers inherit the associative properties of addition and multiplication from complex numbers.
+        
+        \item \textbf{Additive identity}: The number \( 0 \) is an algebraic integer because it satisfies \( x = 0 \).
+        
+        \item \textbf{Additive inverse}: If \( \alpha \) is an algebraic integer, then \( -\alpha \) is also an algebraic integer. For example, if \( \alpha = \sqrt{2} \), then \( -\sqrt{2} \) satisfies the same equation \( x^2 - 2 = 0 \).
+        
+        \item \textbf{Distributive property}: Algebraic integers satisfy the distributive property since complex numbers do.
+    \end{itemize}
+    
+    However, **algebraic integers do not necessarily have multiplicative inverses** that are also algebraic integers. For example, the inverse of \( 2 \) is \( 1/2 \), which is an algebraic number but not an algebraic integer.
+    
+    Thus, the set of algebraic integers forms a \textbf{ring}, not a field, because it lacks multiplicative inverses for all elements.
+    
+\end{proofbox}
+
+
+
+\end{document}
+
+
+
+
