@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.11)  24 SEP 2024 19:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.11)  29 SEP 2024 00:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -988,26 +988,91 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 925.
- [13] [14] (397 notes.aux)
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 938--941
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 938--941
+
+ []
+
+[14]
+Overfull \hbox (11.56297pt too wide) in paragraph at lines 959--961
+[]\OT1/cmr/m/n/10 By the Fun-da-men-tal The-o-rem of Al-ge-bra this equa-tion has m roots, call them $\OML/cmm/m/it/10 ![]; ![]; [] ; ![]$
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 993--994
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 993--994
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--998
+
+ []
+
+
+Overfull \hbox (66.75813pt too wide) detected at line 999
+\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) = [](\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )[][\OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) [] (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) [] (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )][]
+ []
+
+
+Overfull \hbox (60.53058pt too wide) detected at line 1002
+[] \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) [] (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) [] (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )][]
+ []
+
+[16]
+Overfull \hbox (32.83232pt too wide) in paragraph at lines 1010--1015
+[]\OT1/cmr/m/n/10 where each co-ef-fi-cient $\OML/cmm/m/it/10 ^^L[]$ \OT1/cmr/m/n/10 is a sym-met-ric in-te-gral poly-no-mial of the con-stants $\OML/cmm/m/it/10 c[][]c[][] [] c[][]$\OT1/cmr/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1020
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1048
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1051
+
+ []
+
+
+Overfull \hbox (27.14497pt too wide) in paragraph at lines 1058--1060
+\OT1/cmr/m/n/10 where each co-ef-fi-cient $\OML/cmm/m/it/10 ^^M[]$ \OT1/cmr/m/n/10 is a sym-met-ric in-te-gral poly-no-mial in the con-stants $\OML/cmm/m/it/10 c[][]; c[][]; [] ; c[][]$\OT1/cmr/m/n/10 .
+ []
+
+[18] [19] (397 notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `"397 notes".out' has not changed.
-(rerunfilecheck)             Checksum: C0348C645B9F9403D8228E05E222B331;169.
+(rerunfilecheck)             Checksum: 304AB6EE69FAD2EA93B8F1798E9E3998;372.
  ) 
 Here is how much of TeX's memory you used:
- 29101 strings out of 474542
- 573741 string characters out of 5744446
+ 29124 strings out of 474542
+ 573962 string characters out of 5744446
  1956978 words of memory out of 5000000
- 50757 multiletter control sequences out of 15000+600000
- 566613 words of font info for 69 fonts, out of 8000000 for 9000
+ 50762 multiletter control sequences out of 15000+600000
+ 567232 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,12n,93p,617b,970s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\shiva\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "397 notes.pdf" (14 pages, 253505 bytes).
+ <C:\Users\shiva\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "397 notes.pdf" (19 pages, 304642 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 92 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

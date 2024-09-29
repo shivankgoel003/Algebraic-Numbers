@@ -924,8 +924,173 @@ algebraic integers forms a ring.}
     
 \end{proofbox}
 
+\section{Proof of Transcendance of Pi }
 
+\lem{}{Let $f$ be an integer polynomial  and $n$ a positive
+integer. \begin{enumerate}
+    \item If $F(x) = \frac{x^n}{(n-1)!}f(x)$, then $F(h) \equiv 0 \pmod{n}$
+    \item If $G(x) = \frac{x^{n-1}}{(n-1)!}f(x)$, then $G(h) \equiv f(0) \pmod{n}$
+\end{enumerate}}
 
+\lem{}{For any polynomial $f(x) = \sum_{n = 0}^{m} a_nx^n$, if we let 
+$f^{*}(x) = \sum_{n = 0}^{m} a_nx^{n}\epsilon_n(x)$, then $e^{x}f(h) = f(x+h) + e^{|x|}f^{*}(x)$}
+
+\textbf{Step 1:} Suppose $\pi$ is algebraic, so 
+$f(\pi) = 0$ for some polynomial with integer coefficients, where
+$f(x) = b_0 + b_1x + b_2x^2 + \ldots + b_kx^k$.\\\\
+
+\medskip
+
+Notice $i\pi$ is then algebraic because if $g(x) = f(ix)f(-ix)$, then $g(i\pi) = f(-\pi)f(\pi)$, 
+but $f(\pi) = 0$, so $g(i\pi) = 0$.
+
+\medskip
+
+Additionally, observe that $\bar{g(x)} = \overline{f(ix)}\overline{f(-ix)} = f(\bar{ix})f(\bar{-ix}) = f(-ix)f(ix) = g(x)$, so $g(x)$ has real coefficients.
+
+\medskip
+
+Therefore, $i\pi$ is algebraic and $g(x)$ has real coefficients.
+
+Renaming the varaibles, we  can therefore deduce an integral 
+polynomial equa satisfied by $\pi i$: \[c_0 + c_1x + c_2x^2 + \ldots + c_mx^m = 0 \tag{4}\] for 
+some integers $c_0, c_1, \cdots$.
+
+By the Fundamental Theorem of Algebra this equation has m roots, call them 
+$\omega_1, \omega_2, \ldots, \omega_m$ including $\pi i$. Focusing on 
+the latter, by Euler formula, \[e^{\pi i} = cos \pi + i sin \pi = -1 + 0i \]
+\[ 1 + e^{\pi i} = 0 \]
+\[ e^0 + e^{\pi i} = 0 \]
+
+For the other roots as well, we  have $(e^0 + e^{\omega_1}) \cdot (e^0 + e^{\omega_2}) \cdots (e^0 + e^{\omega_m}) = 0$, 
+since at least one factor (the one corresponding to $\pi i$) is zero.
+\[ e^0 + (e^{\omega_1} + e^{\omega_2} + \ldots + e^{\omega_m}) + (e^{\omega_1}e^{\omega_2} + e^{\omega_1}e^{\omega_3} + \ldots + e^{\omega_{m-1}}e^{\omega_m}) + \ldots + (e^{\omega_1}e^{\omega_2} \cdots e^{\omega_m}) = 0 \]
+\[ e^0 + (e^{\omega_1} + e^{\omega_2} + \ldots + e^{\omega_m}) + (e^{\omega_1 + \omega_2} + e^{\omega_1 + \omega_3} + \ldots + e^{\omega_{m-1} + \omega_m}) + \ldots + (e^{\omega_1 + \omega_2 + \ldots + \omega_m}) = 0 \]
+
+Note that each term in the above expression corresponds to one of the $2^m$ subsets of the set of roots
+$\{\omega_1, \omega_2, \ldots, \omega_m\}$, and that each exponent is a symmetric integral polynomial of those
+roots. Renaming the exponents, $\alpha_1, \alpha_2, \ldots, \alpha_m$, we have
+$$ \sum_{i = 1}^{2^m} e^{\alpha_i} = 0 $$
+
+The proof will amount to showing that the left side of this equation equals a nonzero integer plus a proper
+fraction, and so cannot equal zero, giving us the contradiction that we sought.
+Recall that $\alpha_1 = 0$ and note that some of the pther $\alpha_i$  could 
+conveincably vanish as well (not all of them, since the sum of all the roots is not zero).
+We now re-index the $\alpha_i$ so that the first $n$ of them are non vanishing.
+\[ \sum_{i = 1}^{n} e^{\alpha_i} + \sum_{i = n+1}^{2^m} e^{\alpha_i} = 0 \]
+\[ \sum_{i = 1}^{n} e^{\alpha_i}  + q = 0 \text{ setting the integer } q = 2^m - n \tag{5}\]
+
+With special reference to the highest degree coefficient $c_m$ of the polynomial
+we now choose any large prime $p$ satisfying \[p > q, p > c_m, p > |(c_m\alpha_1)(c_m\alpha_2) \cdots (c_m\alpha_n)|\]
+and consider the polynomial \[ \phi(x) = \frac{c_m^{p-1}}{(p-1)!}x^{p-1}[ c_m^n (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_n)]^{p} \tag{6} \]
+whose degree is $np + p - 1$.
+
+Multiplying En 5 by $\phi(h)$ gives 
+\[ \phi(h) \sum_{i = 1}^{n} e^{\alpha_i} + \phi(h)q = 0 \]
+\[ \sum_{i = 1}^{n} \phi(h)e^{\alpha_i} + \phi(h)q = 0 \text{ since } \phi(h) \text{ is independent of } i \]
+\[ \sum_{i = 1}^{n} [\phi(\alpha_i + h) + e^{|\alpha_i|}\phi^{*}(\alpha_i)] + \phi(h)q = 0 \text{ by Lemma 11} \]
+\[ \sum_{i = 1}^{n} \phi(\alpha_i + h) + \sum_{i = 1}^{n} \phi^{*} (\alpha_i)e^{|\alpha_i|} + \phi(h)q = 0 \]
+\[ s_1 + s_2 + s_3 = 0 \text{ by way of abbrevation} \tag{7}\]\\\\
+
+(1) \textbf{We show that }$\mathbf{s_1}$ \textbf{is an integer multiple of chosen prime p}\\\\
+To evaluate $s_1$ we start with equation 6, and note that shifting the polynomial $\phi(x)$ by any of 
+the displacements $\alpha_i$ creates a net additional factor $x$ i.e. $p$ of them versus $p -1$:
+
+\[ \phi(x + \alpha_i) = \frac{c_m^{p-1}}{(p-1)!}(x + \alpha_i)^{p-1}[c_m^n(x + \alpha_i - \alpha_1)(x + \alpha_i - \alpha_2) \cdots (x + \alpha_i - \alpha_{i - 1})(x)(x + \alpha_i - \alpha_{i + 1}) \cdots (x + \alpha_i - \alpha_n)]^p \]
+\[ = \frac{x^p}{(p-1)!}c_m^{p-1}[c_m^n(x + \alpha_i - \alpha_1)(x + \alpha_i - \alpha_2) \cdots (x + \alpha_i - \alpha_{i - 1})(x + \alpha_i - \alpha_{i + 1}) \cdots (x + \alpha_i - \alpha_n)]^p \]
+Summing over all $i$ gives
+\[ \sum_{i = 1}^{n} \phi(\alpha_i + h) =  \frac{x^p}{(p-1)!} \sum_{i = 1}^{n} c_m^{p-1}[c_m^n(x + \alpha_i - \alpha_1)(x + \alpha_i - \alpha_2) \cdots (x + \alpha_i - \alpha_{i - 1})(x + \alpha_i - \alpha_{i + 1}) \cdots (x + \alpha_i - \alpha_n)]^p \]
+
+The summation portion of the right side is a polynomial in x of degree $(p-1) + (n-1)p = np - 1$.
+
+Multiplying out, and combining like terms, we get:
+
+\[ \sum_{i = 1}^{n} \phi(\alpha_i + h) = \frac{x^p}{(p-1)!}\sum_{j = 1}^{np-1} \beta_jx^j \]
+
+where each coefficient $\beta_j$ is a symmetric integral polynomial of the constants $c_m\alpha_1 c_m\alpha_2 \cdots c_m\alpha_m$. Recall
+that each $\alpha_i$ is itself a symmetric integral polynomial of $\omega_1, \omega_2,\cdots,\omega_m$, which are the roots of a polynomial
+having integer coefficients, with $c_m$ being the highest-degree coefficient. By Fundamental Theorem of Symmetric Polynomials we can conclude that
+$\beta_j$ is an integer for $j = 1, 2, \ldots, np - 1$. This allows us to apply
+Lemma 10 to the polynomial $\sum_{i = 1}^{n} \phi(\alpha_i + h)$, which gives us
+\[ \sum_{i = 1}^{n} \phi(\alpha_i + h) \equiv 0 \pmod{p} \]
+\[s_1 \equiv 0 \pmod{p} \tag{9} \]
+
+(2) \textbf{We show that }$\mathbf{s_2}$ \textbf{is an integer multiple of chosen prime p}\\\\
+We will now show that $s_2$ can be made vanishingly small by choosing the prime $p$ to be sufficiently large. To do this, we apply De Moivre's formula and the triangle inequality for complex numbers:
+\[
+|z_1 z_2| = |z_1| |z_2| \quad \text{and} \quad |x - \alpha_i| \leq |x + \alpha_i| \quad \text{for } i = 1, 2, \dots, n.
+\]
+Using this inequality, we get the bound:
+\[
+|(x - \alpha_1)(x - \alpha_2) \dots (x - \alpha_n)| \leq (|x| + |\alpha_1|)(|x| + |\alpha_2|) \dots (|x| + |\alpha_n|)
+\]
+From Eqn (6), we know:
+\[
+|\phi(x)| = |\frac{c_m^{p-1}}{(p-1)!} x^{p-1} \left[ c_m^n (x - \alpha_1)(x - \alpha_2) \dots (x - \alpha_n) \right]^p|,
+\]
+which, using the triangle inequality, gives:
+\[
+|\phi(x)| \leq \frac{|c_m|^{np + p - 1} |x|^{p-1} [(|x| + |\alpha_1|)(|x| + |\alpha_2|) \dots (|x| + |\alpha_n|)]^p.}{(p-1)!}
+\]
+As $p$ increases, the factorial term $(p-1)!$ grows faster than any polynomial involving $p$. Thus, for sufficiently large $p$, $\phi(x)$ can be made arbitrarily small:
+\[
+\phi(x) \to 0 \quad \text{as} \quad p \to \infty.
+\]
+Similarly, $\phi^*(x)$ can be made arbitrarily small because each term of $\phi^*(x)$ differs from $\phi(x)$ only by the additional factor $\epsilon_n(x)$, which is independent of $p$. Thus:
+\[
+\phi^*(x) \to 0 \quad \text{as} \quad p \to \infty.
+\]
+Therefore, the sum $s_2$ defined as:
+\[
+|s_2| = |\sum_{i=1}^{n} \phi^*(\alpha_i)e^{|\alpha_i|}| < 1 \tag{10}
+\]
+can also be made arbitrarily small by choosing $p$ sufficiently large. Hence, we conclude that $s_2$ becomes vanishingly small for large $p$.\\
+
+\textbf{Finally, we will show that $s_3$ is an integer not divisible by $p$.}\\\\
+To evaluate $s_3$, recall the definition of $\phi(x)$ from Eqn (6):
+\[
+\phi(x) = \frac{c_m^{p-1}}{(p-1)!} x^{p-1} \left[ c_m^n (x - \alpha_1)(x - \alpha_2) \dots (x - \alpha_n) \right]^p.
+\]
+\[ \phi(x) = \frac{x^{p-1}}{(p-1)!} c_m^{p-1} [c_m^n (x - \alpha_1)(x - \alpha_2) \dots (x - \alpha_n)]^p \]
+Multiplying out and combining like terms, we get:
+\[
+\phi(x) = \sum_{j=1}^{np} \gamma_j x^j,
+\]
+where each coefficient $\gamma_j$ is a symmetric integral polynomial in the constants $c_m \alpha_1, c_m \alpha_2, \dots, c_m \alpha_n$. For example, the lowest-degree coefficient is:
+\[
+\gamma_0 = (-1)^{np} c_m^{p-1} \left[ (c_m \alpha_1)^p (c_m \alpha_2)^p \dots (c_m \alpha_n)^p \right].
+\]
+By the **Fundamental Theorem of Symmetric Polynomials**, $\gamma_j$ must be an integer for $j = 0, 1, \dots, np$. 
+
+We now apply Lemma 10(b) to Eqn (11), so that $\phi(h)$ is an integer satisfying:
+\[
+\phi(h) \equiv \gamma_0 \pmod{p},
+\]
+that is,
+\[
+\phi(h) \equiv (-1)^{np} c_m^{p-1} \left[ (c_m \alpha_1)^p (c_m \alpha_2)^p \dots (c_m \alpha_n)^p \right] \pmod{p}.
+\]
+Thus, 
+\[
+s_3 = q \pmod{p}.
+\]
+Since we defined $p$ such that $p > q$, $p > c_m$, and $p > |(c_m \alpha_1)(c_m \alpha_2) \dots (c_m \alpha_n)|$, it follows that $p$ does not divide $s_3$. Therefore, $s_3 \not\equiv 0 \pmod{p}$.
+
+Combining this with Eqn (9) implies that neither is $s_1 + s_3$ congruent to 0 modulo $p$. In particular, it cannot be equal to zero:
+\[
+s_1 + s_3 \neq 0,
+\]
+and so, in absolute value:
+\[
+|s_1 + s_3| \geq 1.
+\]
+Combining this with Eqn (7), we get:
+\[
+|-s_2| \geq 1 \quad \text{or} \quad |s_2| \geq 1,
+\]
+which contradicts Eqn (10). 
+
+Thus, our original supposition that $\pi$ is algebraic was false. \textbf{QED.}
 \end{document}
 
 
