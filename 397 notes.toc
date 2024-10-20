@@ -1,0 +1,13 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Primitive Polynomial}{3}{section.1}%
+\contentsline {section}{\numberline {2}Irreducible Polynomial}{3}{section.2}%
+\contentsline {section}{\numberline {3}Algebraic Number}{6}{section.3}%
+\contentsline {section}{\numberline {4}Ring Theory}{9}{section.4}%
+\contentsline {section}{\numberline {5}Field}{12}{section.5}%
+\contentsline {section}{\numberline {6}Proof of Transcendance of Pi }{15}{section.6}%
+\contentsline {section}{\numberline {7}Gelfond - Schneider Theorem}{20}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Baker's Theorem}{22}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Application of Baker's Theorem: Linear Combinations of Logarithms and Diophantine Approximations}{22}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Degree and Height of Algebraic Numbers}{22}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Lower Bound on Linear Combinations of Logarithms}{23}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Proof of Gelfond-Schneider Theorem}{24}{subsection.7.5}%

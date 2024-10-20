@@ -2,9 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage[total={6.5in,9in}]{geometry} % set text height and width: 1-in margins all around
-\title{Algebraic Numbers \\ MAT397 , Fall 2024} % assignment title
-\date{September, 2024} % due date
-\author{SHIVANK GOEL} %% your name here (or you can just delete this line)
 \usepackage{tabularx}
 \usepackage{mdframed}
 \newenvironment{proofbox}
@@ -95,8 +92,7 @@ title=#2,#1}
 
 \usepackage{fancyhdr} % package for headers and footers
 \pagestyle{fancy}
-\lhead{SHIVANK - 1007938038} % replace this with your information
-\rhead{Assignment 4}
+
 % Definition
 \newtcbtheorem{mydefinition}{Definition}
 {
@@ -423,12 +419,24 @@ title=#2,#1}
 
 \newcommand{\ax}[1]{\operatorname{\mathsf{#1}}}
 
+\title{\vspace{3cm} \textbf{Algebraic Numbers} \\[0.5cm] \large Further Studies in Mathematics}
+\author{\textbf{Shivank Goel} \\ \textit{University of Toronto Mississauga} \\ Supervisor: Professor Marina Tvalvazade}
+\date{\vspace{2cm} Fall 2024}
 
 \begin{document}
+
+% Cover page
 \maketitle
+\thispagestyle{empty} % remove page number on cover page
+\newpage
+
+% Table of Contents (optional)
+\tableofcontents
+\newpage
 
 
-\section*{Primitive Polynomial}
+
+\section{Primitive Polynomial}
 A \textbf{primitive polynomial} is a polynomial with integer coefficients in $\mathbb{Z}[x]$ such that the greatest common divisor (GCD) of its coefficients is 1. In other words, a polynomial is primitive if its coefficients have no common prime divisor.
 
 \textbf{Example of a Primitive Polynomial:}
@@ -445,7 +453,7 @@ In this case, the GCD of the coefficients $\{2, 4, 6\}$ is 2, so this polynomial
 
 \textbf{Key Concept:} A primitive polynomial is related to the content of the polynomial, which is the GCD of its coefficients. If the content is 1, the polynomial is primitive.
 
-\section*{Irreducible Polynomial}
+\section{Irreducible Polynomial}
 A \textbf{polynomial is irreducible} if it cannot be factored into the product of two non-constant polynomials with coefficients in the same ring (e.g., $\mathbb{Z}[x]$ or $\mathbb{Q}[x]$).
 
 \textbf{Example of an Irreducible Polynomial (over $\mathbb{Q}$):}
@@ -462,13 +470,12 @@ Here, $g(x)$ can be factored into two polynomials of degree 1, so it is not irre
 
 \textbf{Key Concept:} Irreducibility refers to the inability to factor a polynomial into lower-degree polynomials with coefficients in the same field or ring.
 
-\section*{Summary of Differences}
+\section*{Summary}
 \begin{itemize}
     \item \textbf{Primitive Polynomial}: Focuses on the \textbf{coefficients} of the polynomial. A polynomial is primitive if the GCD of its coefficients is 1.
     \item \textbf{Irreducible Polynomial}: Focuses on the \textbf{factorization} of the polynomial. A polynomial is irreducible if it cannot be factored into the product of two non-constant polynomials with coefficients in the same field or ring.
 \end{itemize}
 
-\section*{Combining the Concepts}
 A polynomial can be both primitive and irreducible, but these properties are independent of each other:
 \begin{itemize}
     \item A polynomial can be \textbf{primitive but reducible}, e.g., 
@@ -542,7 +549,7 @@ In other words, Reducibility over $Q$ implies reducibility over $Z$.
     This completes the proof.
     \end{proofbox}
 
-    \section*{Algebraic Number}
+    \section{Algebraic Number}
     \defn{Algebraic Number}{$x$ is algbraic if $x$ is root of 
     polynomial with integer coefficient, i.e.
     there are integers $a_n$, $a_{n-1}$, $\ldots$, $a_0$ such that
@@ -571,118 +578,81 @@ In other words, Reducibility over $Q$ implies reducibility over $Z$.
     \ex{}{For example, for \( \sqrt{2} \), the minimal polynomial is \( x^2 - 2 \), since this is the simplest polynomial with rational coefficients that has \( \sqrt{2} \) as a root.
     As $x^2 - 2$ is irreducible over $\mathbb{Q}$, it is the unique minimal polynomial for $\sqrt{2}$. (if we factor it, we get $x^2 - 2 = (x - \sqrt{2})(x + \sqrt{2})$ i.e. it is reducible over $\mathbb{R}$ but not over $\mathbb{Q}$.)}
 
-    \thm{9.8}{For any algebraic number \( g \), there is a unique irreducible monic polynomial over \( \mathbb{Q} \) such that:
+    \thm{}{For any algebraic number \( g \), there is a unique irreducible monic polynomial over \( \mathbb{Q} \) such that:
     \begin{enumerate}
         \item \( g \) satisfies the polynomial equation \( g(x) = 0 \),
         \item Any other polynomial over \( \mathbb{Q} \) that has \( g \) as a root is divisible by \( g(x) \).
     \end{enumerate}}
     \begin{proofbox}
-     
-\textbf{Step 1: Finding the Polynomial of Lowest Degree}
+ 
 Since \( g \) is an algebraic number, it satisfies some polynomial equation with rational coefficients. Out of all such polynomials, let’s choose one of the lowest degree, say \( G(x) \), such that \( G(g) = 0 \). If \( G(x) \) is not monic, we divide it by its leading coefficient to create a monic polynomial \( g(x) \). Now, \( g(x) \) is a monic polynomial of the lowest degree that has \( g \) as a root.
 
-\textbf{Step 2: Proving that \( g(x) \) is Irreducible}
 We now show that \( g(x) \) is irreducible over \( \mathbb{Q} \). Suppose, for contradiction, that \( g(x) \) can be factored as:
-
 \[
 g(x) = h_1(x) h_2(x)
 \]
-
 where \( h_1(x) \) and \( h_2(x) \) are lower-degree polynomials with rational coefficients. Since \( g \) is a root of \( g(x) \), one of \( h_1(g) = 0 \) or \( h_2(g) = 0 \) must be true. This would contradict the fact that \( g(x) \) was chosen to have the lowest degree, since \( h_1(x) \) or \( h_2(x) \) would have a smaller degree than \( g(x) \). Hence, \( g(x) \) must be irreducible.
 
-\textbf{Step 3: Any Polynomial with \( g \) as a Root is Divisible by \( g(x) \)}
 Now, let \( f(x) \) be any polynomial over \( \mathbb{Q} \) that has \( g \) as a root (i.e., \( f(g) = 0 \)). Using the division algorithm for polynomials, we can write:
-
 \[
 f(x) = g(x) q(x) + r(x)
 \]
-
 where \( r(x) \) is a remainder with degree smaller than that of \( g(x) \). Since \( f(g) = g(g) = 0 \), it follows that:
-
 \[
 0 = f(g) = g(g) q(g) + r(g) = 0 + r(g)
 \]
-
 which implies that \( r(g) = 0 \). Since the degree of \( r(x) \) is less than that of \( g(x) \), the only way this is possible is if \( r(x) = 0 \). Therefore, \( f(x) \) must be divisible by \( g(x) \).
 
-\textbf{Step 4: Proving Uniqueness of \( g(x) \)}
 Finally, let's assume there is another irreducible monic polynomial, say \( g_1(x) \), such that \( g_1(g) = 0 \). Since \( g_1(x) \) has \( g \) as a root, and \( g(x) \) is the minimal polynomial, we know \( g_1(x) \) must divide \( g(x) \) and vice versa. Since both polynomials are irreducible and monic, this implies that \( g_1(x) = g(x) \). Thus, \( g(x) \) is unique.
 
-\textbf{Conclusion}
-For any algebraic number \( g \), there exists a unique irreducible monic polynomial over \( \mathbb{Q} \), and any other polynomial over \( \mathbb{Q} \) with \( g \) as a root is divisible by this minimal polynomial.
+Therefore, for any algebraic number \( g \), there exists a unique irreducible monic polynomial over \( \mathbb{Q} \), and any other polynomial over \( \mathbb{Q} \) with \( g \) as a root is divisible by this minimal polynomial.
     \end{proofbox}
+
     \defn{Degree of an Algebraic Number}{The degree of an algebraic number is the degree of its minimal polynomial over $\mathbb{Q}$.}
     \ex{}{The degree of $\sqrt{2}$ is 2, as its minimal polynomial is $x^2 - 2$.}
 
 
-\thm{9.9}{Among the rational numbers, the only ones that are algebraic
+\thm{}{Among the rational numbers, the only ones that are algebraic
 integers are the integers 0, $\pm 1$, $\pm 2$, $\pm 3$, $\ldots$}
 \begin{proofbox}
-   Step 1: Integers Are Algebraic Integers
-    Any regular integer \( m \) is an algebraic integer because it satisfies the monic polynomial \( x - m = 0 \). This is a monic polynomial (the leading coefficient is 1) with integer coefficients, so by definition, every integer is an algebraic integer.
+   Any integer \( m \) is an algebraic integer because it satisfies the monic polynomial \( x - m = 0 \), which has integer coefficients.
     
-   Step 2: Rational Numbers that Are Algebraic Integers Must Be Integers
-    Now, let’s suppose we have a rational number \( \frac{m}{q} \) (where \( m \) and \( q \) are integers and \( \gcd(m, q) = 1 \), meaning they have no common factors other than 1). We want to see if this rational number can be an algebraic integer.
-    
-    - Since \( \frac{m}{q} \) is an algebraic integer, it must satisfy a monic polynomial with integer coefficients:
-    
+    Now, consider a rational number \( \frac{m}{q} \), where \( m \) and \( q \) are integers and \( \gcd(m, q) = 1 \). If \( \frac{m}{q} \) is an algebraic integer, it must satisfy a monic polynomial with integer coefficients:
     \[
     \left( \frac{m}{q} \right)^n + b_{n-1} \left( \frac{m}{q} \right)^{n-1} + \dots + b_0 = 0
     \]
-    
-    where \( b_{n-1}, \dots, b_0 \) are integers. 
-    
-    - Multiplying through by \( q^n \) to clear the denominators:
-    
+    where \( b_{n-1}, \dots, b_0 \) are integers. Multiplying through by \( q^n \) to clear the denominators, we obtain:
     \[
     m^n + b_{n-1} m^{n-1} q + \dots + b_0 q^n = 0
     \]
-    
-    Now, observe that this equation implies \( q \) must divide \( m^n \) (the first term on the left-hand side). Since \( m \) and \( q \) have no common factors (we assumed \( \gcd(m, q) = 1 \)), the only way \( q \) can divide \( m^n \) is if \( q = \pm 1 \).
-    
-    - Therefore, \( \frac{m}{q} \) must be an integer because \( q = \pm 1 \).
-    
-    Conclusion:
-    This shows that the only rational numbers that are algebraic integers are the integers themselves, \( 0, \pm 1, \pm 2, \dots \).
-    
-    Additional Explanation:
-    - The term rational integer is used in algebraic number theory to distinguish regular integers from other types of algebraic integers that are not rational numbers. For example, \( \sqrt{2} \) is an algebraic integer because it satisfies the equation \( x^2 - 2 = 0 \), but it’s not a **rational integer** because it’s not a rational number.
-    
-     Example:
-    - Rational integer: 2, because it satisfies \( x - 2 = 0 \), and it’s also a rational number.
-    - Algebraic integer but not a rational integer: \( \sqrt{2} \), because it satisfies \( x^2 - 2 = 0 \), but it’s not a rational number.
-    
-    Thus, the integers are the only rational numbers that can be algebraic integers.
+    This implies that \( q \) must divide \( m^n \). Since \( \gcd(m, q) = 1 \), the only possibility is \( q = \pm 1 \), which means \( \frac{m}{q} \) must be an integer.\\\\
+        \textbf{Example:}
+    - A rational integer: \( 2 \), because it satisfies \( x - 2 = 0 \) and is a rational number.\\
+    - An algebraic integer but not a rational integer: \( \sqrt{2} \), because it satisfies \( x^2 - 2 = 0 \), but is not a rational number.
 \end{proofbox}
 
-\thm{9.10}{The minimal equation of an algebraic integer is monic with
+\thm{}{The minimal equation of an algebraic integer is monic with
 integral coefficients.}
 \begin{proofbox}
+    By definition, the minimal polynomial of an algebraic integer is \textbf{monic}, meaning its leading coefficient is 1. Therefore, it is assumed from the start that the polynomial is monic.
 
-    \textbf{Step 1: The Equation is Monic by Definition}
-    By definition, the minimal polynomial of an algebraic integer is \textbf{monic}, meaning its leading coefficient is 1. Therefore, there is no need to prove that the polynomial is monic, as it is assumed from the start.
-    
-    \textbf{Step 2: Showing that the Coefficients are Integers}
-    Let \( g \) be an algebraic integer. Since \( g \) is an algebraic integer, it satisfies some polynomial equation with \textbf{integer coefficients}. Let this polynomial be \( f(x) \), such that:
-    
+    Now, let \( g \) be an algebraic integer. Since \( g \) is an algebraic integer, it satisfies some polynomial equation with \textbf{integer coefficients}. Let this polynomial be \( f(x) \), such that:
     \[
     f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 = 0
     \]
-    
     where \( a_n, a_{n-1}, \dots, a_0 \) are integers.
     
-    Let \( g(x) = 0 \) be the minimal polynomial of \( g \), which is \textbf{monic} and \textbf{irreducible} over \( \mathbb{Q} \). By \textbf{Theorem 9.8}, the minimal polynomial \( g(x) \) divides any polynomial with \( g \) as a root. Therefore, \( g(x) \) divides \( f(x) \), which gives:
-    
+    Let \( g(x) = 0 \) be the minimal polynomial of \( g \), which is \textbf{monic} and \textbf{irreducible} over \( \mathbb{Q} \). By Theorem 2, the minimal polynomial \( g(x) \) divides any polynomial with \( g \) as a root. Therefore, \( g(x) \) divides \( f(x) \), giving:
     \[
     f(x) = g(x) h(x)
     \]
+    where \( h(x) \) is another polynomial, and both \( g(x) \) and \( h(x) \) have rational coefficients. Since \( f(x) \) has integer coefficients, by Gauss's Lemma, if a monic polynomial with rational coefficients divides a polynomial with integer coefficients, the dividing polynomial must have integer coefficients as well.
     
-    where \( h(x) \) is another polynomial, and both \( g(x) \) and \( h(x) \) have rational coefficients. Since \( f(x) \) is monic and has integer coefficients, \( g(x) \) and \( h(x) \) must be monic as well.
+    Thus, the minimal polynomial \( g(x) \) of the algebraic integer \( g \) must have integer coefficients.
     
-     By \textbf{Gauss Lemma}, if a monic polynomial with rational coefficients divides a polynomial with integer coefficients, then the dividing polynomial must have integer coefficients. Hence, the minimal polynomial \( g(x) \) of the algebraic integer \( g \) must have integer coefficients.
 \end{proofbox}
 
-\thm{9.11}{Let \( n \) be a positive rational integer, and \( g \) a complex number. Suppose we have a system of \( n \) equations involving complex numbers \( \theta_1, \theta_2, \dots, \theta_n \), not all zero, given by:
+\thm{}{Let \( n \) be a positive rational integer, and \( g \) a complex number. Suppose we have a system of \( n \) equations involving complex numbers \( \theta_1, \theta_2, \dots, \theta_n \), not all zero, given by:
 \[
 g \theta_j = a_{j,1} \theta_1 + a_{j,2} \theta_2 + \dots + a_{j,n} \theta_n, \quad j = 1, 2, \dots, n
 \]
@@ -693,7 +663,7 @@ where \( a_{j,i} \) are rational numbers. Then:
 \end{enumerate}
 }
 
-\thm{9.12}{If $\alpha$ and $\beta$ are 
+\thm{}{If $\alpha$ and $\beta$ are 
 algebraic numbers, then so are $\alpha + \beta$ and $\alpha \beta$. If 
 $\alpha$ and $\beta$ are algebraic integers, then so are $\alpha + \beta$ and $\alpha \beta$.}
 
@@ -918,7 +888,7 @@ algebraic integers forms a ring.}
         \item \textbf{Distributive property}: Algebraic integers satisfy the distributive property since complex numbers do.
     \end{itemize}
     
-    However, **algebraic integers do not necessarily have multiplicative inverses** that are also algebraic integers. For example, the inverse of \( 2 \) is \( 1/2 \), which is an algebraic number but not an algebraic integer.
+    However, algebraic integers do not necessarily have multiplicative inverses that are also algebraic integers. For example, the inverse of \( 2 \) is \( 1/2 \), which is an algebraic number but not an algebraic integer.
     
     Thus, the set of algebraic integers forms a \textbf{ring}, not a field, because it lacks multiplicative inverses for all elements.
     
@@ -1091,8 +1061,468 @@ Combining this with Eqn (7), we get:
 which contradicts Eqn (10). 
 
 Thus, our original supposition that $\pi$ is algebraic was false. \textbf{QED.}
+
+
+\section{Gelfond - Schneider Theorem}
+
+\thm{Gelfond-Schneider Theorem}{If $\alpha$ and $\beta$ are algebraic numbers, with $\alpha \neq 0, 1$, and $\beta$ irrational, then $\alpha^{\beta}$ is transcendental.}
+
+(i) If $l, \beta$ are complex numbers with $l \neq 0$, $\beta \not\in Q$ then at least one of 
+$e^{l}$, $\beta$, $e^{\beta l}$ is transcendental.\\\\
+(ii) If $\alpha$, $\beta$ are non zero algebraic numners with $\log \alpha$ and 
+$\log \beta$ linearly independent over $Q$, then $\log \alpha$ and $\log \beta$ are 
+linearly independent over algebraic numbers.\\\\
+
+We shall show that above theorem and the statements (i) and (ii) are equivalent.\\\\
+
+\textbf{ Thm $\Rightarrow$ (i) }\\\\
+Take $\alpha = e^{l}$ ($ l \in$ complex numbers), then clearly $\alpha \neq 0$,
+$\alpha \neq 1$ because exponential function never takes these values except 
+at $l = 0$ but we are excluding that case. 
+
+Now let $\beta$ be any algebraic number that is not rational $(\beta \not\in Q)$.
+Then by Gelfond-Schneider theorem, $\alpha^{\beta} = e^{l\beta}$ is transcendental. This means 
+that at least one of $e^{l}$, $\beta$, $e^{l\beta}$ is transcendental.\\\\
+
+\textbf{ (i) $\Rightarrow$ (ii) }\\\\
+In (ii) we  assume $log \alpha$ and $log \beta$ are linearly  independent, i.e. 
+there are no trivial rational numbers $q_1, q_2$ such that $q_1log \alpha + q_2log \beta = 0$.
+
+If $\log \alpha$ and $\log \beta$ are linearly independent then $\frac{\log \alpha}{\log \beta} \not\in Q$.
+As if they were, then $\log \alpha = q\log \beta$ for some rational number $q$, which would imply that
+$\log \alpha - q\log \beta = 0$, contradicting the linear independence of $\log \alpha$ and $\log \beta$.
+
+Let $l = \log \beta$ and $\beta_0 = \frac{\log \alpha}{\log \beta}$. \\\\
+According to (i), since $l$ and $\beta_0$ are complex numbers with $l \neq 0$ and $\beta_0 \not\in Q$, at least one of $e^{l}$, $\beta_0$, $e^{l\beta_0}$ is transcendental.\\\\
+This means $\beta_0$ is transcendental because: \\\\
+(1.) $e^l = e^{\log \beta} = \beta$ is algebraic, and \\\\
+(2.) $e^{l\beta_0} = e^{\log \alpha} = \alpha$ is algebraic.\\\\
+
+As $\beta_0$ is transcendental and therefore there cannot be any non trivial relation 
+between $\log \alpha$ and $\log \beta$ over the algebraic numbers. This implies that
+$\log \alpha$ and $\log \beta$ are linearly independent over the algebraic numbers.\\\\
+
+
+(ii) $\Rightarrow$ Thm\\\\
+
+$\beta_0 = e^{\beta \log \alpha}$ i.e. $\alpha^{\beta} = e^{\beta \log \alpha}$.\\\\
+By (ii) if $\log \alpha$ and $\log \beta_0$ are linealry dependent over algebraic numbers, then
+$\log \alpha$ and $\log \beta$ are linearly dependent over $Q$.\\\\
+But by assumption of the thoerem, then $\beta \not \in Q \implies \log \alpha$ and $\log \beta_0$ cannot be 
+linearly dependennt over $Q$.\\\\
+Therefore if $\beta \not\in Q$ this leads to contradiction because 
+$\log \alpha$ and $\log \beta_0$ should be L.D. over $Q$ based on (ii) but they cannot be 
+as $\beta \not\in Q$. This contradicts $\alpha^{\beta} = e^{\beta \log \alpha}$ must be transcendental.\\\\
+Lang proved a result, similar to statement (i) above.\\
+\thm{Lang's Theorem}{Suppose $l_1$, $l_2$, and $l_3$ are linearly independent over the rationals and that $\beta_1$ and
+$\beta_2$ are linearly independent over the rationals. Then at least one of the numbers 
+$e^{l_i \beta_j}$ (for $i, j = 1,2,3$) is transcendental.}
+
+\textbf{The Brownawell - Waldschmidt result :} The result is similar to Lang's 
+theorem, it states that among the numbers that can be formed by taking exponentials of the number 
+$e$, (like $e^{e}$, $e^{e^{2}}$, and so on), at least one of them is transcendental.\\\\
+
+\subsection{Baker's Theorem}
+\thm{Baker's Theorem}{Let $\alpha_1, \alpha_2, \dots, \alpha_m$ be non-zero algebraic numbers, and suppose that the logarithms $\log \alpha_1, \log \alpha_2, \dots, \log \alpha_m$ are linearly independent over the rationals. Then, these logarithms are also linearly independent over the algebraic numbers.}
+
+\textbf{Explanation:} 
+
+Baker's Theorem is significant because it extends the Gelfond-Schneider Theorem, which dealt with two algebraic numbers $\alpha$ and $\beta$. Baker's result tells us that if the logarithms of multiple algebraic numbers are linearly independent over the rationals, then no non-trivial linear combination of these logarithms with algebraic coefficients can be zero. This implies that many combinations of logarithms of algebraic numbers are \emph{transcendental}, thus expanding the class of known transcendental numbers.\\\\
+\subsection{Application of Baker's Theorem: Linear Combinations of Logarithms and Diophantine Approximations}
+
+One of the key applications of results like Baker's Theorem is in studying how "far from zero" a linear combination of logarithms of algebraic numbers can be. Specifically, consider a linear combination of the form:
+
+\[
+L = q_1 \log \alpha_1 + q_2 \log \alpha_2 + \dots + q_m \log \alpha_m
+\]
+
+where $\alpha_1, \alpha_2, \dots, \alpha_m$ are algebraic numbers, and $q_1, q_2, \dots, q_m$ are coefficients (rational or algebraic). Baker's Theorem tells us that if the logarithms are linearly independent over the rationals, then the combination $L$ cannot be exactly zero unless all the $q_i$ are zero.
+
+The interesting question, however, is: \emph{How close can $L$ be to zero if it is not exactly zero?}
+
+This question is fundamental in understanding \emph{Diophantine approximations}, which deal with how well algebraic numbers (or expressions involving them) can be approximated by rational numbers or other algebraic expressions.
+
+
+\subsection{Degree and Height of Algebraic Numbers}
+
+To answer the question of how "far from zero" a linear combination like $L$ can be, we introduce two important measures for algebraic numbers: \emph{degree} and \emph{height}.
+
+\defn{Degree of an Algebraic Number}{Let $\alpha$ be an algebraic number. The \emph{degree} of $\alpha$ is the degree of the minimal polynomial $f(x)$ over $\mathbb{Z}$ that $\alpha$ satisfies, i.e., the irreducible polynomial:}
+\[
+f(x) = a_d x^d + a_{d-1} x^{d-1} + \dots + a_1 x + a_0
+\]
+
+where $a_d \neq 0$ and $f(x) \in \mathbb{Z}[x]$. The degree $d$ is the degree of this polynomial.
+
+\defn{Height of an Algebraic Number}{
+Let $\alpha$ be an algebraic number that satisfies an irreducible polynomial $f(x)$ over the integers as defined above. The \emph{height} of $\alpha$ is defined as the maximum absolute value of the coefficients of $f(x)$, i.e.,
+\[
+A = \max_{0 \leq j \leq d} |a_j|
+\]
+
+where $a_j$ are the coefficients of the minimal polynomial $f(x)$.}
+
+\textbf{Why Degree and Height Matter:}
+
+The \emph{degree} and \emph{height} of an algebraic number help us quantify how complicated the number is. In the context of Diophantine approximations, these measures allow us to give precise bounds on how close a linear combination of logarithms of algebraic numbers can get to zero.
+
+In particular, Baker's method can be used to give explicit lower bounds on non-zero linear combinations of logarithms, which ensures that such combinations are not too close to zero. This has important implications in areas of number theory where precise approximations are required, such as in solving Diophantine equations.
+
+\subsection{Lower Bound on Linear Combinations of Logarithms}
+\thm{Lower Bound on Linear Combinations of Logarithms}{Let $\alpha_1, \dots, \alpha_r$ be non-zero algebraic numbers with degrees at most $d$ and heights at most $A$. Let $\beta_0, \beta_1, \dots, \beta_r$ be algebraic numbers with degrees at most $d$ and heights at most $B > 1$. Suppose that:
+
+\[
+\Lambda = \beta_0 + \beta_1 \log \alpha_1 + \dots + \beta_r \log \alpha_r \neq 0.
+\]
+
+Then, there exist constants $C = C(r, d) > 0$ and $w = w(r) \geq 1$ such that:
+\[
+|\Lambda| > B^{-C(\log A)^w}.
+\]}
+
+\textbf{Explanation:}\\\\
+
+
+This theorem gives a lower bound for the absolute value of $\Lambda$, a linear combination of logarithms of algebraic numbers. The key components of the theorem are as follows:
+
+\begin{itemize}
+    \item $\alpha_1, \dots, \alpha_r$ are non-zero algebraic numbers with bounded degrees (at most $d$) and heights (at most $A$).
+    \item $\beta_0, \beta_1, \dots, \beta_r$ are algebraic coefficients with bounded degrees (at most $d$) and heights (at most $B$).
+    \item $\Lambda$ represents a linear combination of the form:
+    \[
+    \Lambda = \beta_0 + \beta_1 \log \alpha_1 + \dots + \beta_r \log \alpha_r.
+    \]
+    If $\Lambda \neq 0$, the theorem guarantees that $\Lambda$ cannot be arbitrarily small; it is bounded below by the expression $B^{-C(\log A)^w}$.
+\end{itemize}
+
+Recall that the \emph{degree} of an algebraic number $\alpha$ is the degree of its minimal polynomial over $\mathbb{Z}$, and the \emph{height} of $\alpha$ is the maximum absolute value of the coefficients of this minimal polynomial.
+
+The theorem applies to algebraic numbers whose degrees and heights are controlled:
+\begin{itemize}
+    \item The degrees of the $\alpha_i$ and $\beta_i$ are bounded by $d$.
+    \item The heights of the $\alpha_i$ are bounded by $A$, and the heights of the $\beta_i$ are bounded by $B > 1$.
+\end{itemize}
+
+The constants $C$ and $w$ depend only on the number of terms in the linear combination $r$ and the degrees of the algebraic numbers $d$. These constants ensure that the lower bound for $|\Lambda|$ remains significant, even as $A$ and $B$ grow.\\\\
+Above theorem is a quantitative result that has important applications in Diophantine approximation. It shows that linear combinations of logarithms of algebraic numbers cannot approach zero too closely, unless they are zero. The degree and height of the algebraic numbers involved dictate how small $\Lambda$ can be.
+
+\subsection{Proof of Gelfond-Schneider Theorem}
+
+General outline: \\\\
+The general approach to proving the Gelfond-Schneider Theorem relies on a contradiction. Suppose that $\alpha^\beta$ is algebraic. The goal is to deduce that this assumption leads to the conclusion that $\beta \in \mathbb{Q}$, which contradicts the hypothesis that $\beta \notin \mathbb{Q}$.
+
+The proof can be broken down into several key steps:
+\begin{itemize}
+    \item We begin by assuming that $\alpha^\beta$ is algebraic, and we aim to show that $\beta \in \mathbb{Q}$.
+    \item First, we reduce the problem to the special case where both $\alpha > 0$ and $\beta$ are real numbers.
+    \item Next, we establish several lemmas that will be used to bound the number of real roots of certain functions involving exponential terms.
+    \item These bounds will eventually lead to a contradiction, which will complete the proof.
+\end{itemize}
+
+The core of the proof uses properties of polynomials, exponentials, and logarithms of algebraic numbers. It also makes use of Rolle's Theorem, the Maximum Modulus Principle from complex analysis, and some combinatorial arguments.\\\\
+\textbf{The Special Case: $\alpha > 0$ and $\beta$ are Real}
+
+We start by considering the special case where $\alpha > 0$ and both $\alpha$ and $\beta$ are real. To establish the result, it suffices to show that if $\alpha^\beta$ is algebraic, then $\beta \in \mathbb{Q}$.
+
+Since $\alpha^\beta$ is algebraic, observe that $\alpha^{s_1 + s_2 \beta}$ is also an algebraic number for all integers $s_1$ and $s_2$. Thus, the behavior of expressions involving $\alpha$ and $\beta$ can be analyzed using properties of logarithms and exponentials.
+
+The strategy is to show that there exist distinct pairs of integers $(s_1, s_2)$ and $(s_1', s_2')$ such that:
+\[
+s_1 + s_2 \beta = s_1' + s_2' \beta.
+\]
+This would imply that $\beta$ is a rational number, which contradicts the assumption that $\beta \notin \mathbb{Q}$.
+
+\lem{Lemma 1}{Let $a_1(t), a_2(t), \dots, a_n(t)$ be non-zero polynomials in $\mathbb{R}[t]$ of degrees $d_1, d_2, \dots, d_n$, respectively. Let $w_1, w_2, \dots, w_n$ be distinct real numbers. Then the function:
+\[
+F(t) = \sum_{j=1}^n a_j(t) e^{w_j t}
+\]
+has at most $d_1 + d_2 + \dots + d_n + n - 1$ real zeroes (counting multiplicities).
+}
+\textbf{Lemma Explanation:}\\\\
+This lemma provides an upper bound on the number of real roots for a function that is a sum of polynomials multiplied by distinct exponential terms. Each \( a_j(t) \) is a polynomial, and each \( e^{w_j t} \) is an exponential with a distinct real exponent \( w_j \). The lemma tells us that the total number of real roots (where \( F(t) = 0 \)) cannot exceed the sum of the degrees of the polynomials plus \( n - 1 \), where \( n \) is the number of terms in the sum.
+
+The distinct exponents \( w_j \) ensure that the exponential functions grow at different rates, which limits the number of real roots the function can have. This is important in applications where we need to bound the number of real solutions to transcendental equations involving both polynomial and exponential terms.\\\\
+\textbf{Example to Illustrate the Lemma:}\\\\
+Consider the polynomials:
+
+\[
+a_1(t) = t + 1 \quad \text{and} \quad a_2(t) = 2,
+\]
+
+and the distinct real exponents \( w_1 = 1 \) and \( w_2 = 2 \). According to the lemma, the function:
+
+\[
+F(t) = (t + 1) e^t + 2 e^{2t}
+\]
+
+should have at most \( d_1 + d_2 + n - 1 = 1 + 0 + 2 - 1 = 2 \) real roots, where \( d_1 = 1 \) is the degree of \( a_1(t) \), \( d_2 = 0 \) is the degree of \( a_2(t) \), and \( n = 2 \) is the number of terms.
+
+\textbf{Analyzing the roots of \( F(t) = 0 \):}
+We can factor out the exponential term \( e^t \) from the expression for \( F(t) \):
+
+\[
+F(t) = e^t \left( (t + 1) + 2 e^t \right).
+\]
+
+Since \( e^t \) is never zero, we can reduce the equation to solving:
+
+\[
+(t + 1) + 2 e^t = 0.
+\]
+
+This equation does not have a simple algebraic solution, so we use numerical methods to estimate the real roots.
+
+At \( t = -1 \), we have:
+
+\[
+(-1 + 1) + 2 e^{-1} = 0 + \frac{2}{e} > 0.
+\]
+
+At \( t = -2 \), we have:
+
+\[
+(-2 + 1) + 2 e^{-2} = -1 + \frac{2}{e^2} \approx -1 + 0.27 < 0.
+\]
+
+Thus, by the Intermediate Value Theorem, there is a root between \( t = -2 \) and \( t = -1 \).
+
+At \( t = 0 \), we have:
+
+\[
+(0 + 1) + 2 e^0 = 1 + 2 = 3.
+\]
+
+At \( t = -3 \), we have:
+
+\[
+(-3 + 1) + 2 e^{-3} = -2 + \frac{2}{e^3} \approx -2 + 0.1 < 0.
+\]
+
+Thus, by the Intermediate Value Theorem again, there is another root between \( t = -3 \) and \( t = -2 \).
+
+\textbf{Conclusion:} 
+We found two real roots for the function \( F(t) = (t + 1) e^t + 2 e^{2t} \), which matches the prediction of Lemma 14. According to the lemma, the function could have at most 2 real roots, and that is exactly what we found.
+
+This example illustrates how the lemma provides an upper bound on the number of real roots when combining polynomials and exponential functions with distinct exponents.\\\\
+\textbf{Proof of Lemma 1:}\\\\
+
+\begin{proofbox}
+
+We prove Lemma 14 by induction on the total degree of the polynomials involved, defined as:
+\[
+k = d_1 + d_2 + \dots + d_n + n.
+\]
+
+\textbf{Base Case (k = 1):} If $k = 1$, then $n = 1$ and $d_1 = 0$, meaning that $a_1(t)$ is a constant polynomial. In this case, $F(t) = a_1 e^{w_1 t}$, and the lemma easily holds since $F(t)$ has at most one real root.
+
+\textbf{Inductive Step:} Assume that the lemma holds for all cases where $k < \ell$. Now, we must show that it holds when $k = \ell$.
+
+Let $N$ be the number of real roots of $F(t)$. By \textbf{Rolle's Theorem}, the number of real roots of the derivative $F'(t)$ is at least $N - 1$. We now compute the derivative of $F(t)$:
+\[
+F'(t) = \sum_{j=1}^n \left( a_j'(t) + w_j a_j(t) \right) e^{w_j t}.
+\]
+Define new polynomials:
+\[
+b_j(t) = a_j'(t) + w_j a_j(t),
+\]
+so that:
+\[
+F'(t) = \sum_{j=1}^n b_j(t) e^{w_j t}.
+\]
+
+For $j = 1, 2, \dots, n-1$, the degree of $b_j(t)$ is equal to $d_j$. For $j = n$, since $w_n = 0$, the degree of $b_n(t)$ is one less than the degree of $a_n(t)$.
+
+By the inductive hypothesis, $F'(t)$ has at most $d_1 + d_2 + \dots + d_n + n - 2$ real roots. Therefore, by Rolle's Theorem:
+\[
+N - 1 \leq d_1 + d_2 + \dots + d_n + n - 2,
+\]
+which implies:
+\[
+N \leq d_1 + d_2 + \dots + d_n + n - 1.
+\]
+Thus, the lemma is proven.\\\\
+    
+\end{proofbox}
+
+
+\lem{Lemma 2}{Suppose \( f(z) \) is an analytic function inside the disk \( D = \{ z : |z| < R \} \), and suppose it is continuous on the boundary of the disk \( \{ z : |z| = R \} \). Then, for all \( z \in D \), we have:
+\[
+|f(z)| \leq |f|_R,
+\]
+where \( |f|_R \) denotes the maximum value of \( |f(z)| \) on the boundary of the disk \( \{ z : |z| = R \} \).
+}
+
+This lemma is a version of the Maximum Modulus Principle, a fundamental result in complex analysis. It tells us that if a function \( f(z) \) is analytic in a region (here, the disk \( D \)) and continuous on the boundary of that region, then the maximum value of \( |f(z)| \) inside the disk occurs on the boundary. In other words, the function cannot have a larger absolute value inside the disk than it does on the boundary.
+
+\lem{Lemma 3: Upper Bound on Determinants of Analytic Functions}{
+    Let \( f_1(z), f_2(z), \dots, f_L(z) \) be analytic functions inside the disk \( D = \{ z : |z| < R \} \) and continuous on the boundary \( \{ z : |z| \leq R \} \). Let \( \zeta_1, \dots, \zeta_L \) be points such that \( |\zeta_j| \leq r \) for each \( j \), where \( 1 \leq r \leq R \). 
+
+The determinant \( \Delta \) of the matrix:
+
+\[
+\Delta = \det
+\begin{pmatrix}
+f_1(\zeta_1) & \cdots & f_L(\zeta_1) \\
+\vdots & \ddots & \vdots \\
+f_1(\zeta_L) & \cdots & f_L(\zeta_L)
+\end{pmatrix}
+\]
+
+satisfies the bound:
+
+\[
+|\Delta| \leq \left( \frac{R}{r} \right)^{-\frac{L(L-1)}{2}} L! \prod_{\lambda=1}^{L} |f_{\lambda}|_R,
+\]
+where \( |f_{\lambda}|_R \) denotes the maximum value of \( |f_{\lambda}(z)| \) on the boundary of the disk \( |z| = R \).
+}
+
+\textbf{Explanation of Lemma 3:}\\\\
+This lemma provides an upper bound on the absolute value of the determinant \( \Delta \), which is formed by evaluating a set of analytic functions \( f_1(z), f_2(z), \dots, f_L(z) \) at specific points \( \zeta_1, \dots, \zeta_L \) inside the disk.
+
+The determinant \( \Delta \) measures how "independent" the values of these functions are at the points \( \zeta_1, \dots, \zeta_L \). If the determinant is zero, it means the functions are linearly dependent at those points.
+
+\emph{Bound on \( \Delta \):} The lemma shows that \( |\Delta| \), the absolute value of the determinant, is bounded by the product of the maximum values of the functions on the boundary \( |z| = R \), scaled by the ratio \( \frac{R}{r} \), where \( r \) is the distance of the points \( \zeta_j \) from the origin.\\\\
+\textbf{Why This is Important:} 
+The determinant \( \Delta \) appears in many applications of transcendental number theory, and bounding its size is crucial for proving results like the Gelfond-Schneider theorem. The lemma uses properties of analytic functions, such as their maximum modulus (Lemma 2), to control the size of \( \Delta \).
+
+In particular, the ratio \( \frac{R}{r} \) reflects how the size of the disk and the location of the points \( \zeta_1, \dots, \zeta_L \) influence the determinant. As the points \( \zeta_j \) approach the boundary (i.e., as \( r \to R \)), the determinant becomes more sensitive to the values of the functions.
+Lemma 3 gives an essential tool for controlling the size of determinants involving analytic functions, particularly when the functions are evaluated at points inside a disk. \\\\
+\textbf{Proof of Lemma 3:}\\\\
+\begin{proofbox}
+    
+Let \( h(z) \) be the determinant of the \( L \times L \) matrix whose entries are \( f_j(\zeta_i z) \), for \( 1 \leq i, j \leq L \). That is,
+
+\[
+h(z) = \det(f_j(\zeta_i z)).
+\]
+
+This function \( h(z) \) is analytic inside the disk \( D_0 = \{ z : |z| < R/r \} \) and continuous on the boundary \( |z| = R/r \). Our goal is to bound \( |h(z)| \).\\\\
+We begin by expanding \( f_j(\zeta_i z) \) as a power series:
+\[
+f_j(\zeta_i z) = \sum_{k=0}^{M-1} b_k(j) \zeta_i^k z^k + z^M g_{i,j}(z),
+\]
+where \( b_k(j) \) are the coefficients from the series expansion, and \( g_{i,j}(z) \) is analytic inside \( D_0 \). Here, \( M = L(L-1)/2 \) is chosen for simplicity.\\\\
+Since the determinant is linear in its columns, we can factor out powers of \( z \) in each term. This leads to the expression:
+\[
+h(z) = z^M \cdot \left( \text{analytic function} \right) + \sum_{\text{distinct } n_1, n_2, \dots, n_L} z^{n_1 + n_2 + \dots + n_L} \cdot \det(\zeta_i^{n_j}).
+\]
+
+Notice that the determinant \( \det(\zeta_i^{n_j}) \) is zero if the powers \( n_1, n_2, \dots, n_L \) are not distinct. The smallest sum of the powers is:
+\[
+n_1 + n_2 + \dots + n_L \geq 0 + 1 + 2 + \dots + (L-1) = \frac{L(L-1)}{2}.
+\]
+Thus, \( h(z) \) is divisible by \( z^M \), where \( M = \frac{L(L-1)}{2} \).\\\\\\
+Since \( h(z) / z^M \) is analytic and continuous on \( D_0 \), we can apply Lemma 2 (Maximum Modulus Principle) to bound the size of \( h(z) \) inside \( D_0 \). Specifically, for any \( w \in D_0 \), we have:
+\[
+\left| \frac{h(w)}{w^M} \right| \leq \left| \frac{h(z)}{z^M} \right|_{R/r}.
+\]
+This means that the maximum value of \( |h(w)| \) is controlled by its values on the boundary \( |z| = R/r \).
+
+
+For \( |z| = R/r \), we have \( |\zeta_i z| \leq R \). Thus, the determinant \( h(z) \) can be bounded by:
+\[
+|h(z)|_{R/r} \leq L! \prod_{\lambda=1}^{L} |f_\lambda|_R,
+\]
+where \( |f_\lambda|_R \) is the maximum modulus of \( f_\lambda(z) \) on the boundary \( |z| = R \).
+
+
+As \( \Delta = h(1) \), we conclude that:
+\[
+|\Delta| = |h(1)| \leq \left( \frac{r}{R} \right)^M |h(z)|_{R/r} \leq \left( \frac{r}{R} \right)^M L! \prod_{\lambda=1}^{L} |f_\lambda|_R.
+\]
+This gives the desired bound on \( |\Delta| \), where \( M = \frac{L(L-1)}{2} \), and completes the proof.
+
+\end{proofbox}
+
+\lem{Lemma 4}{Let \( \Delta = \det(\alpha_{i,j})_{L \times L} \), where \( \alpha_{i,j} \) are algebraic numbers. Suppose there exists a positive integer \( T \) such that \( T \alpha_{i,j} \) is an algebraic integer for all \( i, j \in \{1, 2, \dots, L\} \). If \( \Delta \neq 0 \), then there is a conjugate of \( \Delta \) whose absolute value is at least \( T^{-L} \).
+}
+\begin{proofbox}
+    Consider the determinant \( \Delta \) of the matrix \( (\alpha_{i,j}) \). Since \( T \alpha_{i,j} \) is an algebraic integer, the determinant \( T^L \Delta \) is also an algebraic integer. Therefore, all the conjugates of \( T^L \Delta \) are algebraic integers.
+
+At least one of the conjugates of \( T^L \Delta \) must have an absolute value \( \geq 1 \) because the absolute value of an algebraic integer's conjugates cannot be arbitrarily small unless the integer is zero (which is not the case here, since \( \Delta \neq 0 \)).
+
+Thus, one of the conjugates of \( T^L \Delta \) satisfies:
+\[
+| \text{conjugate of } T^L \Delta | \geq 1.
+\]
+Dividing by \( T^L \), we find that at least one conjugate of \( \Delta \) satisfies:
+\[
+| \text{conjugate of } \Delta | \geq T^{-L}.
+\]
+This completes the proof.
+\end{proofbox}
+
+\textbf{Now we walk through the proof of the Gelfond-Schneider Theorem:}\\\\
+\begin{proofbox}
+   
+Let $c$ be a sufficiently large real number (to be specified later). Consider the integers $L_0$, $L_1$, and $S$, where each of them is at least 2. Define $L = (L_0 + 1)(L_1 + 1)$.
+
+We select $L_0$, $L_1$, and $S$ to satisfy the following inequalities:
+\[
+c L_0 \log S \leq L, \quad c L_1 S \leq L, \quad L \leq (2S - 1)^2
+\]
+For example, if $S$ is large, we can take:
+\[
+L_0 = \lfloor S \log S \rfloor, \quad L_1 = \lfloor \frac{S}{\log S} \rfloor
+\]
+(We could also take $c = \log \log S$.)
+
+Now, consider a matrix $M$ described as follows:
+- Take an arrangement of the integral pairs $(s_1(i), s_2(i))$ where $|s_1| < S$ and $|s_2| < S$, for a total of $(2S - 1)^2$ pairs.
+- Similarly, arrange pairs $(u(j), v(j))$ for $1 \leq j \leq L$ where $0 \leq u \leq L_0$ and $0 \leq v \leq L_1$.
+
+Define the matrix $M$ as:
+\[
+M(i,j) = \left( s_1(i) + s_2(i) \beta \right)^{u(j)} \alpha^{\left( s_1(i) + s_2(i) \beta \right) v(j)}
+\]
+where $M$ is a $(2S - 1)^2 \times L$ matrix. 
+
+We now outline the main steps for proving the result:
+\begin{itemize}
+    \item[(i)] Consider the determinant $\Delta$ of an arbitrary $L \times L$ submatrix of $M$.
+    \item[(ii)] Use Lemma 3 to obtain an upper bound $B_1$ for $\log |\Delta|$.
+    \item[(iii)] Use Lemma 4 to argue that if $\Delta \neq 0$, then $\Delta$ has an absolute value $\geq B_2$ with $B_2 > B_1$. (We assume this for contradiction.)
+    \item[(iv)] Conclude that $\Delta = 0$ and hence the rank of $M$ is less than $L$.
+    \item[(v)] Use a linear combination of the columns of $M$ to form a function $F(t)$ as in Lemma 1, with fewer than $L$ roots, such that $F(s_1(i) + s_2(i)\beta) = 0$ for $1 \leq i \leq L$.
+    \item[(vi)] Conclude that $\beta$ is rational.
+\end{itemize}
+
+Now, we define the functions $f_j(z)$ for each column $j$ of the matrix:
+\[
+f_j(z) = z^{u(j)} \alpha^{v(j) z} = z^{u(j)} \exp \left( v(j) z \log \alpha \right)
+\]
+where $z = s_1(i) + s_2(i) \beta$. Note that $u(j)$ is a non-negative integer and $\alpha^{v(j) z} = \exp(v(j) z \log \alpha)$. We fix $\log \alpha$ so that it is real. Thus, each $f_j(z)$ is an entire function.
+
+To proceed, we need an upper bound on $|f_j(z)|$. Using the fact that:
+\[
+|e^{z_1 z_2}| = e^{\text{Re}(z_1 z_2)} \leq e^{|z_1 z_2|} = e^{|z_1||z_2|}
+\]
+for all complex numbers $z_1$ and $z_2$, we obtain that:
+\[
+|f_j|_R \leq R^{u(j)} e^{v(j) R |\log \alpha|}
+\]
+for any $R > 0$.
+
+Now, apply Lemma 3 with $r = S(1 + |\beta|)$ and $R = e^2 r$. For some constant $c_1 > 0$, we obtain the bound:
+\[
+\log |\Delta| \leq -L(L - 1) + \log L! + L \max_{1 \leq j \leq L} \{ \log |f_j|_R \}
+\]
+Substitute the upper bound for $|f_j|_R$:
+\[
+\log |\Delta| \leq -L(L - 1) + L \log L + L L_0 \log R + L L_1 R |\log \alpha|
+\]
+Simplifying further:
+\[
+\log |\Delta| \leq -L^2 + c_1 (L L_0 \log S + L L_1 S)
+\]
+The constant $c_1$ is independent of $c$. Therefore, if $c$ is sufficiently large (for example, $c \geq 4c_1$), then we conclude:
+\[
+\log |\Delta| \leq -\frac{L^2}{2}
+\]
+
+
+\end{proofbox}
+
+
+
 \end{document}
-
-
-
-
