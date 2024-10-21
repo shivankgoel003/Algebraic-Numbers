@@ -1520,6 +1520,43 @@ The constant $c_1$ is independent of $c$. Therefore, if $c$ is sufficiently larg
 \log |\Delta| \leq -\frac{L^2}{2}
 \]
 
+Suppose now that $T_0$ is a positive rational integer for which $T_0\alpha$, $T_0\beta$, and $T_0\alpha^{\beta}$ are all algebraic integers. Then $T = (T_0)^{L_0 + 2S L_1}$ has the property that $T$ times any element of $M$ (and hence $T$ times any element of the matrix describing $\Delta$) is an algebraic integer.
+
+Therefore, by Lemma 4, if $\Delta \neq 0$, then there is a conjugate of $\Delta$ with absolute value at least:
+\[
+|\text{conjugate of } \Delta| \geq T^{-L} = (T_0)^{-L(L_0 + 2S L_1)}.
+\]
+
+It is reasonable to expect a similar inequality might hold for $|\Delta|$ itself (rather than for the absolute value of a conjugate of $\Delta$). In fact, it can be shown (and will be shown later) that if $\Delta \neq 0$, then there is a constant $c_2$ (independent of $c$) for which:
+\[
+\log |\Delta| \geq -c_2(LL_0 \log S + SL_1L). \tag{10}
+\]
+
+By using our upper bound for $\log |\Delta|$ above, we see that for $c$ sufficiently large (say, $c \geq 8c_2$ will do), we obtain that $\Delta = 0$.
+
+Since $\Delta = \det(f_j(\zeta_i))$ as defined above, we get that the columns of $(f_j(\zeta_i))$ must be linearly dependent (over the reals). In other words, there exist real numbers $b_j$, not all zero, such that:
+\[
+\sum_{j=1}^{L} b_j f_j(\zeta_i) = 0 \quad \text{for } 1 \leq i \leq L.
+\]
+
+By considering a particular ordering of the $(u(j), v(j))$, we deduce that:
+\[
+\sum_{v=0}^{L_1} \sum_{u=0}^{L_0} b_{(L_0 + 1)v + u + 1} \zeta_i^u \alpha^v = 0 \quad \text{for } 1 \leq i \leq L.
+\]
+But:
+\[
+\sum_{v=0}^{L_1} \sum_{u=0}^{L_0} b_{(L_0 + 1)v + u + 1} \zeta_i^u \alpha^v = \sum_{v=0}^{L_1} a_v(t) e^{w_v t}
+\]
+where $a_v(t) = \sum_{u=0}^{L_0} b_{(L_0 + 1)v + u + 1} t^u$, $w_v = v \log \alpha$, and $t = \zeta_i = s_1(i) + s_2(i)\beta$.
+
+Each of the $L$ values of $\zeta_i$ is a root of $\sum_{v=0}^{L_1} a_v(t) e^{w_v t} = 0$. Since some $b_j \neq 0$, we deduce from Lemma 1 that there are at most $L_0(L_1 + 1) + (L_1 + 1) - 1 < L$ distinct real roots. Therefore, two roots $\zeta_i$ must be the same, and we can conclude that:
+\[
+s_1(i) + s_2(i) \beta = s_1(i') + s_2(i') \beta
+\]
+for some $i, i'$ with $1 \leq i < i' \leq L$.
+
+On the other hand, the pairs $(s_1(i), s_2(i))$ and $(s_1(i'), s_2(i'))$ are necessarily distinct, so we can conclude that $\beta$ is rational, completing the proof of Lemma 1.
+
 
 \end{proofbox}
 
