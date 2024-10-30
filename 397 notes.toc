@@ -11,3 +11,4 @@
 \contentsline {subsection}{\numberline {7.3}Degree and Height of Algebraic Numbers}{22}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Lower Bound on Linear Combinations of Logarithms}{23}{subsection.7.4}%
 \contentsline {subsection}{\numberline {7.5}Proof of Gelfond-Schneider Theorem}{24}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Algebraic Number Fields}{33}{section.8}%

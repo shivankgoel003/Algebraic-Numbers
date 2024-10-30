@@ -1557,8 +1557,74 @@ for some $i, i'$ with $1 \leq i < i' \leq L$.
 
 On the other hand, the pairs $(s_1(i), s_2(i))$ and $(s_1(i'), s_2(i'))$ are necessarily distinct, so we can conclude that $\beta$ is rational, completing the proof of Lemma 1.
 
-
 \end{proofbox}
+
+\section{Algebraic Number Fields}
+
+Let $\xi$ be an algebraic number. 
+
+$$Q(\xi) = \left \{ \frac{f(\xi)}{g(\xi)} : f(x), g(x) \in Q[x], g(\xi) \neq 0 \right \}$$
+
+\thm{}{Let $\xi$ be an algebraic number of degree $n$ and height $A$. Then, the degree of the field $Q(\xi)$ over $Q$ is at most $n$. Then
+any element of $Q(\xi)$ can be uniquely written as 
+$a_0 + a_1 \xi + a_2 \xi^2 + \dots + a_{n-1} \xi^{n-1}$ where $a_0, a_1, \dots, a_{n-1} \in Q$.}
+
+\begin{proof}
+    Suppose $\xi$ satisfies $h(x) = 0$, where
+    \[
+    h(x) = x^n + b_1 x^{n-1} + \dots + b_n,
+    \]
+    with $b_i \in Q$. Since $\deg(\xi) = n$, $h(x)$ is irreducible over $Q[x]$. This implies that $h(x)$ is the monic polynomial of smallest degree that $\xi$ satisfies, and $h(x)$ divides any polynomial having $\xi$ as a root.
+    
+    Let $\alpha \in Q(\xi)$. Then $\alpha$ can be written as
+    \[
+    \alpha = \frac{f(\xi)}{g(\xi)},
+    \]
+    where $f(x), g(x) \in Q[x]$ and $g(\xi) \neq 0$.
+    
+    Since $g(\xi) \neq 0$, we have $\gcd(g(x), h(x)) = 1$. Indeed, if $\phi(x)$ is a polynomial that divides both $g(x)$ and $h(x)$, then, assuming $\phi(x)$ is monic and noting that $h(x)$ is irreducible, we must have $\phi(x) = h(x)$ if $\deg(\phi(x)) \geq 1$. Thus, $h(x)$ would divide $g(x)$, which would imply $g(\xi) = 0$, a contradiction.
+    
+    Therefore, there exist polynomials $G(x), H(x) \in Q[x]$ such that
+    \[
+    G(x)g(x) + H(x)h(x) = 1.
+    \]
+    Substituting $x = \xi$, we obtain
+    \[
+    1 = G(\xi)g(\xi) + H(\xi)h(\xi) = G(\xi)g(\xi),
+    \]
+    and hence $G(\xi) = \frac{1}{g(\xi)}$. It follows that
+    \[
+    \alpha = \frac{f(\xi)}{g(\xi)} = f(\xi)G(\xi),
+    \]
+    showing that $\alpha$ is a polynomial in $\xi$ over $Q$. Thus, we may write $\alpha = s(\xi)$, where $s(x) \in Q[x]$.
+    
+    Now, we can divide $s(x)$ by $h(x)$, obtaining
+    \[
+    s(x) = q(x)h(x) + r(x),
+    \]
+    where $r(x) = 0$ or $\deg(r(x)) < n$. Therefore,
+    \[
+    \alpha = s(\xi) = q(\xi)h(\xi) + r(\xi) = r(\xi),
+    \]
+    since $h(\xi) = 0$. Thus, $\alpha = r(\xi)$, where $\deg(r(x)) < n$, and we can write
+    \[
+    \alpha = a_0 + a_1 \xi + \dots + a_{n-1} \xi^{n-1},
+    \]
+    with $a_i \in Q$.
+    
+    Finally, we show that this expression is unique. Suppose
+    \[
+    \alpha = a_0' + a_1' \xi + \dots + a_{n-1}' \xi^{n-1},
+    \]
+    where $a_i' \in Q$ for $0 \leq i \leq n - 1$. If there exists an index $i$ such that $a_i \neq a_i'$, then
+    \[
+    (a_0 - a_0') + (a_1 - a_1') \xi + \dots + (a_{n-1} - a_{n-1}') \xi^{n-1} = 0,
+    \]
+    implying that $\xi$ satisfies a non-zero polynomial of degree less than $n$. This contradicts the fact that $\deg(\xi) = n$. Therefore, $a_i = a_i'$ for all $i$, proving the uniqueness of the expression.
+\end{proof}
+
+
+
 
 
 
