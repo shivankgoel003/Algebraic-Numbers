@@ -12,3 +12,6 @@
 \contentsline {subsection}{\numberline {7.4}Lower Bound on Linear Combinations of Logarithms}{23}{subsection.7.4}%
 \contentsline {subsection}{\numberline {7.5}Proof of Gelfond-Schneider Theorem}{24}{subsection.7.5}%
 \contentsline {section}{\numberline {8}Algebraic Number Fields}{33}{section.8}%
+\contentsline {section}{\numberline {9}Quadratic Fields}{34}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Norm of an algebraic number in a quadratic field}{38}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Units in Imaginary Quadratic Fields}{39}{subsection.9.2}%

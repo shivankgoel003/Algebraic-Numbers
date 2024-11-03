@@ -1558,73 +1558,267 @@ for some $i, i'$ with $1 \leq i < i' \leq L$.
 On the other hand, the pairs $(s_1(i), s_2(i))$ and $(s_1(i'), s_2(i'))$ are necessarily distinct, so we can conclude that $\beta$ is rational, completing the proof of Lemma 1.
 
 \end{proofbox}
-
 \section{Algebraic Number Fields}
 
-Let $\xi$ be an algebraic number. 
+Let $\xi$ be an algebraic number. Then,
+\[
+\mathbb{Q}(\xi) = \left\{ \frac{f(\xi)}{g(\xi)} : f(x), g(x) \in \mathbb{Q}[x], g(\xi) \neq 0 \right\}.
+\]
 
-$$Q(\xi) = \left \{ \frac{f(\xi)}{g(\xi)} : f(x), g(x) \in Q[x], g(\xi) \neq 0 \right \}$$
+\thm{}{
+Let $\xi$ be an algebraic number of degree $n$ over $\mathbb{Q}$. Then the degree of the field $\mathbb{Q}(\xi)$ over $\mathbb{Q}$ is at most $n$. Moreover, any element of $\mathbb{Q}(\xi)$ can be uniquely written in the form
+\[
+a_0 + a_1 \xi + a_2 \xi^2 + \dots + a_{n-1} \xi^{n-1}
+\]
+where $a_0, a_1, \dots, a_{n-1} \in \mathbb{Q}$.
+}
 
-\thm{}{Let $\xi$ be an algebraic number of degree $n$ and height $A$. Then, the degree of the field $Q(\xi)$ over $Q$ is at most $n$. Then
-any element of $Q(\xi)$ can be uniquely written as 
-$a_0 + a_1 \xi + a_2 \xi^2 + \dots + a_{n-1} \xi^{n-1}$ where $a_0, a_1, \dots, a_{n-1} \in Q$.}
+\begin{example}
+    Let \(\xi = \sqrt{2}\), an algebraic number of degree \(2\) over \(\mathbb{Q}\) as it is a root of the irreducible polynomial \(x^2 - 2\). According to the theorem, any element \(\alpha \in \mathbb{Q}(\xi)\) can be uniquely expressed in the form
+    \[
+    \alpha = a_0 + a_1 \xi
+    \]
+    where \(a_0, a_1 \in \mathbb{Q}\).
+
+    For instance, consider \(\alpha = \frac{3 + 5\sqrt{2}}{4}\). We can rewrite this as
+    \[
+    \alpha = \frac{3}{4} + \frac{5}{4}\sqrt{2},
+    \]
+    with \(a_0 = \frac{3}{4}\) and \(a_1 = \frac{5}{4}\), both in \(\mathbb{Q}\). This shows that every element in \(\mathbb{Q}(\sqrt{2})\) can indeed be written in the form \(a_0 + a_1 \xi\), as required.
+\end{example}
 
 \begin{proof}
-    Suppose $\xi$ satisfies $h(x) = 0$, where
+    Suppose $\xi$ satisfies an irreducible polynomial $h(x) \in \mathbb{Q}[x]$ of degree $n$ given by
     \[
     h(x) = x^n + b_1 x^{n-1} + \dots + b_n,
     \]
-    with $b_i \in Q$. Since $\deg(\xi) = n$, $h(x)$ is irreducible over $Q[x]$. This implies that $h(x)$ is the monic polynomial of smallest degree that $\xi$ satisfies, and $h(x)$ divides any polynomial having $\xi$ as a root.
-    
-    Let $\alpha \in Q(\xi)$. Then $\alpha$ can be written as
+    with $b_i \in \mathbb{Q}$. Since $\deg(\xi) = n$, $h(x)$ is the minimal polynomial of $\xi$ over $\mathbb{Q}$.
+
+    Let $\alpha \in \mathbb{Q}(\xi)$. Then $\alpha$ can be expressed as
     \[
     \alpha = \frac{f(\xi)}{g(\xi)},
     \]
-    where $f(x), g(x) \in Q[x]$ and $g(\xi) \neq 0$.
-    
-    Since $g(\xi) \neq 0$, we have $\gcd(g(x), h(x)) = 1$. Indeed, if $\phi(x)$ is a polynomial that divides both $g(x)$ and $h(x)$, then, assuming $\phi(x)$ is monic and noting that $h(x)$ is irreducible, we must have $\phi(x) = h(x)$ if $\deg(\phi(x)) \geq 1$. Thus, $h(x)$ would divide $g(x)$, which would imply $g(\xi) = 0$, a contradiction.
-    
-    Therefore, there exist polynomials $G(x), H(x) \in Q[x]$ such that
+    where $f(x), g(x) \in \mathbb{Q}[x]$ and $g(\xi) \neq 0$.
+
+    Since $\gcd(g(x), h(x)) = 1$, there exist polynomials $G(x), H(x) \in \mathbb{Q}[x]$ such that
     \[
     G(x)g(x) + H(x)h(x) = 1.
     \]
-    Substituting $x = \xi$, we obtain
+    Substituting $x = \xi$, we find that $G(\xi)g(\xi) = 1/g(\xi)$, and thus,
     \[
-    1 = G(\xi)g(\xi) + H(\xi)h(\xi) = G(\xi)g(\xi),
+    \alpha = f(\xi)G(\xi).
     \]
-    and hence $G(\xi) = \frac{1}{g(\xi)}$. It follows that
-    \[
-    \alpha = \frac{f(\xi)}{g(\xi)} = f(\xi)G(\xi),
-    \]
-    showing that $\alpha$ is a polynomial in $\xi$ over $Q$. Thus, we may write $\alpha = s(\xi)$, where $s(x) \in Q[x]$.
-    
-    Now, we can divide $s(x)$ by $h(x)$, obtaining
+    Therefore, $\alpha$ is a polynomial in $\xi$ over $\mathbb{Q}$, say $\alpha = s(\xi)$, where $s(x) \in \mathbb{Q}[x]$.
+
+    We can divide $s(x)$ by $h(x)$, obtaining
     \[
     s(x) = q(x)h(x) + r(x),
     \]
-    where $r(x) = 0$ or $\deg(r(x)) < n$. Therefore,
+    where $r(x) = 0$ or $\deg(r(x)) < n$. Then,
     \[
-    \alpha = s(\xi) = q(\xi)h(\xi) + r(\xi) = r(\xi),
+    \alpha = s(\xi) = r(\xi),
     \]
-    since $h(\xi) = 0$. Thus, $\alpha = r(\xi)$, where $\deg(r(x)) < n$, and we can write
+    so $\alpha = a_0 + a_1 \xi + \dots + a_{n-1} \xi^{n-1}$, with $a_i \in \mathbb{Q}$.
+
+    Finally, to prove uniqueness, assume
     \[
-    \alpha = a_0 + a_1 \xi + \dots + a_{n-1} \xi^{n-1},
+    \alpha = a_0' + a_1' \xi + \dots + a_{n-1}' \xi^{n-1}.
     \]
-    with $a_i \in Q$.
-    
-    Finally, we show that this expression is unique. Suppose
-    \[
-    \alpha = a_0' + a_1' \xi + \dots + a_{n-1}' \xi^{n-1},
-    \]
-    where $a_i' \in Q$ for $0 \leq i \leq n - 1$. If there exists an index $i$ such that $a_i \neq a_i'$, then
-    \[
-    (a_0 - a_0') + (a_1 - a_1') \xi + \dots + (a_{n-1} - a_{n-1}') \xi^{n-1} = 0,
-    \]
-    implying that $\xi$ satisfies a non-zero polynomial of degree less than $n$. This contradicts the fact that $\deg(\xi) = n$. Therefore, $a_i = a_i'$ for all $i$, proving the uniqueness of the expression.
+    If \(a_i \neq a_i'\) for some \(i\), then \(\xi\) satisfies a non-zero polynomial of degree less than \(n\), a contradiction. Hence, the expression is unique.
 \end{proof}
 
+\begin{example}
+If $K = \mathbb{Q}(2^{1/3})$, then $2^{1/3}$ is a root of the irreducible polynomial $x^3 - 2$. Thus, any element in $K$ can be written as
+\[
+a_0 + a_1 2^{1/3} + a_2 2^{2/3}
+\]
+where $a_0, a_1, a_2 \in \mathbb{Q}$.
+\end{example}
 
+\section{Quadratic Fields}
 
+\defn{Quadratic Field}{
+A field $K = \mathbb{Q}(\alpha)$, where $\alpha$ is an algebraic number of degree 2, is called a quadratic field.}
+
+\begin{example}
+    The field \(\mathbb{Q}(\sqrt{5}) = \{a + b\sqrt{5} : a, b \in \mathbb{Q}\}\) is a quadratic field since \(\sqrt{5}\) is a root of the irreducible polynomial \(x^2 - 5\).
+
+    Similarly, consider \(\mathbb{Q}\left(\frac{2 + \sqrt{7}}{2}\right)\). Let \(\alpha = \frac{2 + \sqrt{7}}{2}\). Then, \(2\alpha - 2 = \sqrt{7}\), so \(\alpha\) is a root of the irreducible polynomial \(x^2 - 2x - 2\). Thus, \(\mathbb{Q}\left(\frac{2 + \sqrt{7}}{2}\right)\) is a quadratic field.
+
+    Note:
+    \[
+    \mathbb{Q}\left(\frac{2 + \sqrt{7}}{2}\right) = \mathbb{Q}(\sqrt{7}),
+    \]
+    \[
+    \mathbb{Q}\left(\frac{3 + \sqrt{-3/7}}{5}\right) = Q(\sqrt{\frac{-3}{7}}) = Q(\sqrt{\frac{ -21}{49}}) = Q(\frac{1}{7} \sqrt{-21}) = \mathbb{Q}\left(\sqrt{-21}\right),
+    \]
+    \[
+    \mathbb{Q}(\sqrt{20}) = Q(2\sqrt{5}) = \mathbb{Q}(\sqrt{5}).
+    \]
+\end{example}
+
+\prop{
+Let $K = \mathbb{Q}(\alpha)$ be a quadratic field, where $\alpha$ is an algebraic number of degree 2. Then $K = \mathbb{Q}(\sqrt{m})$ for some square-free integer $m \neq 1$.}
+
+\begin{proof}
+    Suppose $\alpha$ satisfies a polynomial \(ax^2 + bx + c = 0\) with \(a, b, c \in \mathbb{Z}\). Then,
+    \[
+    \alpha = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a},
+    \]
+    where \(b^2 - 4ac\) is not a perfect square. Thus, \(\mathbb{Q}(\alpha) = \mathbb{Q}(\sqrt{m})\), where \(m\) is a square-free integer.
+
+\end{proof}
+    \clm{}{
+    Given a quadratic field, there is a unique square-free integer \(m \neq 1\) such that the field is \(\mathbb{Q}(\sqrt{m})\).
+    }
+    
+    \begin{proof}
+        Suppose \( Q(\sqrt{m}) = Q(\sqrt{n}) \) for two integers \( m \) and \( n \). This implies that \( \sqrt{m} \) can be expressed in terms of \( \sqrt{n} \). Therefore, there exist rational numbers \( a \) and \( b \) such that
+        \[
+        \sqrt{m} = a + b \sqrt{n}.
+        \]
+        
+        \noindent Squaring both sides of the equation, we get:
+        \[
+        m = a^2 + 2ab \sqrt{n} + b^2 n.
+        \]
+        Since \( \sqrt{n} \) is irrational (because \( n \) is square-free and \( n \neq 1 \)), the coefficient of \( \sqrt{n} \) must be zero. Thus, we must have \( 2ab = 0 \).
+        
+        \noindent \textbf{Case Analysis:}
+        \begin{itemize}
+            \item \textbf{Case 1:} \( b = 0 \) \\
+            If \( b = 0 \), then \( \sqrt{m} = a \), implying that \( m = a^2 \), a perfect square. However, this contradicts the fact that \( m \) is square-free. Therefore, \( b \neq 0 \).
+        
+            \item \textbf{Case 2:} \( a = 0 \) \\
+            If \( a = 0 \), then the equation becomes \( m = b^2 n \). Since \( m \) and \( n \) are both square-free, the only way for this equality to hold is if \( b^2 = 1 \). This gives \( b = \pm 1 \), and thus \( m = n \).
+        \end{itemize}
+        
+        \noindent \textbf{Conclusion:} Both cases lead to a contradiction if \( m \neq n \), so the only possibility is \( m = n \). Therefore, there is a unique square-free integer \( m \neq 1 \) such that each quadratic field \( Q(\sqrt{m}) \) has a unique representation.
+    \end{proof}
+
+    \noindent \textbf{Recall:} If $\alpha$ is an algebraic integer, then $\alpha$ satisfies a monic polynomial with integer coefficients. If $f(x)$ is the minimal polynomial of $\alpha$, then $f(x)$ is monic, \( f(x) \in \mathbb{Q}[x] \), and \( f(x) \) divides any polynomial \( g(x) \in \mathbb{Q}[x] \) for which \( g(\alpha) = 0 \); i.e., \( g(x) = f(x)h(x) \) for some \( h(x) \in \mathbb{Q}[x] \).
+
+Since both \( f(x) \) and \( g(x) \) are monic and \( g(x) \in \mathbb{Z}[x] \), by Gauss's Lemma, both \( f(x) \) and \( h(x) \) must be in \( \mathbb{Z}[x] \). Thus, we conclude that the \textbf{minimal polynomial of an algebraic integer has all coefficients in \( \mathbb{Z} \)}.
+
+\vspace{0.5em}
+
+Now we know that a quadratic field can be written as:
+\[
+\mathbb{Q}(\sqrt{m}) = \left\{ a + b\sqrt{m} : a, b \in \mathbb{Q} \right\},
+\]
+where \( m \) is a square-free integer. Alternatively, we can represent elements of \( \mathbb{Q}(\sqrt{m}) \) as
+\[
+\left\{ \frac{a + b\sqrt{m}}{c} : a, b, c \in \mathbb{Z}, \; c > 0 \right\}.
+\]
+
+\noindent
+Algebraic integers in \(\mathbb{Q}\) are simply the usual integers, i.e., elements of \(\mathbb{Z}\), also called rational integers.\\\\
+
+\thm{}{Let $\mathbb{Q}(\sqrt{m})$ , m square-free $\neq 1$, be a quadratic field. Then \\\\
+(i) $a + b\sqrt{m}$, $a, b \in \mathbb{Z}$, are 
+algebraic integers in $\mathbb{Q}(\sqrt{m})$.\\\\
+(ii) If $m \equiv 1 \pmod{4}$, then  in addition $\frac{a + b\sqrt{m}}{2}$ with 
+$a, b$ odd, are also algebraic integers. \\\\
+(iii) Every algebraic integer in $\mathbb{Q}(\sqrt{m})$ is  one of these two types.}
+
+\begin{proof}
+(i) $a, b \in \mathbb{Z}$,$a + b\sqrt{m}$ is an algebraic integer because $a$, $b$ 
+$\sqrt{m}$ are algebraic integers and the sum and product of algebraic integers are algebraic integers.\\\\
+
+Or : Let $\alpha =  a + b\sqrt{m}$,  ($\alpha - a)^2 = m b^2$.
+Therefore $\alpha$ satisfies a monic polynomial with integer coefficients, and therefore 
+$\alpha$ is an algebraic integer.\\\\
+
+(ii) Now consider the case where \( m \equiv 1 \pmod{4} \). Let us examine an element of the form \( \frac{a + b\sqrt{m}}{2} \). To determine whether this is an algebraic integer, consider the polynomial:
+\[
+\left( x - \frac{a + b\sqrt{m}}{2} \right) \left( x - \frac{a - b\sqrt{m}}{2} \right) = x^2 - ax + \frac{a^2 - m b^2}{4}.
+\]
+If \( a \) and \( b \) are odd and \( m \equiv 1 \pmod{4} \), we find that
+\[
+a^2 - m b^2 \equiv 1 - 1 \equiv 0 \pmod{4}.
+\]
+Therefore, the constant term \( \frac{a^2 - m b^2}{4} \) is an integer, and hence \( \frac{a + b\sqrt{m}}{2} \) satisfies a monic polynomial with integer coefficients. Thus, \( \frac{a + b\sqrt{m}}{2} \) is an algebraic integer.\\\\
+(iii) Suppose $\alpha = \frac{a + b\sqrt{m}}{c}$, $a, b, c \in \mathbb{Z}$, $c > 0$ is an algebraic integer in $\mathbb{Q}(\sqrt{m})$. 
+ Assume that $\gcd(a, b, c) = 1$. \\\\
+
+\begin{itemize}
+    \item If \( b = 0 \), then \( \alpha = \frac{a}{c} \), which is a rational number. For \( \alpha \) to be an algebraic integer, \( \frac{a}{c} \) must be a rational integer, which is true if and only if \( c \) divides \( a \) (i.e., \( c | a \)).
+
+    \item Now suppose \( b \neq 0 \). Then \( \alpha \) is not a rational number, and the degree of \( \alpha \) is 2. In fact, \( \alpha \) satisfies the polynomial:
+    \[
+    \left(x - \frac{a + b\sqrt{m}}{c}\right)\left(x - \frac{a - b\sqrt{m}}{c}\right) = 0,
+    \]
+    which expands to
+    \[
+    x^2 - \frac{2a}{c} x + \frac{a^2 - m b^2}{c^2} = 0.
+    \]
+\end{itemize}
+
+Since \( \alpha \) is an algebraic integer, this polynomial must have integer coefficients if it is the minimal polynomial of \( \alpha \). If \( b = 0 \), we know that \( c | a \), so the polynomial also has integer coefficients in this case. Therefore, for both \( b = 0 \) and \( b \neq 0 \), \( \alpha = \frac{a + b\sqrt{m}}{c} \) is an algebraic integer if and only if \( c | 2a \) and \( c^2 | (a^2 - m b^2) \).
+
+\vspace{0.5em}
+\noindent \textbf{Additional Considerations:}
+\begin{itemize}
+    \item Suppose \( (a, c) = 1 \). Let \( p \) be any prime dividing both \( a \) and \( c \). Then \( p^2 | c^2 \), so \( p^2 | (a^2 - m b^2) \). This implies \( p^2 | a^2 \) and \( p^2 | m b^2 \). Since \( m \) is square-free, we must have \( p^2 | b^2 \), which gives \( p | b \). Therefore, \( p \) divides \( a \), \( b \), and \( c \), which contradicts our assumption that \( \gcd(a, b, c) = 1 \). Thus, \( (a, c) = 1 \).
+
+    \item If \( c > 2 \), then \( c | 2a \), implying \( (a, c) > 1 \), which is a contradiction. Therefore, \( c = 1 \) or \( c = 2 \).
+\end{itemize}
+
+\noindent 
+\begin{itemize}
+    \item If \( c = 1 \), then \( \alpha = a + b\sqrt{m} \) with \( a, b \in \mathbb{Z} \).
+    \item If \( c = 2 \), we require \( 4 | (a^2 - m b^2) \). Since \( (a, c) = 1 \), \( a \) must be odd. We have:
+    \[
+    a^2 \text{ (odd)} - m b^2 \text{ (odd)} \equiv 0 \pmod{4},
+    \]
+    so \( b^2 m \) is odd, which implies that \( b \) is also odd.
+\end{itemize}
+
+Thus, if \( c = 2 \), both \( a \) and \( b \) must be odd, and we find that \( m \equiv 1 \pmod{4} \).
+
+\vspace{0.5em}
+Therefore:
+\begin{itemize}
+    \item For \( m \equiv 2 \text{ or } 3 \pmod{4} \), the algebraic integers in \( \mathbb{Q}(\sqrt{m}) \) are of the form \( a + b\sqrt{m} \), where \( a, b \in \mathbb{Z} \).
+    \item For \( m \equiv 1 \pmod{4} \), the algebraic integers in \( \mathbb{Q}(\sqrt{m}) \) are of the following two types:
+    \begin{enumerate}
+        \item \( a + b\sqrt{m} \), where \( a, b \in \mathbb{Z} \).
+        \item \( \frac{a + b\sqrt{m}}{2} \), where \( a \) and \( b \) are odd integers.
+    \end{enumerate}
+\end{itemize}
+
+In other words, for \( m \equiv 1 \pmod{4} \), the algebraic integers can also be written as \( c + d \left(\frac{1 + \sqrt{m}}{2}\right) \), where \( c, d \in \mathbb{Z} \).
+\end{proof}
+
+\vspace{0.5em}
+\noindent \textbf{Properties of Algebraic Integers:}
+If \( \alpha \) and \( \beta \) are algebraic integers, then \( \alpha + \beta \), \( \alpha \beta \), and \( -\alpha \) are also algebraic integers. Thus, the set of all algebraic integers in an algebraic number field forms a subring of that field, and hence is itself a ring.
+
+\prop{
+Let \( \alpha \) be an algebraic number. Then there exists a \( c \in \mathbb{Z} \), \( c \neq 0 \), such that \( c\alpha \) is an algebraic integer.}
+
+\begin{proof}
+Suppose \( \alpha \) satisfies the polynomial
+\[
+a_0 \alpha^n + a_1 \alpha^{n-1} + \dots + a_n = 0,
+\]
+where \( a_i \in \mathbb{Z} \) and not all coefficients are zero. Assume \( a_0 \neq 0 \). Multiply the polynomial by \( a_0^{n-1} \) to obtain
+\[
+(a_0 \alpha)^n + a_1(a_0 \alpha)^{n-1} + a_2 a_0 (a_0 \alpha)^{n-2} + \dots + a_n a_0^{n-1} = 0.
+\]
+This shows that \( a_0 \alpha \) satisfies a monic polynomial with integer coefficients, which means \( a_0 \alpha \) is an algebraic integer. Let \( c = a_0 \).
+\end{proof}
+
+\subsection{Norm of an algebraic number in a quadratic field}
+
+Let $\alpha \in K = \mathbb{Q}(\sqrt{m})$, where $m$ is square-free. Therefore 
+$\alpha = \frac{a + b\sqrt{m}}{c}$, $a, b, c \in \mathbb{Z}$, $c \neq 0$. Then 
+$\overline{\alpha} = \frac{a - b\sqrt{m}}{c}$ is called the conjugate of $\alpha$ in $Q(\sqrt{m})$.\\\\
+$\alpha$ and $\overline{\alpha}$ are the roots of the quadratic polynomial $x^2 - \frac{2a}{c}x + \frac{a^2 - b^2m}{c^2} = 0$.\\\\
+If $\alpha$ is an algebraic integer, then $\overline{\alpha}$ is also an algebraic integer.\\\\
+$N(\alpha) =$ norm of $\alpha \in \mathbb{Q}(\sqrt{m})$ is defined as $N(\alpha) = \alpha \overline{\alpha} = \frac{a^2 - b^2m}{c^2}$.\\\\
+
+\subsection{Units in Imaginary Quadratic Fields}
 
 
 
