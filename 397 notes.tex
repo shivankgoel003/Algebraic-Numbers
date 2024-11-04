@@ -1818,7 +1818,340 @@ $\alpha$ and $\overline{\alpha}$ are the roots of the quadratic polynomial $x^2 
 If $\alpha$ is an algebraic integer, then $\overline{\alpha}$ is also an algebraic integer.\\\\
 $N(\alpha) =$ norm of $\alpha \in \mathbb{Q}(\sqrt{m})$ is defined as $N(\alpha) = \alpha \overline{\alpha} = \frac{a^2 - b^2m}{c^2}$.\\\\
 
+\defn{Divisor of an integer in a number field}{Let $K$ be an algebraic number field. Lett $\alpha$ be non zero integer 
+(i.e. algebraic integer) in $K$. We say that 
+$\alpha$ is a divissor of integer $\beta$ in K, if there is 
+an integer $\gamma$ in K such that $\beta = \alpha \gamma$.}
+
+
+\begin{example}
+    In the field of rational integers, we typically say \( 2 \mid 6 \) because \( 6 = 2 \times 3 \).
+    
+    Consider \( K = \mathbb{Q}(i) \), where \( 1 + i \) is a divisor of 2 since:
+    \[
+    2 = (1 + i)(1 - i).
+    \]
+    
+    In the field \( K = \mathbb{Q}(i) = \mathbb{Q}(\sqrt{-1}) \), note that \( -1 \equiv 1 \pmod{4} \). Therefore, the ring of all algebraic integers in \( \mathbb{Q}(i) \) is:
+    \[
+    \{ a + b\sqrt{-1} : a, b \in \mathbb{Z} \} = \mathbb{Z} + \mathbb{Z}i = \mathbb{Z}[i],
+    \]
+    where \( \mathbb{Z}[i] \) denotes the set of all expressions of the form \( a + bi \) with integer coefficients.
+    \end{example}
+
+    \subsection{Unit of an algebraic integer}
+
+\defn{Unit of an algebraic integer}{An algebraic integer in $K$ is called a unit
+of $K$ if it divides 1. Thus an algebraic integer $\epsilon$ is a unit of $K$ if $\epsilon | 1$ 
+($\epsilon$ is a divisor of 1 or $\epsilon$ divides 1), i.e. there is an integer $\epsilon'$ in $K$ 
+such that $\epsilon \epsilon' = 1$.}
+
+\textbf{Here Unit of $K$ just means the unit of the ring of algebraic integers of $K$ in the usual sense.}\\\\
+
+\prop{Reciprocal of a unit is also a unit}
+\begin{proof}
+    Let $\epsilon$ be a unit of $K$. Therefore $\epsilon$ is an 
+    algebraic integer, $\epsilon \neq 0$, such that $\epsilon|1$. So there is 
+    an algebraic integer $\epsilon'$ such that $\epsilon \epsilon' = 1$.
+    Therefore $\epsilon'$ is a unit of $K$.
+    But $\epsilon' = \frac{1}{\epsilon}$. Thus
+    $\frac{1}{\epsilon}$ is a unit of $K$.
+\end{proof}
+
+\thm{}{The units of $K$ form a subgroup of the group of non-zero elements of $K$.}
+
+\begin{proof}
+Let $U$ be the set of units of $K$. Let $\epsilon_1$, 
+$\epsilon_2$  be in $U$. Therefore, there are algebraic integers 
+$\epsilon_3$ and  $\epsilon_4$ in $K$ such that $\epsilon_1 \epsilon_3 = 1$ and
+$\epsilon_2 \epsilon_4 = 1$. Therefore $\epsilon_1 \epsilon_2 (\epsilon_3 \epsilon_4) = 1$,
+we get that $\epsilon_1 \epsilon_2$ is also a unit of $K$. Also, 
+for $\epsilon \in U$, $\frac{1}{\epsilon}$ is a unit. 
+Therefore $U$ is a subgroup of $K^{*}$. Therefore $U$ is a group.   
+\end{proof}
+
+
+\noindent \textbf{Recall:} The norm of an element \( \alpha \), denoted \( N(\alpha) \), is defined as \( N(\alpha) = \alpha \overline{\alpha} \).
+
+\[
+N(\alpha) = \left( \frac{a + b\sqrt{m}}{c} \right) \left( \frac{a - b\sqrt{m}}{c} \right) = \frac{a^2 - b^2m}{c^2}.
+\]
+Thus, \( N(\alpha) \in \mathbb{Q} \).
+
+\vspace{0.5em}
+
+Suppose \( \alpha \) is an algebraic integer in \( \mathbb{Q}(\sqrt{m}) \), and let \( \alpha = \frac{a + b\sqrt{m}}{c} \) as before.
+
+\begin{itemize}
+    \item If \( b = 0 \), then \( \alpha = \frac{a}{c} \) and \( \overline{\alpha} = \frac{a}{c} \). Since \( \alpha \) and \( \overline{\alpha} \) are both algebraic integers, \( \alpha \in \mathbb{Q} \), making \( \alpha \) a rational number. Consequently, \( \alpha \in \mathbb{Z} \), and we have:
+    \[
+    N(\alpha) = \alpha \overline{\alpha} = \alpha^2 \in \mathbb{Z}.
+    \]
+
+    \item Now suppose \( b \neq 0 \). In this case, \( \alpha \) is not a rational number, so the degree of \( \alpha \) is 2. We observe that \( \alpha \) satisfies the polynomial:
+    \[
+    x^2 - (\alpha + \overline{\alpha})x + \alpha \overline{\alpha} = 0,
+    \]
+    where
+    \[
+    \alpha + \overline{\alpha} = \frac{2a}{c} \quad \text{and} \quad \alpha \overline{\alpha} = \frac{a^2 - b^2m}{c^2}.
+    \]
+    Both \( \alpha + \overline{\alpha} \) and \( \alpha \overline{\alpha} \) are in \( \mathbb{Q} \).
+
+    This polynomial is monic, defined over \( \mathbb{Q} \), and has degree 2, so it is the minimal polynomial of \( \alpha \). Since \( \alpha \) is an algebraic integer, this minimal polynomial must actually have integer coefficients. Therefore:
+    \[
+    \alpha \overline{\alpha} = \frac{a^2 - b^2m}{c^2} \in \mathbb{Z},
+    \]
+    which implies \( N(\alpha) \in \mathbb{Z} \).
+\end{itemize}
+
+\noindent \textbf{Thus, if \( \alpha \in \mathbb{Q}(\sqrt{m}) \) is an algebraic integer, then \( N(\alpha) \) is an integer.}
+
+\thm{}{Let $\alpha$ be an integer of $K = \mathbb{Q}(\sqrt{m})$. Then $\alpha$ is a unit of $K$ if and only if $N(\alpha) = \pm 1$.}
+\begin{proof}
+    Suppose \( \alpha \) is a unit in \( K \). Then \( \alpha \) is an algebraic integer in \( K \), and there exists an algebraic integer \( \beta \) in \( K \) such that \( \alpha \beta = 1 \).
+
+    Taking the norm, we find that
+    \[
+    N(\alpha \beta) = N(1) = 1.
+    \]
+    Using the multiplicative property of the norm, we have:
+    \[
+    N(\alpha \beta) = N(\alpha) N(\beta).
+    \]
+    This property holds for any elements \( \alpha \) and \( \beta \) in the quadratic field \( K = \mathbb{Q}(\sqrt{m}) \).
+
+    Since \( \alpha \beta = 1 \), we get \( N(\alpha) N(\beta) = 1 \). Since \( N(\alpha) \) and \( N(\beta) \) are both integers (as \( \alpha \) and \( \beta \) are integers in \( K \)), it follows that \( N(\alpha) = \pm 1 \).
+
+    Conversely, suppose \( N(\alpha) = \pm 1 \). Then \( \alpha \overline{\alpha} = \pm 1 \), which implies:
+    \[
+    \alpha \cdot (\pm \overline{\alpha}) = 1.
+    \]
+    Here, \( \pm \overline{\alpha} \) is an algebraic integer in \( K \), so \( \alpha \) divides \( 1 \), meaning that \( \alpha \) is a unit.
+\end{proof}
+
+\begin{example}
+    Find \( N(3 + 4i) \) in \( \mathbb{Q}(i) \).
+    
+    We calculate:
+    \[
+    N(3 + 4i) = (3 + 4i)(3 - 4i) = 3^2 + 4^2 = 9 + 16 = 25.
+    \]
+   
+    Secondly, consider
+
+    $N(\frac{3}{5} + \frac{4}{5}i) = (\frac{3}{5} + \frac{4}{5}i)(\frac{3}{5} - \frac{4}{5}i) = \frac{9}{25} + \frac{16}{25} = 1$\\\\
+    Here the ring of algebraic in $Q(i)$ is \{$a + bi : a, b \in \mathbb{Z}$\}. Therefore 
+    $\frac{3}{5} + \frac{4}{5}i$ is not an algebraic integer in $Q(i)$.ALthough $N(\frac{3}{5} + \frac{4}{5}i) = 1$, 
+    $\frac{3}{5} + \frac{4}{5}i$ is not a unit of $Q(i)$.
+
+\end{example}
+
+\noindent \textbf{Note:} If \( m \geq 2 \) (i.e., \( m > 0 \)), the quadratic field \( \mathbb{Q}(\sqrt{m}) \) has infinitely many units.
+
+\vspace{1em}
+
+For example, if \( m = 2 \), the ring of integers of \( K = \mathbb{Q}(\sqrt{2}) \) is:
+\[
+\mathbb{Z}[\sqrt{2}] = \{a + b\sqrt{2} : a, b \in \mathbb{Z}\}.
+\]
+We observe that \( 1 + \sqrt{2} \in \mathbb{Z}[\sqrt{2}] \).
+
+\[
+N(1 + \sqrt{2}) = (1 + \sqrt{2})(1 - \sqrt{2}) = 1 - 2 = -1.
+\]
+Therefore, \( 1 + \sqrt{2} \) is a unit in \( K \).
+
+Since \( (1 + \sqrt{2})^n \) is also a unit for all \( n \geq 1 \), and these powers are all distinct, we obtain infinitely many units in \( K \).
+
+\vspace{1em}
+
+Now, if \( m \) is a square-free integer \( > 1 \), consider \( \alpha = a + b \sqrt{m} \in \mathbb{Q}(\sqrt{m}) \), where \( a, b \in \mathbb{Z} \). Then \( \alpha \) is an integer of \( K = \mathbb{Q}(\sqrt{m}) \).
+
+The norm of \( \alpha \) is given by:
+\[
+N(\alpha) = a^2 - b^2m.
+\]
+If \( N(\alpha) = 1 \), i.e., \( a^2 - b^2m = 1 \), then \( \alpha \) is a unit in \( K \). This equation:
+\[
+x^2 - my^2 = 1,
+\]
+is known as Pell's equation or the Brahmagupta-Bhaskara equation.
+
+\vspace{1em}
+
+Since Pell's equation has infinitely many solutions, this proves the existence of infinitely many units in \( \mathbb{Q}(\sqrt{m}) \) for \( m > 1 \).
+
 \subsection{Units in Imaginary Quadratic Fields}
+
+\thm{}{Let \( K = \mathbb{Q}(\sqrt{m}) \), where \( m \) is a square-free integer with \( m < 0 \). The units in \( K \) are as follows:
+\begin{itemize}
+    \item[(i)] For \( m = -1 \), the units are \( \pm 1 \) and \( \pm i \).
+    \item[(ii)] For \( m = -3 \), the units are \( \pm 1 \), \( \pm \omega \), and \( \pm \omega^2 \), where \( \omega = \frac{-1 + \sqrt{-3}}{2} \). \\
+    These can also be written as \( \pm 1 \) and \( \frac{\pm 1 \pm \sqrt{-3}}{2} \).
+    \item[(iii)] For \( m \neq -1, -3 \), the units are just \( \pm 1 \).
+\end{itemize}}
+
+\begin{proof}
+    Let \( \epsilon \) be a unit in \( \mathbb{Q}(\sqrt{m}) \). Write \( \epsilon = \frac{a + b\sqrt{m}}{2} \) with \( m \equiv 1 \pmod{4} \), where \( a \) and \( b \) are odd integers.
+
+    Since \( \epsilon \) is a unit, we have \( N(\epsilon) = \pm 1 \).
+
+    Now,
+    \[
+    N(\epsilon) = 
+    \begin{cases}
+    a^2 - b^2 m, & \text{if } m \equiv 0 \pmod{4} \\
+    \frac{a^2 - b^2 m}{4}, & \text{if } m \equiv 1 \pmod{4} \text{ and } a, b \text{ are odd}
+    \end{cases}
+    \]
+    
+    Since \( m \) is negative, \( -m > 0 \). Therefore, \( N(\epsilon) > 0 \), which implies \( N(\epsilon) = 1 \).
+
+    Consider the case \( a^2 - b^2 m = 1 \). If \( m \leq -2 \), then \( a^2 - b^2 m \geq 2b^2 \). If \( b = 0 \), then \( a = \pm 1 \); if \( b \neq 0 \), then \( a^2 - b^2 m \geq 2b^2 \geq 2 \). Therefore, there is no unit with \( b \neq 0 \) in this case.
+
+    Thus, if \( m \leq -2 \) and \( m \not\equiv 1 \pmod{4} \), then \( \epsilon = \pm 1 \).
+
+    For \( m = -1 \), we have \( a^2 - mb^2 = a^2 + b^2 = 1 \), giving \( a = \pm 1 \), \( b = 0 \), or \( a = 0 \), \( b = \pm 1 \). Therefore, \( \epsilon = \pm 1 \) or \( \pm i \).
+
+    Now consider \( N(\epsilon) = \frac{a^2 - b^2 m}{4} \) with \( m \equiv 1 \pmod{4} \) and \( a, b \) odd. Then \( N(\epsilon) = 1 \) gives \( a^2 - b^2 m = 4 \).
+
+    If \( m < -3 \), i.e., \( m \leq -7 \) with \( m \equiv 1 \pmod{4} \), then \( a^2 - b^2 m \geq 7 \) if \( b \neq 0 \), so there are no units with \( b \neq 0 \) in this case. Therefore, \( b = 0 \), which implies \( a^2 = 4 \), a contradiction as \( a \) is odd. 
+
+    For \( m = -3 \), we have \( a^2 + 3b^2 = 4 \) with \( b \) odd. For \( b = \pm 1 \), we find \( a^2 = 1 \), so \( a = \pm 1 \), giving \( \epsilon = \frac{\pm 1 \pm \sqrt{-3}}{2} \). No units exist with \( b \neq \pm 1 \), as \( a^2 + 3b^2 > 4 \).
+
+    For \( m \equiv 1 \pmod{4} \), the first case \( a^2 - b^2 m = 1 \) gives \( a = \pm 1 \) and \( b = 0 \), so \( \epsilon = \pm 1 \) is the only possibility.
+
+    Therefore:
+    \begin{itemize}
+        \item[(i)] For \( m = -1 \), the units are \( \pm 1 \) and \( \pm i \).
+        \item[(ii)] For \( m = -3 \), the units are \( \pm 1 \), \( \pm \omega \), and \( \pm \omega^2 \), where \( \omega = \frac{-1 + \sqrt{-3}}{2} \).
+        \item[(iii)] For \( m \neq -1, -3 \), the units are \( \pm 1 \).
+    \end{itemize}
+\end{proof}
+
+\subsection{Prime Elements in an Algebraic Number Field}
+
+\defn{}{A prime element in $K$ is an algebriac integer $\pi$ in $K$ such that 
+$\pi$ is a non unit and if $\pi = \alpha \beta$ ($\alpha$, $\beta$ integers of K) then either $\alpha$ is a unit or $\beta$ is a unit. (irreducible element)}
+
+\prop{Suppose $\pi$ is an algebraic integer in $Q(\sqrt{m})$ such that  $N(\pi) = \pm p$, $p$ a prime number 
+then $\pi$ is a prime in $K$.}
+
+\begin{proof}Assume, for the sake of contradiction, that \( \pi \) is not prime. Then we can write \( \pi = \alpha \beta \) for some elements \( \alpha \) and \( \beta \) in \( K \), where neither \( \alpha \) nor \( \beta \) is a unit.
+
+    Since \( N(\pi) = \pm p \) and \( N(\pi) = N(\alpha \beta) = N(\alpha) N(\beta) \), it follows that:
+    \[
+    N(\alpha) N(\beta) = \pm p.
+    \]
+    
+    If both \( \alpha \) and \( \beta \) are non-units, then \( N(\alpha) \neq 1 \) and \( N(\beta) \neq 1 \). This would imply that both \( N(\alpha) \) and \( N(\beta) \) are divisors of \( \pm p \), which is impossible since \( p \) is prime and \( N(\alpha), N(\beta) \neq 1 \).
+    
+    Thus, we reach a contradiction, and it follows that \( \pi \) must be a prime in \( K \).
+    \end{proof}
+
+\begin{example}
+$1 + i$ is a prime in $Q(i)$.\\\\
+$N(1 + i) = (1 + i)(1 - i) = 1 - i^2 = 1 + 1 = 2$, which is a prime number. Therefore $1 + i$ is a prime in $Q(i)$.
+\end{example}
+
+\textbf{Note:} If $\pi$  is prime on $\mathbb{Q}(\sqrt{m})$ so is $\underbrace{\epsilon \pi}_{\text{associate of} \pi}$ for any unit $\epsilon$ in $K$.\\\\
+\begin{proof}
+    Suppose \( \pi \) is prime. Let \( \epsilon \) be a unit in \( K \) and consider the element \( \epsilon \pi \), which is an associate of \( \pi \). Assume for contradiction that \( \epsilon \pi \) is not prime, so we can write \( \epsilon \pi = \alpha \beta \) for some elements \( \alpha \) and \( \beta \) in \( K \).
+
+Then we have:
+\[
+\pi = (\epsilon^{-1} \alpha) \beta.
+\]
+
+Since \( \pi \) is prime, it must be the case that either \( \epsilon^{-1} \alpha \) is a unit or \( \beta \) is a unit. 
+
+If \( \epsilon^{-1} \alpha \) is a unit, then \( \epsilon (\epsilon^{-1} \alpha) = \alpha \) is also a unit (since a unit times a unit is a unit). 
+
+Therefore, either \( \alpha \) or \( \beta \) is a unit, meaning \( \epsilon \pi \) satisfies the conditions of being prime. This proves that any associate of a prime element \( \pi \) in \( K \) is also prime.
+\end{proof}
+
+
+\defn{}{If $\alpha$, $\beta$ are non zero elements of ring of integers of an algebraic number field, then they are called 
+associates if $\frac{\alpha}{\beta}$ is a unit, or equivalently if $\frac{\beta}{\alpha}$ is a unit, i.e. 
+$\alpha = \text{unit} \times \beta$ or $\beta = \text{unit} \times \alpha$.}
+
+\prop{Let $K = \mathbb{Q}(\sqrt{m}$), m square free $\neq 1$. Any non zero, non unit 
+integer of $K$ can be written as a product of primes in $K$}
+
+\begin{proof}
+    Let \( \alpha \) be a non-zero, non-unit element of \( K \). If \( \alpha \) is not prime, then there exist non-units \( \alpha_1 \) and \( \alpha_2 \) in \( K \) such that \( \alpha = \alpha_1 \alpha_2 \).
+
+    We can continue factorizing \( \alpha_1 \) and \( \alpha_2 \) if either is not prime. Proceeding in this manner, suppose the factorization process does not terminate. Then, for every \( n \geq 2 \), we have:
+    \[
+    \alpha = \beta_1 \beta_2 \dots \beta_n,
+    \]
+    where each \( \beta_i \) is a non-unit in \( K \).
+    
+    Since \( \beta_i \) is a non-unit, we have \( |N(\beta_i)| \geq 2 \). Consequently, \( |N(\alpha)| \geq 2^n \) for every \( n \geq 2 \).
+    
+    This implies that \( |N(\alpha)| \) grows without bound as \( n \to \infty \), which is a contradiction because \( \alpha \) has a fixed norm. Therefore, the factorization process must terminate, meaning that \( \alpha \) can indeed be written as a product of primes in \( K \).
+\end{proof}
+
+\subsection{Euclidean Quadratic Fields}
+
+\defn{Euclidean Quadratic Fields}{A quadratic field $\mathbb{Q}(\sqrt{m})$ is called Euclidean if the Euclidean algorithm holds 
+wrt norm for integers in $K$.}
+
+\defn{Euclidean Algorithm wrt norm}{Let $a$, $b$, be integers in $K$, a non zero. Then there are integers $c$, $r$ in $K$ such that
+$b = ac + r$ and $N(r) < N(a)$.}
+
+\prop{ Let $K = \mathbb{Q}(\sqrt{m})$ be a Euclidean Quadratic Field. Let 
+$\alpha$, $\beta$ be twwo non zero non units of $K$ which do not have a common 
+factor. There there are $\gamma$, $\delta$ integrs of $K$, such that 
+$$ 1 = \alpha \gamma + \beta \delta$$}
+
+\begin{proof}
+    Consider elements of the form \( \alpha \gamma + \beta \delta \), where \( \gamma \) and \( \delta \) vary over the integers in \( K \). Let \( \epsilon \) be an element of this form with the minimum non-zero norm \( |N(\epsilon)| \) in absolute value. Divide \( \alpha \) by \( \epsilon \), so we can write:
+    \[
+    \alpha = \gamma' \epsilon + \delta',
+    \]
+    where \( |N(\delta')| < |N(\epsilon)| \).
+    
+    Now, express \( \delta' \) as:
+    \[
+    \delta' = \alpha - \gamma' \epsilon = \alpha - \gamma' (\alpha \gamma_1 + \beta \delta_1),
+    \]
+    which is a combination of \( \alpha \) and \( \beta \). Since \( |N(\delta')| < |N(\epsilon)| \), we have \( N(\delta') = 0 \), implying that \( \delta' = 0 \). Therefore, \( \epsilon \) divides \( \alpha \), and similarly, \( \epsilon \) divides \( \beta \).
+    
+    Thus, \( \epsilon \) is a common factor of \( \alpha \) and \( \beta \). However, since \( \alpha \) and \( \beta \) do not have a non-trivial common factor, \( \epsilon \) must be a unit. 
+    
+    We have \( \epsilon = \alpha \gamma_1 + \beta \delta_1 \), so:
+    \[
+    1 = \alpha \left( \frac{\gamma_1}{\epsilon} \right) + \beta \left( \frac{\delta_1}{\epsilon} \right).
+    \]
+    This shows that \( 1 \) can be written as a combination of \( \alpha \) and \( \beta \) with coefficients that are integers in \( K \).reofore $1$ is a combination of $\alpha$ and $\beta$ with integers in $K$ as coefficients.
+
+\end{proof}
+
+\prop{In a Euclidean Field  $K$, if $\pi$ is prime then 
+$\pi | \alpha \beta$ implies $\pi | \alpha$ or $\pi | \beta$}
+
+\begin{proof}
+Suppose \( \pi | \alpha \beta \) and \( \pi \nmid \alpha \). Then \( \alpha \) and \( \pi \) do not have a non-trivial common factor. Therefore, there exist integers \( \gamma \) and \( \delta \) in \( K \) such that:
+\[
+1 = \pi \gamma + \alpha \delta.
+\]
+Multiplying both sides by \( \beta \), we get:
+\[
+\beta = \pi \gamma \beta + \alpha \beta \delta.
+\]
+Since \( \pi | \alpha \beta \), it follows that \( \pi | \beta \).
+\end{proof}
+
+This establishes that:
+
+
+\thm{}{A Eucliddean Field has a unique prime factorization property, i.e. 
+every non zero, non unit integer of $K$ is a product of primes uniquely 
+apart from order and associates}
+
+
 
 
 
