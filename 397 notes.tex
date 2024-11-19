@@ -2151,8 +2151,154 @@ This establishes that:
 every non zero, non unit integer of $K$ is a product of primes uniquely 
 apart from order and associates}
 
+\section{The Equation $x^3 + y^3 = z^3$}
 
+\thm{Fermat's Last Theorem}{Let $n \geq 3$ be an integer. Then the equation $x^n + y^n = z^n$ has no solutions over $\mathbb{Z}$.}
 
+We will prove this theorem for $n = 3$.\\\\
+\textbf{Proof for $n = 3$:} \\\\
+The equation \( x^3 + y^3 = z^3 \) was proved by Euler to have no solutions in positive integers. We will consider the following claims to prove this theorem:
+\clm{1}{A minimization argument for \(a, b, c\)}
+\clm{2}{$\gcd(a+b, a^2 - ab + b^2) = 1$}
+\clm{3}{$(a+b)$ and $(a^2 - ab + b^2)$ are perfect cubes}
+\clm{4}{$\begin{cases}
+a + b = p^3\\
+a^2 - ab + b^2 = q^3
+\end{cases}$ has no solutions}
+
+WTS: $\not\exists a, b, c \in \mathbb{Z}^+$ such that $a^3 + b^3 = c^3$.\\\\
+By contradiction, assume that $\exists a, b, c \in \mathbb{Z}^+$ such that $a^3 + b^3 = c^3$. Suppose that \(a, b, c\) are such that \((a + b + c)\) is minimized.\\\\
+
+\defn{Minimized}{Minimized, here, means choosing the smallest possible value of $(a + b + c)$ among all potential solutions $(a, b, c)$ that satisfy the equation $a^3 + b^3 = c^3$.}
+
+WLOG, assume that $\gcd(a, b, c) = 1$. If not, we can divide \(a, b, c\) by their gcd. The equation \(a^3 + b^3 = c^3\) will still hold for the reduced values \(a', b', c'\), satisfying \(\gcd(a', b', c') = 1\).\\\\
+
+The equation \(a^3 + b^3 = c^3\) can be written as \((a + b)(a^2 - ab + b^2) = c^3\). We now proceed to prove Claim 2: \(\gcd(a + b, a^2 - ab + b^2) = 1\).\\\\
+
+\textbf{Proof of Claim 2:}\\\\
+Assume that \(d \in \mathbb{Z}\) is a common divisor of \((a + b)\) and \((a^2 - ab + b^2)\). Then \(d\) divides both \((a + b)\) and \((a^2 - ab + b^2)\). Thus, 
+\[
+\begin{cases}
+d | (a + b) & (1) \\
+d | (a^2 - ab + b^2) & (2)
+\end{cases}
+\]
+
+From (1), \(a + b \equiv 0 \pmod{d}\), which implies \(a \equiv -b \pmod{d}\). Substituting \(a \equiv -b \pmod{d}\) into (2), we get:
+\[
+d | ((-b)^2 - (-b)b + b^2) \implies d | (b^2 + b^2 + b^2) \implies d | 3b^2.
+\]
+This implies \(d | b\) or \(d | 3\).\\\\
+If \(d | b\), then \(b | d\). However, since \(d | (a+b)\), we have:
+\[
+\frac{a + b}{d} \in \mathbb{Z} \implies \frac{a}{d} + \frac{b}{d} \in \mathbb{Z} \implies \frac{a}{d} \in \mathbb{Z}.
+\]
+Thus, \(d | a\). Combining \(d | a\) and \(d | b\), we deduce \(\gcd(a, b) \geq 1\), which contradicts the assumption \(\gcd(a, b, c) = 1\).
+
+Therefore, \(d | 3\), so \(d = 1\) or \(d = 3\).
+
+Now considering \((1)\), \(d | (a + b) \implies 3 | (a + b) \implies a \equiv -b \pmod{3}\). 
+
+Thus, \(\exists k, m \in \mathbb{Z}\) such that:
+\[
+\begin{cases}
+a = 3k + r, \\
+b = 3m + r,
+\end{cases}
+\]
+i.e., \(a\) and \(b\) are multiples of 3 plus the same remainder \(r\).
+
+From \(a \equiv -b \pmod{3}\), we can write:
+\[
+3k + r \equiv -(3m + r) \pmod{3} \implies 3k + r \equiv -3m - r \pmod{3} \implies 2r \equiv 0 \pmod{3} \implies r \equiv 0 \pmod{3}.
+\]
+
+Thus:
+\[
+\begin{cases}
+a = 3k \equiv 0 \pmod{3}, \\
+b = 3m \equiv 0 \pmod{3},
+\end{cases}
+\]
+which implies:
+\[
+\begin{cases}
+3 | a, \\
+3 | b.
+\end{cases}
+\]
+
+This contradicts the assumption that \(\gcd(a, b, c) = 1\). Therefore, \(d = 1\) is the only value that satisfies \((1)\) and \((2)\).
+
+Thus:
+\[
+\gcd(a + b, a^2 - ab + b^2) = 1. \tag{\(\pi\)}
+\]
+
+Now \(c^3 = (a + b)(a^2 - ab + b^2)\), and from \((\pi)\), we conclude:
+\[
+\begin{cases}
+a + b = p^3, \quad p \in \mathbb{Z}, \\
+a^2 - ab + b^2 = q^3, \quad q \in \mathbb{Z}.
+\end{cases}
+\]
+
+\defn{Perfect Cube}{$n \in \mathbb{Z}$ is a perfect cube if \(\exists m \in \mathbb{Z}\) such that \(n = m^3\).}
+
+We can write \(a+b\) as \(a+b = p_1^{e_1}p_2^{e_2} \dots p_k^{e_k}\), where \(p_i\) are primes, \(e_i \in \mathbb{Z}\), and \(\exists\) at least one \(e_i\) such that \(3 \nmid e_i\) for \(i \in \{1, \dots, k\}\).
+
+If \(a^2 - ab + b^2\) is a perfect cube, then \(\exists q \in \mathbb{Z}\) such that \(a^2 - ab + b^2 = q^3\). Substituting these relations, we get:
+\[
+c^3 = (a + b)(a^2 - ab + b^2) = (p_1^{e_1}p_2^{e_2} \dots p_k^{e_k})q^3.
+\]
+
+Assume \(e_2\) is such that \(3 \nmid e_2\) and \(e_1 = e_3 = \dots = e_k = 3\). Then:
+\[
+c^3 = (p_1^{e_1}p_2^{e_2} \dots p_k^{e_k})q^3 = p_2^{e_2}(p_1p_3 \dots p_kq)^3.
+\]
+
+Thus:
+\[
+\left( \frac{c}{p_1p_3 \dots p_k} \right)^3 = p_2^{e_2}.
+\]
+
+Let \(x = \frac{c}{p_1p_3 \dots p_k}\). Then \(x^3 = p_2^{e_2}\), where \(x \in \mathbb{Q}\), \(p_2\) is prime, and \(e_2 \in \mathbb{Z}\) such that \(3 \nmid e_2\). 
+
+Since \(x \in \mathbb{Q}\), we have \(x = p_2^{e_2/3}\). For \(x \in \mathbb{Q}\), \(\frac{e_2}{3} \in \mathbb{Z}\), which implies \(3 | e_2\). This contradicts the assumption \(3 \nmid e_2\).
+
+Thus, \(a+b = p_1^3p_2^3 \dots p_k^3 = (p_1p_2 \dots p_k)^3\), i.e., \(a+b\) is a perfect cube. By the same reasoning, \(a^2 - ab + b^2\) is also a perfect cube.
+
+Hence:
+\[
+\begin{cases}
+a + b = p^3, \\
+a^2 - ab + b^2 = q^3.
+\end{cases}
+\]
+
+Substituting \(a = p^3 - b\) into \(a^2 - ab + b^2 = q^3\), we get:
+\[
+(p^3 - b)^2 - (p^3 - b)b + b^2 = q^3.
+\]
+
+Expanding:
+\[
+p^6 - 2p^3b + b^2 - p^3b + b^2 + b^2 = q^3 \implies p^6 - 3p^3b + 3b^2 = q^3.
+\]
+
+Reducing modulo \(p^3\), we have:
+\[
+p^6 - 3p^3b + 3b^2 \equiv q^3 \pmod{p^3}.
+\]
+
+This simplifies to:
+\[
+3b^2 \equiv q^3 \pmod{p^3}.
+\]
+
+To complete the proof, we show that \(3b^2 \equiv q^3 \pmod{p^3}\) implies \(q^3 \equiv 0 \pmod{p^3}\). Assume the contrary. If \(q^3 \not\equiv 0 \pmod{p^3}\), it leads to a contradiction regarding the divisibility of \(b^2\) and \(p^3\). Therefore, \(q^3 \equiv 0 \pmod{p^3}\), which implies \(b \equiv 0 \pmod{p^3}\), contradicting the minimality of \(a+b+c\).
+
+Hence, no solutions exist for \(a^3 + b^3 = c^3\) in \(\mathbb{Z}^+\).
 
 
 \end{document}

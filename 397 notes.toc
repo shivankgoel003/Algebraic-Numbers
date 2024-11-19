@@ -18,3 +18,4 @@
 \contentsline {subsection}{\numberline {9.3}Units in Imaginary Quadratic Fields}{42}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}Prime Elements in an Algebraic Number Field}{43}{subsection.9.4}%
 \contentsline {subsection}{\numberline {9.5}Euclidean Quadratic Fields}{44}{subsection.9.5}%
+\contentsline {section}{\numberline {10}The Equation $x^3 + y^3 = z^3$}{46}{section.10}%
