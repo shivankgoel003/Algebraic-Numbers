@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1731972880.20996 "c:/Users/shiva/Desktop/final year/mat397/notes 397/Algebraic-Numbers/397 notes.tex" "397 notes.pdf" "397 notes" 1731972883.17096 0
-  "397 notes.aux" 1731972882 2946 7da6a1fcf8f22f6203600552a5d5927f "pdflatex"
-  "397 notes.out" 1731972882 4247 1ef8eeb07b02d8fe8fbbd5a230cb9167 "pdflatex"
-  "397 notes.tex" 1731972877 114316 f4fb58e3d4f743a00feb63153a7711fa ""
-  "397 notes.toc" 1731972882 1878 4edc3976b552393c33539772052929be "pdflatex"
+["pdflatex"] 1732575971.69775 "c:/Users/shiva/Desktop/final year/mat397/notes 397/Algebraic-Numbers/397 notes.tex" "397 notes.pdf" "397 notes" 1732575977.14912 0
+  "397 notes.aux" 1732575976 3503 d2d97cc1008cb7f5d52d18c44076933d "pdflatex"
+  "397 notes.out" 1732575976 5163 1fb7965eb15ad6619cb6f4dc716cfe0c "pdflatex"
+  "397 notes.tex" 1732575970 136647 b039747752117704ccbebd6ff7ef2f6d ""
+  "397 notes.toc" 1732575976 2271 f9b1673aec26dedbfd2514faafe96470 "pdflatex"
   "C:/Users/shiva/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1716172999 81074 e9df683c7a67b773afe1722d345afa16 ""
   "C:/Users/shiva/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1684618211 11548 f682b43c0e7bcd78a3e130decb87d8cf ""
   "C:/Users/shiva/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1707678555 24210787 8eeca706b0806df4eea0cbdf825d050c ""
@@ -19,7 +19,9 @@
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx5.tfm" 1136765053 1332 f817c21a1ba54560425663374f1b651a ""
+  "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx6.tfm" 1136765053 1344 8a0be4fe4d376203000810ad4dc81558 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx7.tfm" 1136765053 1336 3125ccb448c1a09074e3aa4a9832f130 ""
+  "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx8.tfm" 1136765053 1332 1fde11373e221473104d6cc5993f046e ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -46,6 +48,7 @@
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247593067 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1247593067 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247593067 32762 7fee39e011c23b3589931effd97b9702 ""
+  "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247593067 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb" 1247593066 35022 e40946b20bfdcd1099eafb2bcd9f25dd ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247593066 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
@@ -220,7 +223,7 @@
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695379486 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695379486 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/shiva/Desktop/final year/mat397/notes 397/Algebraic-Numbers/397 notes.tex" 1731972877 114316 f4fb58e3d4f743a00feb63153a7711fa ""
+  "c:/Users/shiva/Desktop/final year/mat397/notes 397/Algebraic-Numbers/397 notes.tex" 1732575970 136647 b039747752117704ccbebd6ff7ef2f6d ""
   (generated)
   "397 notes.aux"
   "397 notes.log"

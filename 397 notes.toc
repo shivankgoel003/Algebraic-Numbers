@@ -18,4 +18,8 @@
 \contentsline {subsection}{\numberline {9.3}Units in Imaginary Quadratic Fields}{42}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}Prime Elements in an Algebraic Number Field}{43}{subsection.9.4}%
 \contentsline {subsection}{\numberline {9.5}Euclidean Quadratic Fields}{44}{subsection.9.5}%
-\contentsline {section}{\numberline {10}The Equation $x^3 + y^3 = z^3$}{46}{section.10}%
+\contentsline {section}{\numberline {10}Fermat's Last Theorem for $n = 3$ and $n = 4$}{46}{section.10}%
+\contentsline {subsection}{\numberline {10.1}$x^3 + y^3 = z^3$}{46}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}$x^4 + y^4 = z^4$}{49}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Unique Factorization }{51}{section.11}%
+\contentsline {section}{\numberline {12}Primes in Quadratic Fields Having the Unique Factorization Property}{53}{section.12}%

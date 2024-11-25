@@ -2151,7 +2151,9 @@ This establishes that:
 every non zero, non unit integer of $K$ is a product of primes uniquely 
 apart from order and associates}
 
-\section{The Equation $x^3 + y^3 = z^3$}
+\section{Fermat's Last Theorem for $n = 3$ and $n = 4$}
+
+\subsection{$x^3 + y^3 = z^3$}
 
 \thm{Fermat's Last Theorem}{Let $n \geq 3$ be an integer. Then the equation $x^n + y^n = z^n$ has no solutions over $\mathbb{Z}$.}
 
@@ -2299,6 +2301,442 @@ This simplifies to:
 To complete the proof, we show that \(3b^2 \equiv q^3 \pmod{p^3}\) implies \(q^3 \equiv 0 \pmod{p^3}\). Assume the contrary. If \(q^3 \not\equiv 0 \pmod{p^3}\), it leads to a contradiction regarding the divisibility of \(b^2\) and \(p^3\). Therefore, \(q^3 \equiv 0 \pmod{p^3}\), which implies \(b \equiv 0 \pmod{p^3}\), contradicting the minimality of \(a+b+c\).
 
 Hence, no solutions exist for \(a^3 + b^3 = c^3\) in \(\mathbb{Z}^+\).
+
+\subsection{$x^4 + y^4 = z^4$}
+
+\thm{}{The equation \( x^4 + y^4 = z^4 \) has no solutions in positive integers.}
+
+\thm{}{The equation \( x^4 + y^4 = z^2 \) has no solutions in positive integers.}
+
+\textbf{Main idea:} Relate solutions to \( x^2 + y^2 = z^2 \) to solutions to equations $x^4 + y^4 = z^2$ and $a^2 + 4b^4 = c^4$.\\\\
+Namely, for each solution $(x,y,z)$ to $x^4 + y^4 = z^2$ we construct a positive solution $(a,b,c)$ to $a^2 + 4b^4 = c^4$ with $c < z$.\\\\
+Then using the solution $(a,b,c)$ we construct another solution $(x',y',z')$ with $z' < c$ and so on. This would imply that 
+the set of values of $z$ arising in solutions to $x^4 + y^4 = z^2$ has no minimal element which contradicts 
+to the fact that every non empty set of positive integers has a minimal element.\\\\
+
+\textbf{Proof:}\\\\
+Take any solutions \( (x, y, z) \). Find a solution \( (a, b, c) \) with \( c < z \). Then construct a new solution \( (x', y', z') \) with \( z' < c \implies z' < z \).
+
+Take any \( (x, y, z) \) with \( x^4 + y^4 = z^2 \). Let \( d = \gcd(x, y) \), where \( d > 1 \), and \( d \mid x \) and \( d \mid y \). Then, we have
+\[
+d^4 \mid x^4 + y^4 = z^2 \implies d^2 \mid z.
+\]
+Thus, we can define new variables as follows:
+\[
+x_1 = \frac{x}{d}, \quad y_1 = \frac{y}{d}, \quad z_1 = \frac{z}{d^2}.
+\]
+The greatest common divisor \( \gcd(x_1, y_1, z_1) \) satisfies \( x^4 + y^4 = z^2 \), with \( \gcd(x_1, y_1) = 1 \). This implies that \( (x_1^2, y_1^2, z_1) \) satisfies \( x^2 + y^2 = z^2 \) and \( \gcd(x_1^2, y_1^2) = 1 \).
+
+Now, consider the equations:
+\[
+x_1^2 = r^2 - s^2, \quad y_1^2 = 2rs, \quad z_1 = r^2 + s^2,
+\]
+where \( r > s > 0 \), \( \gcd(r, s) = 1 \), and \( r \) and \( s \) are of different parity.
+
+\clm{}{\( r \) is odd, and \( s \) is even.}
+
+Otherwise, if \( r \) is even and \( s \) is odd, then
+\[
+(r^2 - s^2) \equiv 0 - 1 \equiv -1 \equiv x_1^2 \pmod{4},
+\]
+which is impossible.
+
+Thus, \( \gcd(r, s) = 1 \) and \( r \) is odd, and \( s \) is even. This implies \( \gcd(r, 2s) = 1 \). Additionally,
+\[
+y_1^2 = r(2s) \implies r, 2s \text{ are perfect squares.}
+\]
+Therefore, we set
+\[
+r = c^2 \quad \text{and} \quad 2s = (2b)^2 = 4b^2 \implies s = 2b^2.
+\]
+We now have
+\[
+r^2 = c^2, \quad s = 2b^2, \quad \gcd(c, b) = 1.
+\]
+Thus,
+\[
+x_1 = r^2 - s^2 = c^4 - 4b^4.
+\]
+We conclude that
+\[
+x_1^2 + 4b^4 = c^4.
+\]
+This satisfies the equation \( a^2 + 4b^4 = c^4 \) with \( c < z \).
+
+Next, let \( h = \gcd(b, c) \), so that
+\[
+h^4 \mid c^4 - 4b^4 = a^2 \implies h^2 \mid a.
+\]
+Define new variables:
+\[
+a_1 = \frac{a}{h^2}, \quad b_1 = \frac{b}{h}, \quad c_1 = \frac{c}{h}.
+\]
+We have \( \gcd(b_1, c_1) = 1 \), and thus \( (a_1, 2b_1^2, c_1) \) is a solution to \( x^2 + y^2 = z^2 \). This solution is primitive because \( c^2 = r \) is odd, so \( c_1^2 \) is odd, and \( \gcd(2b_1^2, c_1) = 1 \).
+
+Finally, let \( r' \) and \( s' \) have opposite parity, and \( \gcd(r', s') = 1 \). Then
+\[
+a_1 = (r')^2 - (s')^2, \quad 2b_1^2 = 2r's', \quad b_1^2 = r's'.
+\]
+Thus, we have
+\[
+c_1^2 = (r')^2 + (s')^2.
+\]
+By setting \( z' = c_1 \), we get a new solution \( (x', y', z') \) satisfying the equation
+\[
+x^4 + y^4 = z^2.
+\]
+Furthermore, since \( c_1' = z' < c < z \), we conclude that \( z' \leq z \), as required.
+
+This completes the proof that the equation \( x^4 + y^4 = z^2 \) has no solutions in positive integers.
+
+\section{Unique Factorization }
+
+\defn{Unique Factorization}{An integral domain \( R \) has the \textit{unique factorization property} if:
+\begin{itemize}
+    \item Every non-zero, non-unit element \( a \in R \) can be expressed as a product of irreducible elements:
+    \[
+    a = p_1 p_2 \cdots p_k,
+    \]
+    where \( p_i \) are irreducible elements.
+    \item This factorization is unique up to the order of the factors and multiplication by units.
+\end{itemize}
+Such a domain is called a \textit{unique factorization domain (UFD)}.
+}
+Unique factorization ensures that prime elements behave analogously to prime numbers in \( \mathbb{Z} \). For example, quadratic fields such as \( \mathbb{Q}(\sqrt{m}) \) may or may not exhibit unique factorization, which significantly influences their arithmetic structure.
+
+
+\thm{}{ The fields $\mathbb{Q}(\sqrt{m}) \text{ for } m = -1, -2, -3, -7, 2, 3$ are Euclidean and so have the unique factorization property.}
+
+\prop{Every Euclidean domain is a unique factorization domain.}
+
+\textit{Proof:} In a Euclidean domain:
+\begin{itemize}
+    \item All ideals are principal (it is a principal ideal domain, PID).
+    \item PIDs are UFDs because every element can be factored into irreducibles uniquely.
+\end{itemize}
+Thus, proving a quadratic field is Euclidean ensures it is a UFD.
+
+\noindent
+\textbf{Proof of Thm 21} \\\\
+Consider any integers \( \alpha \) and \( \beta \) in \( \mathbb{Q}(\sqrt{m}) \) with \( \beta \neq 0 \). Then 
+\[
+\frac{\alpha}{\beta} = u + v\sqrt{m},
+\]
+where \( u \) and \( v \) are rational numbers. Let \( x \) and \( y \) be integers closest to \( u \) and \( v \), respectively, such that
+\[
+0 \leq |u - x| \leq \frac{1}{2}, \quad 0 \leq |v - y| \leq \frac{1}{2}. 
+\]
+
+Define \( \gamma = x + y\sqrt{m} \) and \( \delta = \alpha - \beta\gamma \). Both \( \gamma \) and \( \delta \) are elements of \( \mathbb{Q}(\sqrt{m}) \). The norm of \( \delta \) is given by
+\[
+N(\delta) = N(\beta) N\left(\frac{\alpha}{\beta} - \gamma\right),
+\]
+where
+\[
+\frac{\alpha}{\beta} - \gamma = (u - x) + (v - y)\sqrt{m}
+\]
+Thus, the norm becomes
+\[
+N(\delta) = |N(\beta)| \cdot \left| (u - x)^2 - m(v - y)^2 \right|
+\]
+
+Using the bounds on \( u - x \) and \( v - y \) from (9.10), we have
+\[
+(u - x)^2 \leq \frac{1}{4}, \quad m(v - y)^2 \leq \frac{|m|}{4}
+\]
+For \( m > 0 \), it follows that
+\[
+-\frac{m}{4} \leq (u - x)^2 - m(v - y)^2 \leq \frac{1}{4}
+\]
+For \( m < 0 \), we obtain
+\[
+0 \leq (u - x)^2 - m(v - y)^2 \leq \frac{1}{4} + \frac{|m|}{4}
+\]
+
+Thus, for \( m = 2, 3, -1, -2 \), we have
+\[
+|N(\delta)| < |N(\beta)|,
+\]
+proving that \( \mathbb{Q}(\sqrt{m}) \) is Euclidean for these values of \( m \).
+
+For \( m = -3 \) and \( m = -7 \), we modify the choice of \( \gamma \). Define
+\[
+\gamma = \frac{r + s\sqrt{m}}{2},
+\]
+where \( r \) and \( s \) are integers such that \( r \equiv s \pmod{2} \) and \( |2u - r| \leq 1 \), \( |2v - s| \leq 1 \). Then
+\[
+\gamma \in \mathbb{Q}(\sqrt{m}),
+\]
+and \( \delta = \alpha - \beta\gamma \) satisfies
+\[
+N(\delta) = |N(\beta)| \cdot \left| \frac{1}{4} + \frac{1}{16}(-m) \right| < |N(\beta)|.
+\]
+
+Hence, \( \mathbb{Q}(\sqrt{m}) \) is Euclidean for \( m = -3 \) and \( m = -7 \) as well. This completes the proof.
+
+\section{Primes in Quadratic Fields Having the Unique Factorization Property}
+
+\textbf{Background:} In quadratic fields \( \mathbb{Q}(\sqrt{m}) \), the unique factorization property allows us to study the structure of primes. Rational primes \( p \) in \( \mathbb{Z} \) behave differently in these fields, and understanding their decomposition in \( \mathbb{Q}(\sqrt{m}) \) is fundamental in algebraic number theory.
+
+\thm{}{Let \( \mathbb{Q}(\sqrt{m}) \) have the unique factorization property. Then:\\
+To any prime \( \pi \) in \( \mathbb{Q}(\sqrt{m}) \), there corresponds one and only one rational prime \( p \in \mathbb{Z} \) such that \( \pi \mid p \).
+}
+
+\begin{proof}
+    The norm \( N(\pi) \) of the prime \( \pi \) is a positive rational integer. Since \( \pi \) divides \( N(\pi) \), there exist positive rational integers divisible by \( \pi \). Let \( n \) be the smallest such positive integer.
+
+    We claim that \( n \) is a rational prime. Suppose, for contradiction, that \( n \) is not a rational prime. Then \( n \) can be written as \( n = n_1 n_2 \), where \( 0 < n_1 < n \) and \( 0 < n_2 < n \). 
+    
+    Since \( \pi \mid n \), it must also divide \( n_1 \) or \( n_2 \) (by the unique factorization property). However, this contradicts the minimality of \( n \), because \( n_1 \) or \( n_2 \) would be a smaller positive integer divisible by \( \pi \). Hence, \( n \) must be a rational prime, which we call \( p \).
+    
+    Next, we show that \( \pi \) cannot divide any other rational prime \( q \neq p \). Suppose \( \pi \mid q \) for some other rational prime \( q \). By Bezout's identity, there exist integers \( x \) and \( y \) such that:
+    \[
+    1 = px + qy.
+    \]
+    Since \( \pi \mid p \) and \( \pi \mid q \), it follows that \( \pi \mid 1 \), which is impossible because no prime can divide 1. Therefore, \( \pi \) cannot divide any rational prime other than \( p \).
+    
+    Thus, every prime \( \pi \) in \( \mathbb{Q}(\sqrt{m}) \) corresponds to exactly one rational prime \( p \), completing the proof.
+\end{proof}
+
+\noindent
+ In Theorem 22, we established that each prime \( \pi \) in \( \mathbb{Q}(\sqrt{m}) \) corresponds to exactly one rational prime \( p \) in \( \mathbb{Z} \). This correspondence forms the foundation for understanding how rational primes behave in quadratic fields.\\\\
+\noindent
+ Theorem 23 builds on this result by exploring how rational primes \( p \) either remain prime in \( \mathbb{Q}(\sqrt{m}) \), split into products of two primes, or behave in other special ways depending on \( m \).
+
+
+ \thm{}{Let \( \mathbb{Q}(\sqrt{m}) \) have the unique factorization property. Then:
+ \begin{enumerate}
+    \item Any rational prime $p$ is either a prime $\pi$ of the field or a product $\pi_1 \pi_2$ of two primes, not necessarily distinct, of $\mathbb{Q}(\sqrt{m})$.
+    \item The totality of primes $\pi, \pi_1, \pi_2$ obtained by applying part (1) to all rational primes, together with their associates, constitute the set of all primes of $\mathbb{Q}(\sqrt{m})$.
+    \item An odd rational prime $p$ satisfying $(p, m) = 1$ is a product $\pi_1 \pi_2$ of two primes in $\mathbb{Q}(\sqrt{m})$ if and only if $\left(\frac{m}{p}\right) = 1$. Furthermore, if $p = \pi_1 \pi_2$, the product of two primes, then $\pi_1$ and $\pi_2$ are not associates, but $\pi_1$ and $\overline{\pi_2}$ are, and $\pi_2$ and $\overline{\pi_1}$ are.
+    \item If $(2, m) = 1$, then 2 is the associate of a square of a prime if $m \equiv 3 \pmod{4}$, 2 is a prime if $m \equiv 5 \pmod{8}$, and 2 is the product of two distinct primes if $m \equiv 1 \pmod{8}$.
+    \item Any rational prime $p$ that divides $m$ is the associate of the square of a prime in $\mathbb{Q}(\sqrt{m})$.
+\end{enumerate}}
+
+Explanation and Example
+\begin{remark}
+This theorem is important for understanding how rational primes behave in the extended field $\mathbb{Q}(\sqrt{m})$. Some rational primes remain prime, while others may split into a product of two primes in this new number system.
+\end{remark}
+
+
+\begin{example}
+Let us consider the field $\mathbb{Q}(\sqrt{-5})$.
+
+\begin{enumerate}
+    \item Consider the rational prime $p = 3$. In $\mathbb{Q}(\sqrt{-5})$, $3$ remains a prime. This means that there are no factors of $3$ in the form of $a + b\sqrt{-5}$ that can multiply to give $3$.
+
+    \item Now consider the rational prime $p = 2$. In the field $\mathbb{Q}(\sqrt{-5}))$, $2$ can be factored as:
+    \[
+    2 = (1 + \sqrt{-5})(1 - \sqrt{-5}).
+    \]
+    Here, $2$ splits into the product of two primes in $\mathbb{Q}(\sqrt{-5})$, namely $(1 + \sqrt{-5})$ and $(1 - \sqrt{-5})$.
+\end{enumerate}
+
+This illustrates how some rational primes can remain prime in an extended field, while others can split into distinct prime factors.
+\end{example}
+
+\textbf{Proof of Theorem 23 - Statement 1}\\\\
+\begin{proofbox}
+    Suppose the rational prime $p$ is not a prime in $\mathbb{Q}(\sqrt{m})$. Then we can write
+    \[
+    p = \pi \beta,
+    \]
+    where $\pi$ is a prime in $\mathbb{Q}(\sqrt{m})$ and $\beta$ is some element of $\mathbb{Q}(\sqrt{m})$.
+    
+    Taking the norm of both sides, we have
+    \[
+    N(\pi) N(\beta) = N(p) = p^2.
+    \]
+    Since $p$ is a rational prime, $N(p) = p^2$.
+    
+    The norm $N(\pi)$ cannot be $\pm 1$ because:
+    \begin{enumerate}
+        \item If $N(\pi) = \pm 1$, then $\pi$ would be a \textit{unit} in $\mathbb{Q}(\sqrt{m})$, meaning $\pi$ would not contribute meaningfully to the prime factorization.
+        \item A true prime element in $\mathbb{Q}(\sqrt{m})$ must be \textit{irreducible} and not a unit. Thus, for $\pi$ to be a prime in $\mathbb{Q}(\sqrt{m})$, we require $N(\pi) \neq \pm 1$.
+    \end{enumerate}
+    
+    With this condition, we now analyze the two possible cases for $N(\beta)$.
+    
+
+    From the norm equation \( N(\pi) N(\beta) = p^2 \), we have two possibilities:
+    \begin{enumerate}
+        \item \textbf{Case 1: $N(\beta) = \pm 1$.}\\
+        If $N(\beta) = \pm 1$, then $\beta$ is a \textit{unit} in $\mathbb{Q}(\sqrt{m})$. This implies that $\pi$ is an \textit{associate} of $p$, meaning that $\pi$ and $p$ are essentially the same prime, differing only by a unit (such as $\pm 1$). In this case, $p$ remains a prime in $\mathbb{Q}(\sqrt{m})$.
+    
+        \item \textbf{Case 2: $N(\beta) = \pm p$.}\\
+        If $N(\beta) = \pm p$, then $\beta$ itself is a \textit{prime} in $\mathbb{Q}(\sqrt{m})$ by Theorem 9.24. Thus, $p$ can be written as the product of two primes, $\pi$ and $\beta$, in $\mathbb{Q}(\sqrt{m})$.
+    \end{enumerate}
+    
+   
+    If $p$ is not a prime in $\mathbb{Q}(\sqrt{m})$, it must factor as $p = \pi \beta$, where $\pi$ and $\beta$ are primes in $\mathbb{Q}(\sqrt{m})$. This completes the proof of statement (1).
+
+\end{proofbox}
+
+\textbf{Proof of Theorem 23 - Statement 2}\\
+\begin{proofbox}
+    From Statement (1), we know that every rational prime $p$ is either:
+\begin{itemize}
+    \item A prime $\pi$ in $\mathbb{Q}(\sqrt{m})$, or
+    \item A product $\pi_1 \pi_2$ of two primes in $\mathbb{Q}(\sqrt{m})$.
+\end{itemize}
+
+Thus, for every rational prime $p$, we can identify primes $\pi$, $\pi_1$, and $\pi_2$ in $\mathbb{Q}(\sqrt{m})$ associated with it. These form the core set of primes in $\mathbb{Q}(\sqrt{m})$.
+
+However, to account for \textit{all} primes in $\mathbb{Q}(\sqrt{m})$, we must also include their \textbf{associates}. Recall that two elements in $\mathbb{Q}(\sqrt{m})$ are associates if they differ by multiplication by a unit. For example, if $\pi$ is a prime, then $-\pi$ is also a prime, as it is an associate of $\pi$.
+
+Therefore, the total set of primes in $\mathbb{Q}(\sqrt{m})$ consists of:
+\begin{itemize}
+    \item All primes $\pi$, $\pi_1$, and $\pi_2$ identified from Statement (1), and
+    \item Their associates, which are elements of the form $u \pi$, where $u$ is a unit in $\mathbb{Q}(\sqrt{m})$.
+\end{itemize}
+
+This proves that the totality of primes obtained from Statement (1), together with their associates, constitutes the full set of primes in $\mathbb{Q}(\sqrt{m})$.
+\end{proofbox}
+
+\textbf{Proof of Theorem 23 - Statement 3}\\
+\begin{proofbox}
+    Let $p$ be an odd rational prime such that $(p, m) = 1$ (i.e., $p$ does not divide $m$) and $\left( \frac{m}{p} \right) = 1$ (i.e., $m$ is a quadratic residue modulo $p$).\\\\
+From theorem 13 , we know the structure of the integers in $\mathbb{Q}(\sqrt{m})$:
+\begin{enumerate}
+    \item If $m \equiv 2 \pmod{4}$ or $m \equiv 3 \pmod{4}$, the integers are of the form:
+    \[
+    a + b\sqrt{m}, \quad \text{where } a, b \in \mathbb{Z}.
+    \]
+    \item If $m \equiv 1 \pmod{4}$, the integers include both:
+    \[
+    a + b\sqrt{m}, \quad \text{and} \quad \frac{a + b\sqrt{m}}{2}, \quad \text{where } a, b \text{ are odd integers.}
+    \]
+\end{enumerate}
+These forms will be crucial for determining whether $p$ divides certain elements in $\mathbb{Q}(\sqrt{m})$.
+\noindent
+Let \( p \) be an odd rational prime such that \( (p, m) = 1 \) and \( \left( \frac{m}{p} \right) = 1 \). By definition of the Legendre symbol, the condition \( \left( \frac{m}{p} \right) = 1 \) means there exists a rational integer \( x \) such that \( x^2 \equiv m \pmod{p} \). Then \( p \mid (x^2 - m) \), which implies:
+\[
+p \mid (x - \sqrt{m})(x + \sqrt{m}).
+\]
+
+If \( p \) were a prime in \( \mathbb{Q}(\sqrt{m}) \), it would divide one of the factors, say \( x - \sqrt{m} \), so that:
+\[
+\frac{x - \sqrt{m}}{p}, \quad \frac{x + \sqrt{m}}{p}
+\]
+would be integers in \( \mathbb{Q}(\sqrt{m}) \). By Theorem 13, the integers of \( \mathbb{Q}(\sqrt{m}) \) are of the form \( a + b\sqrt{m} \) if \( m \equiv 2 \pmod{4} \) or \( 3 \pmod{4} \), and \( \frac{a + b\sqrt{m}}{2} \) if \( m \equiv 1 \pmod{4} \). In either case, \( p \mid x \) and \( p \mid m \), which contradicts \( (p, m) = 1 \). Thus, \( p \) is not a prime in \( \mathbb{Q}(\sqrt{m}) \).
+
+By Statement (1) of Theorem 13, \( p \) must split as \( p = \pi_1 \pi_2 \), where \( \pi_1 \) and \( \pi_2 \) are primes in \( \mathbb{Q}(\sqrt{m}) \).
+
+Now suppose that \( p \) is an odd rational prime, that \( (p, m) = 1 \), and that \( p \) is not a prime in \( \mathbb{Q}(\sqrt{m}) \). From the proof of Statement (1), we see that \( p = \pi \beta \), \( N(\beta) = \pm p \), and \( N(\pi) = \pm p \). Let \( \pi = a + b\sqrt{m} \), where \( a \) and \( b \) are rational integers or, if \( m \equiv 1 \pmod{4} \), halves of odd rational integers. Then:
+\[
+a^2 - mb^2 = N(\pi) = \pm p,
+\]
+and we have:
+\[
+(2a)^2 - m(2b)^2 = m(2b)^2 \equiv 4p \pmod{p}.
+\]
+
+Here \( 2a \) and \( 2b \) are rational integers, and neither is a multiple of \( p \). For if \( p \) divided either one, it would divide the other, and we would have \( p^2 \mid (4a^2, 4b^2, 4mb^2, 4p) \), a contradiction. Therefore \( (2b, p) = 1 \), and there is a rational integer \( w \) such that \( 2bw \equiv 1 \pmod{p} \). Multiplying both sides of the norm equation by \( w^2 \), we find:
+\[
+(2aw)^2 = m(2bw)^2 \equiv m \pmod{p}.
+\]
+
+Thus \( \left( \frac{m}{p} \right) = 1 \), which confirms that \( p = \pi_1 \pi_2 \).
+
+Next, consider the ratios of the factors \( \pi \) and \( \beta \):
+\[
+\beta = \frac{p}{\pi} = \pm \frac{p}{a + b\sqrt{m}} = \pm (a - b\sqrt{m}),
+\]
+and its conjugate:
+\[
+\overline{\beta} = \pm (a + b\sqrt{m}).
+\]
+From this, \( \pi \) and \( \overline{\beta} \) are associates, as their ratio is \( \pm 1 \). On the other hand, the ratio \( \pi / \beta \) is given by:
+\[
+\frac{\pi}{\beta} = \frac{a + b\sqrt{m}}{a - b\sqrt{m}} = \frac{(2a)^2 + m(2b)^2}{4p} + \frac{8ab\sqrt{m}}{4p}.
+\]
+
+This ratio is not an integer, as \( p \) does not divide \( 8ab \), so \( \pi \) and \( \beta \) are not associates.
+
+Thus, \( p \) splits into distinct primes \( \pi_1 \) and \( \pi_2 \), which are not associates, completing the proof.
+\end{proofbox}
+
+\textbf{Proof of Theorem 23 - Statement 4}\\
+
+\begin{proofbox}
+    If \( m \equiv 3 \pmod{4} \), then:
+\[
+m^2 - m = 2 \cdot \frac{m^2 - m}{2} = 2(m + \sqrt{m})(m - \sqrt{m}).
+\]
+Thus, \( 2 \mid (m \pm \sqrt{m}) \), so \( 2 \) cannot be a prime of \( \mathbb{Q}(\sqrt{m}) \). Hence, \( 2 \) is divisible by a prime \( x + y\sqrt{m} \), which must have norm \( \pm 2 \). Therefore:
+\[
+x^2 - my^2 = \pm 2.
+\]
+This implies:
+\[
+\frac{x - y\sqrt{m}}{x + y\sqrt{m}} = \frac{x^2 + my^2 - 2xy\sqrt{m}}{x^2 - my^2} = \frac{x^2 + my^2}{2} - xy\sqrt{m},
+\]
+and similarly:
+\[
+\frac{x + y\sqrt{m}}{x - y\sqrt{m}} = \frac{x^2 + my^2}{2} + xy\sqrt{m}.
+\]
+Thus, \( x - y\sqrt{m} \) and \( x + y\sqrt{m} \) are associates, and \( 2 \) is the associate of the square of a prime when \( m \equiv 3 \pmod{4} \).
+
+If \( m \equiv 1 \pmod{4} \), and \( 2 \) is not a prime in \( \mathbb{Q}(\sqrt{m}) \), then \( 2 \) is divisible by:
+\[
+\frac{1}{2}(x + y\sqrt{m}),
+\]
+with norm \( \pm 2 \). This requires \( x \) and \( y \) such that:
+\[
+x^2 - my^2 = \pm 8.
+\]
+If \( x \) and \( y \) are even, say \( x = 2x_0 \), \( y = 2y_0 \), then:
+\[
+x_0^2 - my_0^2 = \pm 2.
+\]
+Since \( m \equiv 1 \pmod{4} \), \( x_0^2 - my_0^2 \) cannot equal \( \pm 2 \), as \( m \equiv 1 \pmod{8} \) implies divisibility conditions that lead to contradictions. Therefore, \( x \) and \( y \) must both be odd, and:
+\[
+x^2 - y^2 \equiv 1 \pmod{8}.
+\]
+This implies \( x^2 - my^2 \equiv 0 \pmod{8} \), so \( m \equiv 1 \pmod{8} \). Hence, \( 2 \) is divisible by primes \( \frac{1}{2}(x + y\sqrt{m}) \) and \( \frac{1}{2}(x - y\sqrt{m}) \), which are distinct since their ratio is not a unit:
+\[
+\frac{x + y\sqrt{m}}{x - y\sqrt{m}} = \frac{x^2 + my^2}{8} + \frac{xy\sqrt{m}}{4}.
+\]
+The ratio is not an integer, so \( 2 \) is the product of two distinct primes when \( m \equiv 1 \pmod{8} \).
+
+If \( m \equiv 5 \pmod{8} \), suppose \( 2 \) is not a prime. Then \( 2 \) must divide:
+\[
+\frac{1}{2}(x + y\sqrt{m}),
+\]
+with norm \( \pm 2 \). This requires \( x \) and \( y \) to satisfy:
+\[
+x^2 - my^2 = \pm 8.
+\]
+If \( x, y \) are even, \( x_0^2 - my_0^2 = \pm 2 \), which is impossible since \( m \equiv 5 \pmod{8} \) leads to no solutions. Hence, \( 2 \) must remain a prime in \( \mathbb{Q}(\sqrt{m}) \) when \( m \equiv 5 \pmod{8} \).
+
+This completes the proof.
+
+\end{proofbox}
+
+\textbf{Proof of Theorem 23 - Statement 5}\\    
+
+\begin{proofbox}
+    Let \( p \) be a rational prime divisor of \( m \).
+
+1. Case 1: \( p = |m| \):
+   If \( p = |m| \), then:
+   \[
+   m = p \cdot \sqrt{m} \cdot \sqrt{m}.
+   \]
+   Thus, \( p = \pm \sqrt{m} \cdot \sqrt{m} \), and \( p \) is the associate of the square of a prime in \( \mathbb{Q}(\sqrt{m}) \) by Theorem (If the norm of an integer \( a \) in \( \mathbb{Q}(\sqrt{m}) \) is \( \pm p \), where \( p \) is a rational prime, then \( a \) is a prime in \( \mathbb{Q}(\sqrt{m}) \).).
+
+2. Case 2: \( p < |m| \): 
+   In this case, write:
+   \[
+   \frac{m}{p} = \sqrt{m} \cdot \sqrt{m} \quad \text{(Equation 9.13)}.
+   \]
+   By Theorem 13, \( p \) is not a divisor of \( \sqrt{m} \) in \( \mathbb{Q}(\sqrt{m}) \), and hence \( p \) is not a prime in \( \mathbb{Q}(\sqrt{m}) \). Therefore, \( p \) is divisible by a prime \( \pi \) in \( \mathbb{Q}(\sqrt{m}) \), where:
+   \[
+   N(\pi) = \pm p.
+   \]
+
+   Since \( N(\pi) = \pm p \), \( \pi \) is not a divisor of \( m/p \). However, by Equation (9.13), \( \pi \) is a divisor of \( \sqrt{m} \). Hence, \( \pi^2 \) divides \( m \), as claimed.
+\end{proofbox}
 
 
 \end{document}

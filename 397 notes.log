@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.11)  18 NOV 2024 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.11)  25 NOV 2024 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1492,52 +1492,58 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2154.
+(hyperref)                removing `math shift' on input line 2154.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2154.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2154.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2156.
+
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 2158--2161
+Underfull \hbox (badness 10000) in paragraph at lines 2160--2163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2158--2161
+Underfull \hbox (badness 10000) in paragraph at lines 2160--2163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2169--2171
+Underfull \hbox (badness 10000) in paragraph at lines 2171--2173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2169--2171
+Underfull \hbox (badness 10000) in paragraph at lines 2171--2173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2169--2171
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2174--2175
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2174--2175
+Underfull \hbox (badness 10000) in paragraph at lines 2171--2173
 
  []
 
@@ -1552,40 +1558,221 @@ Underfull \hbox (badness 10000) in paragraph at lines 2176--2177
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 2178--2180
+Underfull \hbox (badness 10000) in paragraph at lines 2178--2179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2190--2193
+Underfull \hbox (badness 10000) in paragraph at lines 2178--2179
 
  []
 
 
-Overfull \hbox (68.18489pt too wide) detected at line 2214
+Underfull \hbox (badness 10000) in paragraph at lines 2180--2182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2192--2195
+
+ []
+
+
+Overfull \hbox (68.18489pt too wide) detected at line 2216
 \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^Q ^^@\OT1/cmr/m/n/10 (3\OML/cmm/m/it/10 m \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r\OT1/cmr/m/n/10 )([]3)  =[]\OMS/cmsy/m/n/10 )  \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^Q ^^@\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 r\OT1/cmr/m/n/10 ([]3)  =[]\OMS/cmsy/m/n/10 )  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 0([]3)  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 0([]3)\OML/cmm/m/it/10 :
  []
 
-[47] [48] [49] (397 notes.aux)
+[47] [48]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2305.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2311--2316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2311--2316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2311--2316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2311--2316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2317--2319
+
+ []
+
+[49] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 2419--2422
+
+ []
+
+[51] [52]
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2505
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.43335pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.43335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
+
+[53]
+Overfull \hbox (15.0pt too wide) in paragraph at lines 2517--2520
+[]$[]$
+ []
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 2522--2537
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2539
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2539.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.43335pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.43335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
+
+[54]
+Package mdframed Info: Not enough space on this page on input line 2573.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2575--2576
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2576.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 2594.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.43335pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.43335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 2596--2597
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2597.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2597--2601
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.43335pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.43335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 2659--2660
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2661.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.43335pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.43335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
+
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 2716--2717
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2718.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.43335pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.43335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
+
+[58]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.43335pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.43335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
+
+[59] (397 notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `"397 notes".out' has not changed.
-(rerunfilecheck)             Checksum: 1EF8EEB07B02D8FE8FBBD5A230CB9167;4247.
+(rerunfilecheck)             Checksum: 1FB7965EB15AD6619CB6F4DC716CFE0C;5163.
  ) 
 Here is how much of TeX's memory you used:
- 29304 strings out of 474542
- 576924 string characters out of 5744446
+ 29358 strings out of 474542
+ 577593 string characters out of 5744446
  1960978 words of memory out of 5000000
- 50856 multiletter control sequences out of 15000+600000
- 569486 words of font info for 79 fonts, out of 8000000 for 9000
+ 50874 multiletter control sequences out of 15000+600000
+ 570107 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,13n,93p,687b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\shiva\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "397 notes.pdf" (49 pages, 484175 bytes).
+ <C:\Users\shiva\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "397 notes.pdf" (59 pages, 538266 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 649 PDF objects out of 1000 (max. 8388607)
+ 207 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
