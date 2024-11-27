@@ -23,3 +23,4 @@
 \contentsline {subsection}{\numberline {10.2}$x^4 + y^4 = z^4$}{49}{subsection.10.2}%
 \contentsline {section}{\numberline {11}Unique Factorization }{51}{section.11}%
 \contentsline {section}{\numberline {12}Primes in Quadratic Fields Having the Unique Factorization Property}{53}{section.12}%
+\contentsline {section}{\numberline {13}References}{60}{section.13}%

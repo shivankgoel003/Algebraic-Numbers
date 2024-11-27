@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.11)  25 NOV 2024 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.11)  27 NOV 2024 10:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -383,7 +383,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip125
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 16.
+Package hyperref Info: Option `colorlinks' set `true' on input line 17.
  (C:\Users\shiva\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count298
 \lst@gtempboxa=\box61
@@ -744,24 +744,24 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
  (397 notes.aux)
 \openout1 = `"397 notes.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 427.
+LaTeX Font Info:    ... okay on input line 427.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -816,17 +816,17 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\shiva\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 426.
+Package hyperref Info: Link coloring ON on input line 427.
  (397 notes.out) (397 notes.out)
 \@outlinefile=\write4
 \openout4 = `"397 notes.out"'.
 
 \c@lstlisting=\count342
-LaTeX Font Info:    Trying to load font information for U+msa on input line 430.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 431.
  (C:\Users\shiva\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 430.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 431.
  (C:\Users\shiva\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -838,803 +838,803 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [2] [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 499.
+(mdframed)              on input line 500.
  [4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 527.
+(mdframed)              on input line 528.
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
+Underfull \hbox (badness 10000) in paragraph at lines 528--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
+Underfull \hbox (badness 10000) in paragraph at lines 528--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
+Underfull \hbox (badness 10000) in paragraph at lines 528--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--539
+Underfull \hbox (badness 10000) in paragraph at lines 528--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--539
+Underfull \hbox (badness 10000) in paragraph at lines 536--540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 541--544
+Underfull \hbox (badness 10000) in paragraph at lines 536--540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--550
+Underfull \hbox (badness 10000) in paragraph at lines 542--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--550
+Underfull \hbox (badness 10000) in paragraph at lines 547--551
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 547--551
 
  []
 
 [5]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 559--567
+Overfull \hbox (15.0pt too wide) in paragraph at lines 560--568
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--567
+Underfull \hbox (badness 10000) in paragraph at lines 560--568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--567
+Underfull \hbox (badness 10000) in paragraph at lines 560--568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--567
+Underfull \hbox (badness 10000) in paragraph at lines 560--568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--567
+Underfull \hbox (badness 10000) in paragraph at lines 560--568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--567
+Underfull \hbox (badness 10000) in paragraph at lines 560--568
 
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 569--572
+Overfull \hbox (15.0pt too wide) in paragraph at lines 570--573
 []$[]$
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 578--580
+Overfull \hbox (15.0pt too wide) in paragraph at lines 579--581
 []$[]$
  []
 
 [6]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 586.
+(mdframed)              on input line 587.
  [7]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 612--613
+Overfull \hbox (15.0pt too wide) in paragraph at lines 613--614
 []$[]$
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 617.
+(mdframed)              on input line 618.
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--632
+Underfull \hbox (badness 10000) in paragraph at lines 628--633
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 636.
+(mdframed)              on input line 637.
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 724--728
+Underfull \hbox (badness 10000) in paragraph at lines 725--729
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--728
+Underfull \hbox (badness 10000) in paragraph at lines 725--729
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--728
+Underfull \hbox (badness 10000) in paragraph at lines 725--729
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 745.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 746.
 (C:\Users\shiva\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 745.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 746.
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--746
+Underfull \hbox (badness 10000) in paragraph at lines 746--747
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--746
+Underfull \hbox (badness 10000) in paragraph at lines 746--747
 
  []
 
 [11] [12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 826.
+(mdframed)              on input line 827.
  [13]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 895.
+(mdframed)              on input line 896.
  [14]
-Underfull \hbox (badness 10000) in paragraph at lines 908--911
+Underfull \hbox (badness 10000) in paragraph at lines 909--912
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--911
+Underfull \hbox (badness 10000) in paragraph at lines 909--912
 
  []
 
 [15]
-Overfull \hbox (11.56297pt too wide) in paragraph at lines 929--931
+Overfull \hbox (11.56297pt too wide) in paragraph at lines 930--932
 []\OT1/cmr/m/n/10 By the Fun-da-men-tal The-o-rem of Al-ge-bra this equa-tion has m roots, call them $\OML/cmm/m/it/10 ![]; ![]; [] ; ![]$
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
+Underfull \hbox (badness 10000) in paragraph at lines 964--965
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
+Underfull \hbox (badness 10000) in paragraph at lines 964--965
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 965--968
+Underfull \hbox (badness 10000) in paragraph at lines 966--969
 
  []
 
 
-Overfull \hbox (66.75813pt too wide) detected at line 969
+Overfull \hbox (66.75813pt too wide) detected at line 970
 \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) = [](\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )[][\OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) [] (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) [] (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )][]
  []
 
 
-Overfull \hbox (60.53058pt too wide) detected at line 972
+Overfull \hbox (60.53058pt too wide) detected at line 973
 [] \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) [] (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) [] (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )][]
  []
 
 [17]
-Overfull \hbox (32.83232pt too wide) in paragraph at lines 980--985
+Overfull \hbox (32.83232pt too wide) in paragraph at lines 981--986
 []\OT1/cmr/m/n/10 where each co-ef-fi-cient $\OML/cmm/m/it/10 ^^L[]$ \OT1/cmr/m/n/10 is a sym-met-ric in-te-gral poly-no-mial of the con-stants $\OML/cmm/m/it/10 c[][]c[][] [] c[][]$\OT1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 988--990
+Underfull \hbox (badness 10000) in paragraph at lines 989--991
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1018
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1019
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1019--1021
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1022
 
  []
 
 
-Overfull \hbox (27.14497pt too wide) in paragraph at lines 1028--1030
+Overfull \hbox (27.14497pt too wide) in paragraph at lines 1029--1031
 \OT1/cmr/m/n/10 where each co-ef-fi-cient $\OML/cmm/m/it/10 ^^M[]$ \OT1/cmr/m/n/10 is a sym-met-ric in-te-gral poly-no-mial in the con-stants $\OML/cmm/m/it/10 c[][]; c[][]; [] ; c[][]$\OT1/cmr/m/n/10 .
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1075
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1076
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1075
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1076
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1075
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1076
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1082
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1083
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1086
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1087
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1086
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1087
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1090
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1091
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1101
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1104
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1104
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1107
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1107
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1108--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1108--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1108--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1108--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1108--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1124
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1124
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1125
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
+Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
+Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1208
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1211--1213
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1224
+Underfull \hbox (badness 10000) in paragraph at lines 1223--1225
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1241--1243
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1244--1247
+Underfull \hbox (badness 10000) in paragraph at lines 1245--1248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1244--1247
+Underfull \hbox (badness 10000) in paragraph at lines 1245--1248
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1306--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1306--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1306--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1309
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1309.
+(mdframed)              on input line 1310.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1342--1344
+Underfull \hbox (badness 10000) in paragraph at lines 1343--1345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1342--1344
+Underfull \hbox (badness 10000) in paragraph at lines 1343--1345
 
  []
 
 [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1379--1381
+Underfull \hbox (badness 10000) in paragraph at lines 1380--1382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1384--1387
+Underfull \hbox (badness 10000) in paragraph at lines 1385--1388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1391
+Underfull \hbox (badness 10000) in paragraph at lines 1389--1392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1391
+Underfull \hbox (badness 10000) in paragraph at lines 1389--1392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1391
+Underfull \hbox (badness 10000) in paragraph at lines 1389--1392
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1391.
+(mdframed)              on input line 1392.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1399--1401
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1403--1406
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1416
+Underfull \hbox (badness 10000) in paragraph at lines 1404--1407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1416
+Underfull \hbox (badness 10000) in paragraph at lines 1414--1417
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1414--1417
 
  []
 
 [28]
-Package mdframed Info: Not enough space on this page on input line 1435.
+Package mdframed Info: Not enough space on this page on input line 1436.
  [29]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1439.
+(mdframed)              on input line 1440.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1456
+Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1456
+Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1456.
+(mdframed)              on input line 1457.
 [30] [31] [32]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 1576--1589
+Overfull \hbox (15.0pt too wide) in paragraph at lines 1577--1590
 []$[]$
  []
 
 [33]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 1630--1637
+Overfull \hbox (15.0pt too wide) in paragraph at lines 1631--1638
 []$[]$
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 1643--1659
+Overfull \hbox (15.0pt too wide) in paragraph at lines 1644--1660
 []$[]$
  []
 
 [34] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1714--1716
+Underfull \hbox (badness 10000) in paragraph at lines 1715--1717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1714--1716
+Underfull \hbox (badness 10000) in paragraph at lines 1715--1717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1722
+Underfull \hbox (badness 10000) in paragraph at lines 1723--1723
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1722
+Underfull \hbox (badness 10000) in paragraph at lines 1723--1723
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1722
+Underfull \hbox (badness 10000) in paragraph at lines 1723--1723
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1727
+Underfull \hbox (badness 10000) in paragraph at lines 1726--1728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1727
+Underfull \hbox (badness 10000) in paragraph at lines 1726--1728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1728--1731
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1732
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1728--1731
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1732
 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1743
+Underfull \hbox (badness 10000) in paragraph at lines 1740--1744
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1743
+Underfull \hbox (badness 10000) in paragraph at lines 1740--1744
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1743
+Underfull \hbox (badness 10000) in paragraph at lines 1740--1744
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1814--1820
+Underfull \hbox (badness 10000) in paragraph at lines 1815--1821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1814--1820
+Underfull \hbox (badness 10000) in paragraph at lines 1815--1821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1814--1820
+Underfull \hbox (badness 10000) in paragraph at lines 1815--1821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1814--1820
+Underfull \hbox (badness 10000) in paragraph at lines 1815--1821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1814--1820
+Underfull \hbox (badness 10000) in paragraph at lines 1815--1821
 
  []
 
 [38]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 1827--1841
+Overfull \hbox (15.0pt too wide) in paragraph at lines 1828--1842
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1849--1850
+Underfull \hbox (badness 10000) in paragraph at lines 1850--1851
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1849--1850
+Underfull \hbox (badness 10000) in paragraph at lines 1850--1851
 
  []
 
 [39] [40]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1944.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1945.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1943--1947
+Underfull \hbox (badness 10000) in paragraph at lines 1944--1948
 
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 1933--1949
+Overfull \hbox (15.0pt too wide) in paragraph at lines 1934--1950
 []$[]$
  []
 
 [41] [42]
-Underfull \hbox (badness 10000) in paragraph at lines 2054--2056
+Underfull \hbox (badness 10000) in paragraph at lines 2055--2057
 
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 2053--2057
+Overfull \hbox (15.0pt too wide) in paragraph at lines 2054--2058
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2058--2060
+Underfull \hbox (badness 10000) in paragraph at lines 2059--2061
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2058--2060
+Underfull \hbox (badness 10000) in paragraph at lines 2059--2061
 
  []
 
 [43] [44]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2154.
+(hyperref)                removing `math shift' on input line 2155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2154.
+(hyperref)                removing `math shift' on input line 2155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2154.
+(hyperref)                removing `math shift' on input line 2155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2154.
+(hyperref)                removing `math shift' on input line 2155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2156.
+(hyperref)                removing `math shift' on input line 2157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2156.
+(hyperref)                removing `superscript' on input line 2157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2156.
+(hyperref)                removing `superscript' on input line 2157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2156.
+(hyperref)                removing `superscript' on input line 2157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2156.
+(hyperref)                removing `math shift' on input line 2157.
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2163
+Underfull \hbox (badness 10000) in paragraph at lines 2161--2164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2163
+Underfull \hbox (badness 10000) in paragraph at lines 2161--2164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2171--2173
+Underfull \hbox (badness 10000) in paragraph at lines 2172--2174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2171--2173
+Underfull \hbox (badness 10000) in paragraph at lines 2172--2174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2171--2173
+Underfull \hbox (badness 10000) in paragraph at lines 2172--2174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2176--2177
+Underfull \hbox (badness 10000) in paragraph at lines 2177--2178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2176--2177
+Underfull \hbox (badness 10000) in paragraph at lines 2177--2178
 
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 2178--2179
+Underfull \hbox (badness 10000) in paragraph at lines 2179--2180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2178--2179
+Underfull \hbox (badness 10000) in paragraph at lines 2179--2180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2180--2182
+Underfull \hbox (badness 10000) in paragraph at lines 2181--2183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2192--2195
+Underfull \hbox (badness 10000) in paragraph at lines 2193--2196
 
  []
 
 
-Overfull \hbox (68.18489pt too wide) detected at line 2216
+Overfull \hbox (68.18489pt too wide) detected at line 2217
 \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^Q ^^@\OT1/cmr/m/n/10 (3\OML/cmm/m/it/10 m \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r\OT1/cmr/m/n/10 )([]3)  =[]\OMS/cmsy/m/n/10 )  \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^Q ^^@\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 r\OT1/cmr/m/n/10 ([]3)  =[]\OMS/cmsy/m/n/10 )  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 0([]3)  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 0([]3)\OML/cmm/m/it/10 :
  []
 
 [47] [48]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2305.
+(hyperref)                removing `math shift' on input line 2306.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2305.
+(hyperref)                removing `superscript' on input line 2306.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2305.
+(hyperref)                removing `superscript' on input line 2306.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2305.
+(hyperref)                removing `superscript' on input line 2306.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2305.
+(hyperref)                removing `math shift' on input line 2306.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2311--2316
+Underfull \hbox (badness 10000) in paragraph at lines 2312--2317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2311--2316
+Underfull \hbox (badness 10000) in paragraph at lines 2312--2317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2311--2316
+Underfull \hbox (badness 10000) in paragraph at lines 2312--2317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2311--2316
+Underfull \hbox (badness 10000) in paragraph at lines 2312--2317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2317--2319
+Underfull \hbox (badness 10000) in paragraph at lines 2318--2320
 
  []
 
 [49] [50]
-Underfull \hbox (badness 10000) in paragraph at lines 2419--2422
+Underfull \hbox (badness 10000) in paragraph at lines 2420--2423
 
  []
 
 [51] [52]
-Underfull \hbox (badness 10000) in paragraph at lines 2501--2505
+Underfull \hbox (badness 10000) in paragraph at lines 2502--2506
 
  []
 
@@ -1646,28 +1646,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
 
 [53]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 2517--2520
+Overfull \hbox (15.0pt too wide) in paragraph at lines 2518--2521
 []$[]$
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 2522--2537
-[]$[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2538--2539
+Underfull \hbox (badness 10000) in paragraph at lines 2522--2523
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2538--2539
+Underfull \hbox (badness 10000) in paragraph at lines 2522--2523
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2539.
+(mdframed)              on input line 2523.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 2557.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.43335pt, for example:
@@ -1676,18 +1674,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
 
 [54]
-Package mdframed Info: Not enough space on this page on input line 2573.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2575--2576
+Underfull \hbox (badness 10000) in paragraph at lines 2559--2560
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2576.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 2594.
+(mdframed)              on input line 2560.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2580--2581
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2581.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2581--2585
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.43335pt, for example:
@@ -1696,18 +1702,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 2596--2597
-
- []
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 2597.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2597--2601
-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.43335pt, for example:
@@ -1716,13 +1710,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
 
 [56]
-Underfull \hbox (badness 10000) in paragraph at lines 2659--2660
+Underfull \hbox (badness 10000) in paragraph at lines 2643--2644
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2661.
+(mdframed)              on input line 2645.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.43335pt, for example:
@@ -1731,13 +1725,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
 
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 2716--2717
+Underfull \hbox (badness 10000) in paragraph at lines 2700--2701
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2718.
+(mdframed)              on input line 2702.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.43335pt, for example:
@@ -1753,26 +1747,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-10.43335pt}.
 
-[59] (397 notes.aux)
+[59]
+Overfull \hbox (21.98413pt too wide) in paragraph at lines 2797--2799
+\OT1/cmr/m/n/10 from: [][]$\OT1/cmtt/m/n/10 https : / / people . math . sc . edu / filaseta / gradcourses / math785 / math785notes8 .
+ []
+
+
+Overfull \hbox (6.23427pt too wide) in paragraph at lines 2803--2805
+\OT1/cmr/m/n/10 from: [][]$\OT1/cmtt/m/n/10 https : / / en . wikipedia . org / wiki / Proof _ of _ Fermat % 27s _ Last _ Theorem _ for _
+ []
+
+[60] (397 notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `"397 notes".out' has not changed.
-(rerunfilecheck)             Checksum: 1FB7965EB15AD6619CB6F4DC716CFE0C;5163.
+(rerunfilecheck)             Checksum: 77D283486A9EE55DCCC9592DFF0433B5;5258.
  ) 
 Here is how much of TeX's memory you used:
- 29358 strings out of 474542
- 577593 string characters out of 5744446
+ 29364 strings out of 474542
+ 577641 string characters out of 5744446
  1960978 words of memory out of 5000000
- 50874 multiletter control sequences out of 15000+600000
- 570107 words of font info for 81 fonts, out of 8000000 for 9000
+ 50875 multiletter control sequences out of 15000+600000
+ 570275 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,13n,93p,687b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\shiva\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "397 notes.pdf" (59 pages, 538266 bytes).
+ <C:\Users\shiva\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "397 notes.pdf" (60 pages, 560598 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 207 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 671 PDF objects out of 1000 (max. 8388607)
+ 211 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,7 +10,8 @@
 \usepackage{amsthm,amsmath,amssymb,amsfonts}
 \usepackage{enumerate} 
 \newcommand\tab[1][0.5cm]{\hspace*{#1}}
-\usepackage{hyperref} % package for in-text hyperlinks
+\usepackage{hyperref}
+\usepackage{url} % package for in-text hyperlinks
 \hypersetup{colorlinks=true,
 linkcolor=blue,
 urlcolor=blue}
@@ -2518,23 +2519,6 @@ Explanation and Example
 This theorem is important for understanding how rational primes behave in the extended field $\mathbb{Q}(\sqrt{m})$. Some rational primes remain prime, while others may split into a product of two primes in this new number system.
 \end{remark}
 
-
-\begin{example}
-Let us consider the field $\mathbb{Q}(\sqrt{-5})$.
-
-\begin{enumerate}
-    \item Consider the rational prime $p = 3$. In $\mathbb{Q}(\sqrt{-5})$, $3$ remains a prime. This means that there are no factors of $3$ in the form of $a + b\sqrt{-5}$ that can multiply to give $3$.
-
-    \item Now consider the rational prime $p = 2$. In the field $\mathbb{Q}(\sqrt{-5}))$, $2$ can be factored as:
-    \[
-    2 = (1 + \sqrt{-5})(1 - \sqrt{-5}).
-    \]
-    Here, $2$ splits into the product of two primes in $\mathbb{Q}(\sqrt{-5})$, namely $(1 + \sqrt{-5})$ and $(1 - \sqrt{-5})$.
-\end{enumerate}
-
-This illustrates how some rational primes can remain prime in an extended field, while others can split into distinct prime factors.
-\end{example}
-
 \textbf{Proof of Theorem 23 - Statement 1}\\\\
 \begin{proofbox}
     Suppose the rational prime $p$ is not a prime in $\mathbb{Q}(\sqrt{m})$. Then we can write
@@ -2739,4 +2723,84 @@ This completes the proof.
 \end{proofbox}
 
 
+The theorem we have just proved provides a method for determining the primes in quadratic fields \( \mathbb{Q}(\sqrt{m}) \) having the unique factorization property. For such fields \( \mathbb{Q}(\sqrt{m}) \), we proceed as follows:
+
+Primes in \( \mathbb{Q}(\sqrt{m}) \)
+
+1. Case 1: \( (p, 2m) = 1 \) and \( \left( \frac{m}{p} \right) = -1 \): 
+   In this case, the rational prime \( p \), together with all its associates in \( \mathbb{Q}(\sqrt{m}) \), are primes in \( \mathbb{Q}(\sqrt{m}) \).
+
+2. Case 2: \( (p, 2m) = 1 \) and \( \left( \frac{m}{p} \right) = 1 \):  
+   Here, the prime \( p \) factors into two primes \( \pi_1 \) and \( \pi_2 \) in \( \mathbb{Q}(\sqrt{m}) \), with:
+   \[
+   N(\pi_1) = N(\pi_2) = p.
+   \]
+   Any other factoring of \( p \) will merely replace \( \pi_1 \) and \( \pi_2 \) by their associates.
+
+3. Case 3: \( (p, 2m) > 1 \):
+   For such primes \( p \), they may either be primes in \( \mathbb{Q}(\sqrt{m}) \) or products of two primes in \( \mathbb{Q}(\sqrt{m}) \).
+
+
+Suppose \( a \) is an integer in \( \mathcal{O}(\mathbb{Q}(\sqrt{m})) \) with norm:
+\[
+N(a) = \pm p,
+\]
+where \( p \) is a rational prime. If \( p \mid a \), this necessitates that \( a \) itself must be a prime in \( \mathbb{Q}(\sqrt{m}) \).  
+
+Case: \( m \not\equiv 1 \pmod{4} \):
+We can write:
+\[
+a = x + y\sqrt{m}, \quad N(a) = x^2 - my^2,
+\]
+where \( x, y \) are integers, both odd or both even. 
+
+Combining these facts, we arrive at the following conclusion:
+
+
+
+
+Let \( \mathbb{Q}(\sqrt{m}) \) have the unique factorization property, and let \( p \) be a rational prime such that \( (p, 2m) = 1 \). Suppose:
+\[
+x^2 - my^2 = \pm p
+\]
+has a solution \( (x, y) \), where \( x = a, y = b \). Then:
+\[
+\alpha = a + b\sqrt{m}, \quad \beta = a - b\sqrt{m},
+\]
+and the associates of \( \alpha \) and \( \beta \) are primes in \( \mathbb{Q}(\sqrt{m}) \). These are the only primes in \( \mathbb{Q}(\sqrt{m}) \) that divide \( p \).
+
+
+
+If \( m \equiv 1 \pmod{4} \), then at least one of the two equations:
+\[
+x^2 - my^2 = \pm p
+\]
+has a solution. Let \( x = a, y = b \) be such a solution. Then the numbers:
+\[
+\alpha = \frac{a + b\sqrt{m}}{2}, \quad \beta = \frac{a - b\sqrt{m}}{2},
+\]
+and their associates are primes in \( \mathbb{Q}(\sqrt{m}) \). These are the only primes in \( \mathbb{Q}(\sqrt{m}) \) that divide \( p \).
+
+These results provide insight into how rational primes \( p \) behave in quadratic fields \( \mathbb{Q}(\sqrt{m}) \) with the unique factorization property. Additionally, they offer valuable information about the solutions of certain Diophantine equations:
+\[
+x^2 - my^2 = \pm p.
+\]
+
+It must be remembered that these results apply only to those \( \mathbb{Q}(\sqrt{m}) \) that have the unique factorization property.
+
+
+
+\section{References}
+\begin{enumerate}
+    \item Niven, I., Zuckerman, H. S.,  Montgomery, H. L. (1991). \textit{An Introduction to the Theory of Numbers}. Hardcover edition, September 3, 1991.
+
+    \item Filaseta, M. (n.d.). Notes on Algebraic Number Theory: Graduate Course. Retrieved from: 
+    \url{https://people.math.sc.edu/filaseta/gradcourses/math785/math785notes8.pdf}
+
+    \item Soundararajan, K. (n.d.). Notes on Transcendental Number Theory. Retrieved from: 
+    \url{https://math.stanford.edu/~ksound/TransNotes.pdf}
+
+    \item Wikipedia. (n.d.). Proof of Fermat's Last Theorem for Specific Exponents. Retrieved from: 
+    \url{https://en.wikipedia.org/wiki/Proof_of_Fermat%27s_Last_Theorem_for_specific_exponents}
+\end{enumerate}
 \end{document}

@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1732575971.69775 "c:/Users/shiva/Desktop/final year/mat397/notes 397/Algebraic-Numbers/397 notes.tex" "397 notes.pdf" "397 notes" 1732575977.14912 0
-  "397 notes.aux" 1732575976 3503 d2d97cc1008cb7f5d52d18c44076933d "pdflatex"
-  "397 notes.out" 1732575976 5163 1fb7965eb15ad6619cb6f4dc716cfe0c "pdflatex"
-  "397 notes.tex" 1732575970 136647 b039747752117704ccbebd6ff7ef2f6d ""
-  "397 notes.toc" 1732575976 2271 f9b1673aec26dedbfd2514faafe96470 "pdflatex"
+["pdflatex"] 1732722622.6063 "c:/Users/shiva/Desktop/final year/mat397/notes 397/Algebraic-Numbers/397 notes.tex" "397 notes.pdf" "397 notes" 1732722625.43873 0
+  "397 notes.aux" 1732722625 3613 7ecd2e6e3ac1f34e0d9a5435e0a07695 "pdflatex"
+  "397 notes.out" 1732722625 5258 77d283486a9ee55dccc9592dff0433b5 "pdflatex"
+  "397 notes.tex" 1732722618 139467 1c7188e3ed821b9051441202dc9a1d44 ""
+  "397 notes.toc" 1732722625 2340 3d2d55b1db4c82e99e6633b08d9265bf "pdflatex"
   "C:/Users/shiva/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1716172999 81074 e9df683c7a67b773afe1722d345afa16 ""
   "C:/Users/shiva/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1684618211 11548 f682b43c0e7bcd78a3e130decb87d8cf ""
   "C:/Users/shiva/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1707678555 24210787 8eeca706b0806df4eea0cbdf825d050c ""
@@ -36,6 +36,7 @@
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti10.tfm" 1136765053 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti12.tfm" 1136765053 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
+  "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt10.tfm" 1136765053 768 1321e9409b4137d6fb428ac9dc956269 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247593066 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247593066 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb" 1247593067 32007 e8fa0078355f39467039935974716569 ""
@@ -55,6 +56,7 @@
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247593066 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247593067 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1247593067 36118 fad905eba93cff5bce1e185fe980a177 ""
+  "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247593067 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247593073 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -223,7 +225,7 @@
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695379486 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/shiva/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695379486 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/shiva/Desktop/final year/mat397/notes 397/Algebraic-Numbers/397 notes.tex" 1732575970 136647 b039747752117704ccbebd6ff7ef2f6d ""
+  "c:/Users/shiva/Desktop/final year/mat397/notes 397/Algebraic-Numbers/397 notes.tex" 1732722618 139467 1c7188e3ed821b9051441202dc9a1d44 ""
   (generated)
   "397 notes.aux"
   "397 notes.log"
